@@ -1,0 +1,27 @@
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+div.slideshow-container {
+  display: block;
+  text-align: center;
+}
+
+figure {
+  display: block;
+  margin: 3rem;
+  text-align: center;
+}
+
+figure img {
+  max-width: 40%;
+}
+figcaption {
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+}

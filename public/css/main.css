@@ -10,6 +10,7 @@
   --medium-green: #7ed6ac;
   --intense-green: #30646b;
 }
+
 h1 {
   font-size: 3.5rem;
 }
@@ -48,7 +49,7 @@ a:hover {
 body {
   background-color: var(--dark-background);
   color: var(--clear-text);
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   width: 80%;
   margin: 0 auto;
 
@@ -104,7 +105,6 @@ body {
         top: 15%;
         min-height: 450px;
         height: 70vh;
-
 
         ul {
           top: 0;
@@ -191,7 +191,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: .5rem 5rem 0 5rem;
+    padding: 0.5rem 5rem 0 5rem;
     text-align: end;
     background-color: var(--dark-background);
   }

@@ -100,30 +100,30 @@ body {
           display: flex;
           flex-flow: column;
           justify-content: space-between;
-          figure {
+          & figure {
             position: relative;
             margin: 0;
             z-index: 2;
-            img {
+            & img {
               height: 45px;
               width: 45px;
               border-radius: 50%;
             }
-            figcaption {
+            & figcaption {
               display: none;
               position: absolute;
               text-wrap: nowrap;
               top: 22%;
               left: 53px;
             }
-          }
-          figure:hover img,
-          figure:focus img {
-            box-shadow: 0 0 0 1px var(--medium-purple);
-          }
-          figure:hover figcaption,
-          figure:focus figcaption {
-            display: block;
+            &:hover img,
+            &:focus img {
+              box-shadow: 0 0 0 1px var(--light-purple);
+            }
+            &:hover figcaption,
+            &:focus figcaption {
+              display: block;
+            }
           }
         }
         div.vertical-line {
@@ -188,5 +188,16 @@ body {
     padding: 0.5rem 5rem 0 5rem;
     text-align: end;
     background-color: var(--dark-background);
+  }
+}
+
+.highlight {
+  & figure {
+    & img {
+      box-shadow: 0 0 0 1px var(--medium-purple);
+    }
+    & figcaption {
+      display: block !important;
+    }
   }
 }

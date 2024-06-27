@@ -146,3 +146,10 @@ Webpack/*
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Robo's Environment Directories & Files
+node_modules/*
+src/*
+package-lock.json
+package.json
+public/index.html

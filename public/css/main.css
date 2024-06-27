@@ -140,11 +140,13 @@ body {
         }
       }
       article {
-        padding-top: 3rem;
+        padding: 3rem;
+        margin-top: 4rem;
         display: flex;
         flex-flow: column;
         width: 80%;
         align-items: center;
+        background: rgba(9, 10, 11, 0.75);
         h4 {
           align-self: baseline;
           img.audio-play {
@@ -200,4 +202,17 @@ body {
       display: block !important;
     }
   }
+}
+
+#background-image-container {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.15;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

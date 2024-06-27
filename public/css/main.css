@@ -147,6 +147,13 @@ body {
         align-items: center;
         h4 {
           align-self: baseline;
+          img.audio-play {
+            width: 30px;
+            height: 30px;
+            transform: translateY(-5px);
+            /* display: inline; */
+            display: none;
+          }
         }
         figure {
           text-align: center;

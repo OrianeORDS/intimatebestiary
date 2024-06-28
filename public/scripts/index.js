@@ -22,3 +22,16 @@ window.addEventListener("scroll", (event) => {
   backgroundImage = art !== "" ? backgroundImage : "";
   bgiElement.style.backgroundImage = backgroundImage;
 });
+
+//stop other playing audios
+document.querySelectorAll("#arts audio").forEach((audioQueried) => { 
+  audioQueried.addEventListener("play", (event) => {
+    let audioPlayed = event.target;
+    document.querySelectorAll("#arts audio").forEach((audioQueriedOnListener) => {
+      if (audioQueriedOnListener !== audioPlayed) {
+        audioQueriedOnListener.pause();
+        audioQueriedOnListener.currentTime = 0;
+      }
+    });
+  });
+});

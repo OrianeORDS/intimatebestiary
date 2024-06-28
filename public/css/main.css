@@ -146,15 +146,28 @@ body {
         flex-flow: column;
         width: 80%;
         align-items: center;
-        background: rgba(9, 10, 11, 0.05);
+
+        /* black transparent panel */
+        /* background: rgba(9, 10, 11, 0.5); */
+
+        /* white transparent panel */
+        background: rgba(248, 248, 255, 0.05);
+
+        /* if disabling the panel background, disable also box-shadow bellow */
+        box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black;
+
         h4 {
           align-self: baseline;
-          img.audio-play {
-            width: 30px;
-            height: 30px;
-            transform: translateY(-5px);
-            /* display: inline; */
-            display: none;
+        }
+        audio {
+          display: block;
+          display: none;
+          align-self: baseline;
+          height: 1.5rem;
+          border-radius: 4%/50%;
+          &:hover,
+          &:focus {
+            box-shadow: 0 0 5px 3px var(--medium-purple);
           }
         }
         figure {
@@ -163,13 +176,18 @@ body {
           img {
             max-height: calc(100vh - 2rem);
             max-width: 100%;
+            margin-bottom: 1rem;
+            box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black;
           }
           figcaption {
             text-align: center;
             font-weight: 500;
+            font-size: 1.6rem;
           }
         }
         .technique {
+          font-family: Arial, Helvetica, sans-serif;
+          font-style: italic;
           text-align: center;
           p {
             margin: 0;

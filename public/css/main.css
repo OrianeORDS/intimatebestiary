@@ -177,7 +177,7 @@ body {
             max-height: calc(100vh - 2rem);
             max-width: 100%;
             margin-bottom: 1rem;
-            box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black;
+            /* box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black; */
           }
           figcaption {
             text-align: center;
@@ -233,4 +233,41 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+#arts article figure {
+  * {
+    padding: 0;
+    margin: 0 !important;
+    box-sizing: border-box;  
+  }
+  .frame-outerBevel {
+    box-shadow: 4px 6px 12px 0 black;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(109, 84, 58) rgb(24, 19, 13) rgb(24, 19, 13)
+      rgb(109, 84, 58);
+  }
+  
+  .frame-flatSurface {
+    border: 12px solid rgb(65, 40, 16);
+  }
+  
+  .frame-innerBevel {
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(24, 19, 13) rgb(109, 84, 58) rgb(109, 84, 58)
+      rgb(24, 19, 13);
+      img { /* including mat and gold beveled edge of mat */
+        display: block;
+        clear: both;
+        height: 100%;
+        width: 100%;
+        padding: 7.5% 7.5% 10% 7.5%; /* Mat width */
+        background-color: beige !important; 	/* Mat color */
+        border-width: 3px;	/* Gold edge of mat */
+        border-style: solid;
+        border-color: rgb(207, 166, 0) rgb(207, 166, 0) rgb(145, 110, 0) rgb(145, 110, 0);
+        }
+  }
 }

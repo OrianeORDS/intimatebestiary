@@ -35,3 +35,21 @@ document.querySelectorAll("#arts audio").forEach((audioQueried) => {
     });
   });
 });
+
+// insert image on a frame
+// new code based on CSS from John Skowronski (@john_skowronski)
+// https://codepen.io/john_skowronski/pen/Egqqjy
+// pair css included on main.css
+document.querySelectorAll("#arts article figure img").forEach((artFigure) => {
+  let newHTML = `
+<div class="frame-outerBevel">
+  <div class="frame-flatSurface">
+    <div class="frame-innerBevel">
+      ${artFigure.outerHTML}
+    </div>
+  </div>
+</div>
+`;
+artFigure.outerHTML = newHTML;
+console.log(artFigure);
+});

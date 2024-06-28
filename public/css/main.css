@@ -176,10 +176,10 @@ body {
             padding: 0;
           }
         }
+        &:last-child {
+          margin-bottom: 3rem;
+        }
       }
-    }
-    #arts:last-child {
-      margin-bottom: 5rem;
     }
   }
   footer {

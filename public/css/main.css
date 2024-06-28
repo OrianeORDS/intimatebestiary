@@ -199,6 +199,28 @@ body {
         }
       }
     }
+    #background-image-container {
+      position: fixed;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0.15;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      &.visible {
+        /* visibility: visible; */
+        opacity: 0.15;
+        transition: all 0.25s ease-in-out;
+      }
+      &.hidden {
+        /* visibility: hidden; */
+        opacity: 0;
+        transition: all 0.25s ease-in-out;
+      }
+    }
   }
   footer {
     position: fixed;
@@ -220,17 +242,4 @@ body {
       display: block !important;
     }
   }
-}
-
-#background-image-container {
-  position: fixed;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.15;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }

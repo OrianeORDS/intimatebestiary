@@ -5,6 +5,7 @@ window.addEventListener("scroll", (event) => {
   let artsNavGallery = document.querySelectorAll("#nav-gallery li");
   let scroll = this.scrollY;
 
+  let art;
   for (art of Array.from(arts).reverse()) {
     if (scroll + 1 >= art.offsetTop) {
       break;
@@ -22,7 +23,8 @@ window.addEventListener("scroll", (event) => {
     .getComputedStyle(bgiElement)
     .getPropertyValue("background-image");
   let newImage = `url('public/images/arts/paintings/${art.id}_lr.jpg')`;
-  newImage = art !== "" ? newImage : "";
+  // newImage = art !== "" ? newImage : "";
+  newImage = art && newImage;
 
   console.log(currentImage);
   console.log(newImage.replace(/url\('/, "").replace(/'\)/, ""));

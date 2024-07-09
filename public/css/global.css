@@ -11,6 +11,23 @@
   --intense-green: #30646b;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--medium-purple);
+}
 h1 {
   font-size: 3rem;
 }
@@ -34,10 +51,13 @@ a:hover {
   color: var(--light-purple);
 }
 
-.description p {
-  margin: 1.5rem 0 1rem 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+.description {
+  color: var(--light-purple);
+  p {
+    margin: 1.5rem 0 1rem 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 }
 
 .hide {
@@ -50,7 +70,7 @@ a:hover {
 html {
   body {
     background-color: var(--dark-background);
-    color: var(--clear-text);
+    color: var(--light-purple);
     font-family: "Oswald", sans-serif;
     width: 80%;
     margin: 0 auto;
@@ -59,10 +79,11 @@ html {
 
     footer {
       position: fixed;
-      left: 0;
+      right: 0;
       bottom: 0;
       width: 100%;
       text-align: end;
+      padding: 0 5rem;
       background-color: var(--dark-background);
     }
   }

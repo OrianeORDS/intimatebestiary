@@ -1,11 +1,3 @@
-body > header > *,
-body > header > *::before,
-body > header > *::after {
-  margin: none;
-  padding: none;
-  box-sizing: inherit;
-}
-
 html > body > header {
   .navigation--desktop {
     .navigation__checkbox {

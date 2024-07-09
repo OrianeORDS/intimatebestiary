@@ -142,12 +142,11 @@ html {
         top: 0;
         width: 100vw;
         height: 100vh;
-        opacity: 0.15;
-        background-image: url("../images/arts/paintings/ourson_lr.jpg");
+        opacity: 0.3;
+        background-image: url("../images/background/pattern_terrazzo.png");
         background-position: center;
         background-size: auto;
-              background-size: cover;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         background-position: center;
         &.visible {
           /* visibility: visible; */

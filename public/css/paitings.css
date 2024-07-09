@@ -1,59 +1,7 @@
-:root {
-  --dark-background: #090a0b;
-  --clear-text: ghostwhite;
-  /* purple */
-  --light-purple: #d4c3d8;
-  --medium-purple: #9783b4;
-  --intense-purple: #402666;
-  /* green */
-  --light-green: #dee8e3;
-  --medium-green: #7ed6ac;
-  --intense-green: #30646b;
-}
-
-h1 {
-  font-size: 3rem;
-}
-h2 {
-  font-size: 1.8rem;
-}
-h3 {
-  font-size: 1.9rem;
-}
-h4 {
-  font-size: 1.8rem;
-}
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: var(--medium-purple);
-}
-a:hover {
-  color: var(--light-purple);
-}
-
-.description p {
-  margin: 1.5rem 0 1rem 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.hide {
-  transition: all 0.2s ease-in-out;
-  overflow: hidden;
-  height: 0;
-  opacity: 0;
-}
+@import url("./global.css");
+@import url("./nav.css");
 
 body {
-  background-color: var(--dark-background);
-  color: var(--clear-text);
-  font-family: "Oswald", sans-serif;
-  width: 80%;
-  margin: 0 auto;
-
   main {
     width: 90%;
     margin: 2rem auto;
@@ -61,24 +9,8 @@ body {
       text-align: center;
       margin: 4rem 0 2rem 0;
     }
-    #about-project {
-      margin: 4rem 0 2rem 0;
-      article {
-        width: 80%;
-        margin: 0 auto;
-        h3 {
-          text-align: center;
-        }
-      }
-    }
-    #about-project:hover #project-description {
-      transition: all 0.6s ease-in-out;
-      overflow: hidden;
-      height: 100%;
-      opacity: 1;
-    }
 
-    #arts {
+    #paitings {
       display: flex;
       flex-flow: column;
       margin: 3rem 0 2rem 0;
@@ -222,17 +154,7 @@ body {
       }
     }
   }
-  footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 0.5rem 5rem 0 5rem;
-    text-align: end;
-    background-color: var(--dark-background);
-  }
 }
-
 .highlight {
   & figure {
     & img {

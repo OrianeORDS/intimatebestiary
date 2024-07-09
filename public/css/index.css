@@ -1,0 +1,32 @@
+@import url("./global.css");
+@import url("./nav.css");
+
+html {
+  body {
+    main {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        text-align: center;
+      }
+
+      #background-image > #background-image-container {
+        position: fixed;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.25;
+        background-image: url("../images/arts/paintings/ourson_lr.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    footer {
+      background-color: transparent;
+      text-align: center;
+    }
+  }
+}

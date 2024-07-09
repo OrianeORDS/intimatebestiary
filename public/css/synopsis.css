@@ -1,0 +1,47 @@
+@import url("./global.css");
+@import url("./nav.css");
+
+html {
+  body {
+    main {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        text-align: center;
+      }
+      #about-project {
+        margin: 4rem 0 2rem 0;
+        article {
+          width: 80%;
+          margin: 0 auto;
+          h3 {
+            text-align: center;
+          }
+        }
+        &:hover #project-description {
+          transition: all 0.6s ease-in-out;
+          overflow: hidden;
+          height: 100%;
+          opacity: 1;
+        }
+      }
+
+      #background-image > #background-image-container {
+        position: fixed;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.25;
+        background-image: url("../images/arts/paintings/ourson_lr.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    footer {
+      text-align: center;
+    }
+  }
+}

@@ -1,5 +1,3 @@
-document.querySelector("footer p").append(` ${new Date().getFullYear()}`);
-
 window.addEventListener("scroll", (event) => {
   let arts = document.querySelectorAll("#arts article");
   let artsNavGallery = document.querySelectorAll("#nav-gallery li");

@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="png"
-      href="./public/images/favicon.png"
-    />
+    <link rel="icon" type="png" href="./public/images/favicon.png" />
     <title>Bestiaire Intime : apprivoiser les blessures de l'enfance</title>
 
     <link
@@ -29,8 +25,8 @@
   </head>
 
   <body>
-    <header>
-      <nav class="navigation navigation--desktop">
+    <header class="navigation">
+      <nav class="navigation--desktop">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
         <label for="navi-toggle" class="navigation__button">
           <span class="navigation__icon">&nbsp;</span>
@@ -39,20 +35,30 @@
         <div class="navigation__nav">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="./views/infos.html" class="navigation__link">Infos</a>
+              <a href="./views/infos.html" class="navigation__link">Synopsis</a>
+            </li>
+            <li class="navigation__item">
+              <a href="./views/infos.html" class="navigation__link"
+                >Peinture et textes</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="./views/infos.html" class="navigation__link"
+                >Sculptures</a
+              >
             </li>
             <li class="navigation__item">
               <a
                 href="https://orianeords.github.io/ORDSwebdev/"
                 class="navigation__link"
-                >Oriane RDS</a
+                >Infos</a
               >
             </li>
           </ul>
         </div>
       </nav>
 
-      <nav class="navigation navigation--phone">
+      <nav class="navigation--phone">
         <ul>
           <li><a href="index.html">Bestiaire Intime</a></li>
           <li><a href="./views/infos.html">Infos</a></li>
@@ -77,7 +83,10 @@
 
       <section id="about-project">
         <article>
-          <h3>Synopsis > Une exposition de dessins pour rendre visible les conséquences des violences faites aux enfants.</h3>
+          <h3>
+            Synopsis > Une exposition de dessins pour rendre visible les
+            conséquences des violences faites aux enfants.
+          </h3>
           <div id="project-description" class="description hide">
             <p>
               Le Bestiaire intime comprend 9 dessins d’animaux, accompagnés d’un
@@ -119,8 +128,7 @@
       </section>
 
       <section id="arts">
-
-        <h3> Peintures et poème > créer depuis l’amnésie traumatique </h3>
+        <h3>Peintures et poème > créer depuis l’amnésie traumatique</h3>
         <nav id="nav-gallery">
           <ul>
             <a href="#ourson">
@@ -228,7 +236,12 @@
 
         <article id="ourson" class="ourson">
           <h4>Ourson</h4>
-          <audio src="./public/audio/arts/ourson.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <audio
+            src="./public/audio/arts/ourson.mp3"
+            type="audio/mpeg"
+            controls
+            controlsList="nodownload"
+          ></audio>
           <figure>
             <img
               src="./public/images/arts/paintings/ourson_lr.jpg"
@@ -265,7 +278,12 @@
         </article>
         <article id="girafe" class="girafe">
           <h4>Girafe</h4>
-          <audio src="./public/audio/arts/girafe.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <audio
+            src="./public/audio/arts/girafe.mp3"
+            type="audio/mpeg"
+            controls
+            controlsList="nodownload"
+          ></audio>
           <div class="description">
             <p>
               Elle n’est pas très différente d’une girafe ordinaire : un très
@@ -310,7 +328,12 @@
         </article>
         <article id="hippopotame" class="hippopotame">
           <h4>Hippopotame</h4>
-          <audio src="./public/audio/arts/hippopotame.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <audio
+            src="./public/audio/arts/hippopotame.mp3"
+            type="audio/mpeg"
+            controls
+            controlsList="nodownload"
+          ></audio>
           <div class="description">
             <p>
               J’entends des cris à l’intérieur de moi par intermittence. Ce
@@ -369,7 +392,12 @@
         </article>
         <article id="lemuriens" class="lemuriens">
           <h4>Lémuriens</h4>
-          <audio src="./public/audio/arts/lemuriens.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <audio
+            src="./public/audio/arts/lemuriens.mp3"
+            type="audio/mpeg"
+            controls
+            controlsList="nodownload"
+          ></audio>
           <div class="description">
             <p>
               Toute invitation déclenche chez moi de la joie enfantine et de
@@ -421,7 +449,12 @@
         </article>
         <article id="panthere" class="panthere">
           <h4>Panthère</h4>
-          <audio src="./public/audio/arts/panthere.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <audio
+            src="./public/audio/arts/panthere.mp3"
+            type="audio/mpeg"
+            controls
+            controlsList="nodownload"
+          ></audio>
           <div class="description">
             <p>
               Je suis une grande anxieuse, je ressens toujours de la petite
@@ -483,7 +516,12 @@
         </article>
         <article id="rhinoceros" class="rhinoceros">
           <h4>Rhinocéros</h4>
-          <audio src="./public/audio/arts/rhinoceros.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <audio
+            src="./public/audio/arts/rhinoceros.mp3"
+            type="audio/mpeg"
+            controls
+            controlsList="nodownload"
+          ></audio>
           <div class="description">
             <p>
               Dans la vie, on nous répète assez que « mademoiselle il faut
@@ -545,7 +583,12 @@
         </article>
         <article id="scarabee" class="scarabee">
           <h4>Scarabée</h4>
-          <audio src="./public/audio/arts/scarabee.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <audio
+            src="./public/audio/arts/scarabee.mp3"
+            type="audio/mpeg"
+            controls
+            controlsList="nodownload"
+          ></audio>
           <div class="description">
             <p>
               D’aussi loin que ma mémoire remonte, j’aimais bien l’école, en
@@ -623,7 +666,12 @@
         </article>
         <article id="limace" class="limace">
           <h4>Limace</h4>
-          <audio src="./public/audio/arts/limace.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <audio
+            src="./public/audio/arts/limace.mp3"
+            type="audio/mpeg"
+            controls
+            controlsList="nodownload"
+          ></audio>
           <div class="description">
             <p>
               Ma limace s’appelle Nullisse. C’est un joli prénom pour une
@@ -673,7 +721,12 @@
         </article>
         <article id="louve-paon" class="louve-paon">
           <h4>Louve-Paon</h4>
-          <audio src="./public/audio/arts/louve-paon.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <audio
+            src="./public/audio/arts/louve-paon.mp3"
+            type="audio/mpeg"
+            controls
+            controlsList="nodownload"
+          ></audio>
           <div class="description">
             <p>
               Je suis devenue mi-louve mi-paon en même temps que je devenais
@@ -729,5 +782,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./public/scripts/index.js"></script>
+    <script src="./public/scripts/robo-scripts.js" type="module"></script>
   </body>
 </html>

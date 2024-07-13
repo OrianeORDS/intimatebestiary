@@ -53,8 +53,7 @@ body {
   font-family: 'Oswald', sans-serif;
   width: 80%;
   margin: 0 auto;
-  min-width: 400px;
-  box-sizing: border-box;
+
   main {
     width: 90%;
     margin: 2rem auto;

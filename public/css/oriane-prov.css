@@ -1,0 +1,32 @@
+
+/* ORIANE => HOME=> HEADER */ 
+
+#home-header__bgpcontainer {
+  position: fixed;
+  z-index: -2;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.15;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/public/images/background/pattern_terrazzo.png");
+}
+
+
+#home-header__bgicontainer {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.15;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/public/images/arts/paintings/ourson_lr.jpg");
+}
+  

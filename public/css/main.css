@@ -50,7 +50,7 @@ a:hover {
 body {
   background-color: var(--dark-background);
   color: var(--clear-text);
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   width: 80%;
   margin: 0 auto;
 

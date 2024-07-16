@@ -6,13 +6,6 @@
     <link rel="icon" type="png" href="./public/images/favicon.png" />
     <title>Bestiaire Intime : apprivoiser les blessures de l'enfance</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,8 +13,7 @@
       rel="stylesheet"
     />
 
-    <link href="./public/css/main.css" rel="stylesheet" />
-    <link href="./public/css/robo-css.css" rel="stylesheet" />
+    <link href="./public/css/index.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -34,30 +26,15 @@
         <div class="navigation__background">&nbsp;</div>
         <div class="navigation__nav">
           <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="./views/infos.html" class="navigation__link">Synopsis</a>
-            </li>
-            <li class="navigation__item">
-              <a href="./views/infos.html" class="navigation__link"
-                >Peinture et textes</a
-              >
-            </li>
-            <li class="navigation__item">
-              <a href="./views/infos.html" class="navigation__link"
-                >Sculptures</a
-              >
-            </li>
-            <li class="navigation__item">
-              <a
-                href="https://orianeords.github.io/ORDSwebdev/"
-                class="navigation__link"
-                >Infos</a
-              >
+            <li class="navigation__item"> <a href="#about-project" class="navigation__link">About Project</a> </li>
+            <li class="navigation__item"> <a href="#infos" class="navigation__link">Synopsis</a> </li>
+            <li class="navigation__item"> <a href="#paintings" class="navigation__link">Peinture et textes</a> </li>
+            <li class="navigation__item"> <a href="#sculptures" class="navigation__link">Sculptures</a> </li>
+            <li class="navigation__item"> <a href="#infos" class="navigation__link">Infos</a>
             </li>
           </ul>
         </div>
       </nav>
-
       <nav class="navigation--phone">
         <ul>
           <li><a href="index.html">Bestiaire Intime</a></li>
@@ -72,70 +49,27 @@
     <main>
       <header>
         <h1>
-          Bestiaire Intime : <br />
-          apprivoiser les blessures de l'enfance
+          Bestiaire Intime
         </h1>
         <h2>
-          Une exposition de dessins pour rendre visible les conséquences des
-          violences faites aux enfants.
+          apprivoiser les blessures de l'enfance
         </h2>
       </header>
 
-      <section id="about-project">
-        <article>
-          <h3>
-            Synopsis > Une exposition de dessins pour rendre visible les
-            conséquences des violences faites aux enfants.
-          </h3>
-          <div id="project-description" class="description hide">
-            <p>
-              Le Bestiaire intime comprend 9 dessins d’animaux, accompagnés d’un
-              texte court. Chaque animal incarne un état émotionnel intense, une
-              petite brisure d’identité. Par exemple, le long cou de la Girafe
-              permet de tenir la tête hors de l’orage, l’Hippopotame hurle la
-              honte existentielle qui hante les victimes de violences sexuelles,
-              l’Ourson donne vie à la fatigue dépressive, celle qui cloue au
-              canapé.
-            </p>
-            <p>
-              Tous ces animaux sont nés du ventre sombre du traumatisme. En
-              revanche, leur représentation se veut lumineuse, et directement
-              accessible. Les textes, autant que les dessins, sont des supports
-              pour apprivoiser des monstres blessés (qui trainaient sous le
-              tapis de ma conscience) et leur trouver un sens, une utilité, des
-              qualités.
-            </p>
-            <p>
-              Faire grandir ce jardin zoologique privé, c’est une manière de
-              survivre à l’inceste, en acceptant les vagues d’émotions
-              fossilisées qui m’enveloppent comme les couches d’un oignon. Par
-              la peinture, l’écriture et l’imagination, mes animaux du dedans
-              s’expriment, on s’apprivoise et on se soutient. Ainsi, je peux me
-              réconcilier avec des parties de moi qui étaient restées
-              prisonnières du passé et de l’amnésie traumatique.
-            </p>
-            <p>
-              Ce travail pourra toucher évidemment les survivant.es, celleux qui
-              cherchent sans cesse à se colmater de l’intérieur, mais également
-              un public plus large. Le Bestiaire intime permet à chacun et
-              chacune de s’interroger sur son propre monde intérieur. Car
-              personne ne sort indemne de l’enfance : il y a toujours des
-              morsures à panser, des fauves à apprivoiser, et une enfant
-              intérieure à consoler.
-            </p>
-          </div>
-        </article>
-      </section>
+      <section id="home">
 
-      <section id="arts">
-        <h3>Peintures et poème > créer depuis l’amnésie traumatique</h3>
+
+      </section>
+      <section id="paintings">
+
+        <h3> Peintures et poème > créer depuis l’amnésie traumatique </h3>
         <nav id="nav-gallery">
           <ul>
             <a href="#ourson">
               <li class="ourson">
                 <figure>
                   <img
-                    src="./public/images/arts/paintings/ourson_tn.jpg"
+                    src="../public/images/arts/paintings/ourson_tn.jpg"
                     alt="Ourson"
                   />
                   <figcaption>Ourson</figcaption>
@@ -146,7 +80,7 @@
               <li class="girafe">
                 <figure>
                   <img
-                    src="./public/images/arts/paintings/girafe_tn.jpg"
+                    src="../public/images/arts/paintings/girafe_tn.jpg"
                     alt="Girafe"
                   />
                   <figcaption>Girafe</figcaption>
@@ -157,7 +91,7 @@
               <li class="hippopotame">
                 <figure>
                   <img
-                    src="./public/images/arts/paintings/hippopotame_tn.jpg"
+                    src="../public/images/arts/paintings/hippopotame_tn.jpg"
                     alt="Hippopotame"
                   />
                   <figcaption>Hippopotame</figcaption>
@@ -168,7 +102,7 @@
               <li class="lemuriens">
                 <figure>
                   <img
-                    src="./public/images/arts/paintings/lemuriens_tn.jpg"
+                    src="../public/images/arts/paintings/lemuriens_tn.jpg"
                     alt="Lémuriens"
                   />
                   <figcaption>Lémuriens</figcaption>
@@ -179,7 +113,7 @@
               <li class="panthere">
                 <figure>
                   <img
-                    src="./public/images/arts/paintings/panthere_tn.jpg"
+                    src="../public/images/arts/paintings/panthere_tn.jpg"
                     alt="Panthère"
                   />
                   <figcaption>Panthère</figcaption>
@@ -190,7 +124,7 @@
               <li class="rhinoceros">
                 <figure>
                   <img
-                    src="./public/images/arts/paintings/rhinoceros_tn.jpg"
+                    src="../public/images/arts/paintings/rhinoceros_tn.jpg"
                     alt="Rhinocéros"
                   />
                   <figcaption>Rhinocéros</figcaption>
@@ -201,7 +135,7 @@
               <li class="scarabee">
                 <figure>
                   <img
-                    src="./public/images/arts/paintings/scarabee_tn.jpg"
+                    src="../public/images/arts/paintings/scarabee_tn.jpg"
                     alt="Scarabée"
                   />
                   <figcaption>Scarabée</figcaption>
@@ -212,7 +146,7 @@
               <li class="limace">
                 <figure>
                   <img
-                    src="./public/images/arts/paintings/limace_tn.jpg"
+                    src="../public/images/arts/paintings/limace_tn.jpg"
                     alt="Limace"
                   />
                   <figcaption>Limace</figcaption>
@@ -223,7 +157,7 @@
               <li class="louve-paon">
                 <figure>
                   <img
-                    src="./public/images/arts/paintings/louve-paon_tn.jpg"
+                    src="../public/images/arts/paintings/louve-paon_tn.jpg"
                     alt="Louve-Paon"
                   />
                   <figcaption>Louve-Paon</figcaption>
@@ -236,15 +170,10 @@
 
         <article id="ourson" class="ourson">
           <h4>Ourson</h4>
-          <audio
-            src="./public/audio/arts/ourson.mp3"
-            type="audio/mpeg"
-            controls
-            controlsList="nodownload"
-          ></audio>
+          <audio src="../public/audio/arts/ourson.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
           <figure>
             <img
-              src="./public/images/arts/paintings/ourson_lr.jpg"
+              src="../public/images/arts/paintings/ourson_lr.jpg"
               alt="Ourson"
             />
             <figcaption>Ourson</figcaption>
@@ -278,12 +207,17 @@
         </article>
         <article id="girafe" class="girafe">
           <h4>Girafe</h4>
-          <audio
-            src="./public/audio/arts/girafe.mp3"
-            type="audio/mpeg"
-            controls
-            controlsList="nodownload"
-          ></audio>
+          <audio src="../public/audio/arts/girafe.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <figure> <img src="../public/images/arts/paintings/girafe_lr.jpg" alt="Girafe"/>
+            <figcaption>Girafe</figcaption>
+          </figure>
+          <div class="technique">
+            <p>49x64,5cm sur papier noir, techniques mixtes</p>
+            <p>
+              (acrylique, crayon de couleur, paillettes, coll, coton, pastel
+              sec)
+            </p>
+          </div>
           <div class="description">
             <p>
               Elle n’est pas très différente d’une girafe ordinaire : un très
@@ -311,29 +245,20 @@
               souffle dans l’accalmie qu’elle m’aura permis d’aller chercher.
             </p>
           </div>
-          <figure>
-            <img
-              src="./public/images/arts/paintings/girafe_lr.jpg"
-              alt="Girafe"
-            />
-            <figcaption>Girafe</figcaption>
+        </article>
+        <article id="hippopotame" class="hippopotame">
+          <h4>Hippopotame</h4>
+          <audio src="../public/audio/arts/hippopotame.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <figure> <img src="../public/images/arts/paintings/hippopotame_lr.jpg" alt="Hippopotame"/> 
+            <figcaption>Hippopotame</figcaption>
           </figure>
           <div class="technique">
             <p>49x64,5cm sur papier noir, techniques mixtes</p>
             <p>
-              (acrylique, crayon de couleur, paillettes, coll, coton, pastel
-              sec)
+              (acrylique, gouache, crayon de couleur, paillettes, colle, pastel
+              gras)
             </p>
           </div>
-        </article>
-        <article id="hippopotame" class="hippopotame">
-          <h4>Hippopotame</h4>
-          <audio
-            src="./public/audio/arts/hippopotame.mp3"
-            type="audio/mpeg"
-            controls
-            controlsList="nodownload"
-          ></audio>
           <div class="description">
             <p>
               J’entends des cris à l’intérieur de moi par intermittence. Ce
@@ -375,29 +300,24 @@
               déchirants de mon Hippopotame ?
             </p>
           </div>
+        </article>
+        <article id="lemuriens" class="lemuriens">
+          <h4>Lémuriens</h4>
+          <audio src="../public/audio/arts/lemuriens.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
           <figure>
             <img
-              src="./public/images/arts/paintings/hippopotame_lr.jpg"
-              alt="Hippopotame"
+              src="../public/images/arts/paintings/lemuriens_lr.jpg"
+              alt="Lémuriens"
             />
-            <figcaption>Hippopotame</figcaption>
+            <figcaption>Lémuriens</figcaption>
           </figure>
           <div class="technique">
             <p>49x64,5cm sur papier noir, techniques mixtes</p>
             <p>
-              (acrylique, gouache, crayon de couleur, paillettes, colle, pastel
-              gras)
+              (crayon de couleur, paillettes, colle, pastel sec, acrylique,
+              laque)
             </p>
           </div>
-        </article>
-        <article id="lemuriens" class="lemuriens">
-          <h4>Lémuriens</h4>
-          <audio
-            src="./public/audio/arts/lemuriens.mp3"
-            type="audio/mpeg"
-            controls
-            controlsList="nodownload"
-          ></audio>
           <div class="description">
             <p>
               Toute invitation déclenche chez moi de la joie enfantine et de
@@ -432,29 +352,21 @@
               immergée, au temps du trauma. Il faut fuir.
             </p>
           </div>
+        </article>
+        <article id="panthere" class="panthere">
+          <h4>Panthère</h4>
+          <audio src="../public/audio/arts/panthere.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
           <figure>
-            <img
-              src="./public/images/arts/paintings/lemuriens_lr.jpg"
-              alt="Lémuriens"
-            />
-            <figcaption>Lémuriens</figcaption>
+            <img src="../public/images/arts/paintings/panthere_lr.jpg" alt="Panthère" />
+            <figcaption>Panthère</figcaption>
           </figure>
           <div class="technique">
             <p>49x64,5cm sur papier noir, techniques mixtes</p>
             <p>
-              (crayon de couleur, paillettes, colle, pastel sec, acrylique,
-              laque)
+              (crayon de couleur, paillettes, pastels gras, arylique, laque,
+              pastel sec)
             </p>
           </div>
-        </article>
-        <article id="panthere" class="panthere">
-          <h4>Panthère</h4>
-          <audio
-            src="./public/audio/arts/panthere.mp3"
-            type="audio/mpeg"
-            controls
-            controlsList="nodownload"
-          ></audio>
           <div class="description">
             <p>
               Je suis une grande anxieuse, je ressens toujours de la petite
@@ -499,29 +411,21 @@
               vivre sans y penser sans cesse.
             </p>
           </div>
-          <figure>
-            <img
-              src="./public/images/arts/paintings/panthere_lr.jpg"
-              alt="Panthère"
-            />
-            <figcaption>Panthère</figcaption>
-          </figure>
-          <div class="technique">
-            <p>49x64,5cm sur papier noir, techniques mixtes</p>
-            <p>
-              (crayon de couleur, paillettes, pastels gras, arylique, laque,
-              pastel sec)
-            </p>
-          </div>
         </article>
         <article id="rhinoceros" class="rhinoceros">
           <h4>Rhinocéros</h4>
-          <audio
-            src="./public/audio/arts/rhinoceros.mp3"
-            type="audio/mpeg"
-            controls
-            controlsList="nodownload"
-          ></audio>
+          <audio src="../public/audio/arts/rhinoceros.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <figure>
+            <img
+              src="../public/images/arts/paintings/rhinoceros_lr.jpg"
+              alt="Rhinocéros"
+            />
+            <figcaption>Rhinocéros</figcaption>
+          </figure>
+          <div class="technique">
+            <p>49x64,5cm sur papier noir, technique mixtes</p>
+            <p>(acrylique, paillettes, colle, pastel gras,)</p>
+          </div>
           <div class="description">
             <p>
               Dans la vie, on nous répète assez que « mademoiselle il faut
@@ -569,26 +473,23 @@
               scarabée que rien ne saurait dérouter prend le relai.
             </p>
           </div>
-          <figure>
-            <img
-              src="./public/images/arts/paintings/rhinoceros_lr.jpg"
-              alt="Rhinocéros"
-            />
-            <figcaption>Rhinocéros</figcaption>
-          </figure>
-          <div class="technique">
-            <p>49x64,5cm sur papier noir, technique mixtes</p>
-            <p>(acrylique, paillettes, colle, pastel gras,)</p>
-          </div>
         </article>
         <article id="scarabee" class="scarabee">
           <h4>Scarabée</h4>
-          <audio
-            src="./public/audio/arts/scarabee.mp3"
-            type="audio/mpeg"
-            controls
-            controlsList="nodownload"
-          ></audio>
+          <audio src="../public/audio/arts/scarabee.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <figure>
+            <img
+              src="../public/images/arts/paintings/scarabee_lr.jpg"
+              alt="Scarabée"
+            />
+            <figcaption>Scarabée</figcaption>
+          </figure>
+          <div class="technique">
+            <p>49x64,5cm sur papier noir, techniques mixtes</p>
+            <p>
+              (pastels secs, laque, crayon de couleur, pastels gras, acrylique)
+            </p>
+          </div>
           <div class="description">
             <p>
               D’aussi loin que ma mémoire remonte, j’aimais bien l’école, en
@@ -650,28 +551,21 @@
               fou, ou un poulet sans tête, ce qui est tout comme.
             </p>
           </div>
-          <figure>
-            <img
-              src="./public/images/arts/paintings/scarabee_lr.jpg"
-              alt="Scarabée"
-            />
-            <figcaption>Scarabée</figcaption>
-          </figure>
-          <div class="technique">
-            <p>49x64,5cm sur papier noir, techniques mixtes</p>
-            <p>
-              (pastels secs, laque, crayon de couleur, pastels gras, acrylique)
-            </p>
-          </div>
         </article>
         <article id="limace" class="limace">
           <h4>Limace</h4>
-          <audio
-            src="./public/audio/arts/limace.mp3"
-            type="audio/mpeg"
-            controls
-            controlsList="nodownload"
-          ></audio>
+          <audio src="../public/audio/arts/limace.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+          <figure>
+            <img
+              src="../public/images/arts/paintings/limace_lr.jpg"
+              alt="Limace"
+            />
+            <figcaption>Limace</figcaption>
+          </figure>
+          <div class="technique">
+            <p>49x64,5cm sur papier noir, techniques mixtes</p>
+            <p>(crayon de couleur, paillettes, colle, pastel sec)</p>
+          </div>
           <div class="description">
             <p>
               Ma limace s’appelle Nullisse. C’est un joli prénom pour une
@@ -707,26 +601,21 @@
               précieusement les paillettes qu’elle étale autour d’elle.
             </p>
           </div>
+        </article>
+        <article id="louve-paon" class="louve-paon">
+          <h4>Louve-Paon</h4>
+          <audio src="../public/audio/arts/louve-paon.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
           <figure>
             <img
-              src="./public/images/arts/paintings/limace_lr.jpg"
-              alt="Limace"
+              src="../public/images/arts/paintings/louve-paon_lr.jpg"
+              alt="Louve-Paon"
             />
-            <figcaption>Limace</figcaption>
+            <figcaption>Louve-Paon</figcaption>
           </figure>
           <div class="technique">
             <p>49x64,5cm sur papier noir, techniques mixtes</p>
             <p>(crayon de couleur, paillettes, colle, pastel sec)</p>
           </div>
-        </article>
-        <article id="louve-paon" class="louve-paon">
-          <h4>Louve-Paon</h4>
-          <audio
-            src="./public/audio/arts/louve-paon.mp3"
-            type="audio/mpeg"
-            controls
-            controlsList="nodownload"
-          ></audio>
           <div class="description">
             <p>
               Je suis devenue mi-louve mi-paon en même temps que je devenais
@@ -754,19 +643,126 @@
               bon moment. Sa crinière est un refuge de chaleur et d’amour.
             </p>
           </div>
-          <figure>
-            <img
-              src="./public/images/arts/paintings/louve-paon_lr.jpg"
-              alt="Louve-Paon"
-            />
-            <figcaption>Louve-Paon</figcaption>
-          </figure>
-          <div class="technique">
-            <p>49x64,5cm sur papier noir, techniques mixtes</p>
-            <p>(crayon de couleur, paillettes, colle, pastel sec)</p>
+        </article>
+      </section>      
+
+      <section id="sculptures">
+
+        <h3> Sculptures > incarner la résilience</h3>
+
+        <div class="carousel">
+          <ul>
+            <li><img src="../public/images/arts/sculptures/girafe_sculpt_lr.png"></li>
+            <li><img src="../public/images/arts/sculptures/scarab_sculpt_lr.png"></li>
+            <li><img src="../public/images/arts/sculptures/slug_sculpt_lr.png"></li>
+            <li><img src="../public/images/arts/sculptures/woolf_sculpt_lr.png"></li>
+          </ul>
+          <div class="carousel-dots"></div>
+        </div>
+  
+      </section>
+
+      <!-- Infos -->
+      <section id="infos">
+        <!-- Description of the exhibitions purpose -->
+        <article id="info__about-project">
+          <h3>
+            Synopsis > Une exposition de dessins pour rendre visible les
+            conséquences des violences faites aux enfants.
+          </h3>
+          <div id="project-description" class="description hide">
+            <p>
+              Le Bestiaire intime comprend 9 dessins d’animaux, accompagnés d’un
+              texte court. Chaque animal incarne un état émotionnel intense, une
+              petite brisure d’identité. Par exemple, le long cou de la Girafe
+              permet de tenir la tête hors de l’orage, l’Hippopotame hurle la
+              honte existentielle qui hante les victimes de violences sexuelles,
+              l’Ourson donne vie à la fatigue dépressive, celle qui cloue au
+              canapé.
+            </p>
+            <p>
+              Tous ces animaux sont nés du ventre sombre du traumatisme. En
+              revanche, leur représentation se veut lumineuse, et directement
+              accessible. Les textes, autant que les dessins, sont des supports
+              pour apprivoiser des monstres blessés (qui trainaient sous le
+              tapis de ma conscience) et leur trouver un sens, une utilité, des
+              qualités.
+            </p>
+            <p>
+              Faire grandir ce jardin zoologique privé, c’est une manière de
+              survivre à l’inceste, en acceptant les vagues d’émotions
+              fossilisées qui m’enveloppent comme les couches d’un oignon. Par
+              la peinture, l’écriture et l’imagination, mes animaux du dedans
+              s’expriment, on s’apprivoise et on se soutient. Ainsi, je peux me
+              réconcilier avec des parties de moi qui étaient restées
+              prisonnières du passé et de l’amnésie traumatique.
+            </p>
+            <p>
+              Ce travail pourra toucher évidemment les survivant.es, celleux qui
+              cherchent sans cesse à se colmater de l’intérieur, mais également
+              un public plus large. Le Bestiaire intime permet à chacun et
+              chacune de s’interroger sur son propre monde intérieur. Car
+              personne ne sort indemne de l’enfance : il y a toujours des
+              morsures à panser, des fauves à apprivoiser, et une enfant
+              intérieure à consoler.
+            </p>
           </div>
         </article>
+        <article id="info__artist">
+          <h3>L'artiste > Oriane Royon Da Silva</h3>
+          <p>
+            J'ai imaginé ce projet artistique pendant l’année 2023, à l’occasion
+            d'une levée d'amnésie traumatique, lorsque sont remontés des bribes
+            de souvenirs d’une violence inouïe. J'ai été contrainte d’affronter
+            des spectres que j’aurais largement préféré me taire à moi-même.
+          </p>
+          <p>
+            Dire était une étape nécessaire de mon chemin de guérison, bien que
+            de l'inceste, on ne guérisse jamais vraiment. J’ai tenté par la même
+            de contribuer à la création et à la dissémination de connaissances
+            collectives, pour reprendre du pouvoir sur nos vies. Le Bestiaire
+            Intime, est projet artistique, mais aussi politique.
+          </p>
+          <br> 
+        </article>
+      <!-- Place and Date -->
+      <article id="info__event">
+          <h3>Où voir l'exposition ? > Bestiaire Intime en chair et en os</h3>
+          <div>
+            <p>Du 12 au 29 Novembre 2024</p>
+            <p>Gallerie Longue Vue, 16 rue Méchin, 93450 L'Île-Saint-Denis</p>
+          </div>
+        </article>
+        <article id="info__photographer">
+          <p>
+            Les photographies des oeuvres ont été prises par 
+            <a href="http://louiseoligny.com/"> Louise Oligny </a>
+          </p>
+        </article>
+        <article id="info__something_else">
+          <!--We could also do button to dowload the communication flyer when it's ready (in septembre I hoppe?)  -->
+        </article>
       </section>
+
+      <!-- Contact -->
+      <section id="contacts">
+        <h3>Contacts</h3>
+        <nav>
+          <ul>
+            <li>
+              <a href="https://orianeords.github.io/ORDSwebdev/"
+                >Site web d'Oriane ORDS</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/longuevue.expo/?hl=fr"
+                >Compte instagram de la Gallerie Longue Vue</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
+
       <section id="background-image">
         <div id="background-image-container"></div>
       </section>
@@ -776,12 +772,14 @@
       <p>Copyright © Oriane RDS</p>
     </footer>
 
-    <script
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     <script src="./public/scripts/index.js"></script>
     <script src="./public/scripts/robo-scripts.js" type="module"></script>
+    <script src="./public/scripts/paitings.js"></script>
+    <script src="./public/scripts/carousel.js"></script>
   </body>
 </html>

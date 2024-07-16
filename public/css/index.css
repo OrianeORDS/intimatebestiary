@@ -53,7 +53,52 @@ html {
     } 
 
 
-    
+  /* FOOTER */
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: end;
+    padding: 0 5rem;
+    background-color: transparent;
+    p {
+      background-color: transparent;
+    }
+    }
+
+
+
+/* HOME SECTION */
+  #home__bgpcontainer {
+    position: fixed;
+    z-index: -2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/public/images/background/pattern_terrazzo.png");
+    /* background-color: darkblue;   //==> test*/
+  }
+  #home-header__bgicontainer {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.15;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/public/images/arts/paintings/ourson_lr.jpg");
+  }
+
+
 /* INFOS SECTION */
     #info__about-project {
         margin: 4rem 0 2rem 0;
@@ -83,10 +128,6 @@ html {
         width: 100%;
         justify-content: center;
         align-items: center;
-
-        h3 {
-          align-self: self-start;
-        }
 
         #nav-gallery {
           position: fixed;
@@ -154,10 +195,6 @@ html {
           /* if disabling the panel background, disable also box-shadow bellow */
           box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black;
 
-          h4 {
-            align-self: self-start;
-            margin-bottom: 2rem;
-          }
           audio {
             display: block;
             align-self: baseline;
@@ -199,6 +236,7 @@ html {
         }
       }
 
+/* SCULPTURES SECTION */ 
       #sculptures {
         display: flex;
         flex-flow: column;
@@ -230,20 +268,12 @@ html {
         background-position: center;
       }
     }
-    footer {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      text-align: end;
-      padding: 0 5rem;
-      background-color: transparent;
-      p {
-        background-color: transparent;
-      }
-    }
-  }
-}
+    
+    
+
+
+
+/* WHERE IS IT APPLIED IN HTML ? DELETE OR REAPPLY ? */ 
 .highlight {
   & figure {
     & img {
@@ -253,35 +283,4 @@ html {
       display: block !important;
     }
   }
-}
-
-/* ORIANE => HOME=> HEADER */
-
-#home__bgpcontainer {
-  position: fixed;
-  z-index: -2;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: 1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("/public/images/background/pattern_terrazzo.png");
-  /* background-color: darkblue;   //==> test*/
-}
-
-#home-header__bgicontainer {
-  position: fixed;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.15;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("/public/images/arts/paintings/ourson_lr.jpg");
 }

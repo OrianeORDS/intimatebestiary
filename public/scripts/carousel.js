@@ -15,6 +15,7 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
   });
   if (index.current > -1) {
     carousel.addEventListener("click", (e) => {
+      carousel.querySelectorAll(".carousel-dots div").forEach(d => d.classList.remove('carousel-dots-active'));
       if (e.target.classList.contains("carousel-previous"))
         index.current = index.previous;
       if (e.target.classList.contains("carousel-next"))
@@ -25,12 +26,16 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
           img.classList.add("carousel-previous");
         } else if (i === index.current) {
           img.classList.add("carousel-current");
+          carousel.querySelector(".carousel-dots div:nth-child("+(i+1)+")").classList.add('carousel-dots-active');
         } else if (i === index.next) {
           img.classList.add("carousel-next");
         } else {
           img.classList.add("carousel-hidden");
         }
       });
+      if ( Array.from(document.querySelectorAll(".carousel-dots div")).includes(e.target) ) {
+        //match nth element to the index
+      }
     });
     carousel.click();
   }

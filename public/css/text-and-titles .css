@@ -1,0 +1,38 @@
+/* XXXXXXXX TITLES XXXXXXXX */ /*except for home page*/
+  #synopsis {
+    background-color: red;
+  }
+  h1, h2, h3, h4, h5, h6 {
+      font-family: "Oswald", sans-serif;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.9rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  article {
+    padding: 3rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    align-items: center;
+
+    background: hsla(0, 0%, 0%, 0.6);
+    /* if disabling the panel background, disable also box-shadow bellow */
+    box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black;
+  }
+
+  .description {
+    p {
+      background-color: blueviolet;
+      margin: 1.5rem 0;
+    }
+  }

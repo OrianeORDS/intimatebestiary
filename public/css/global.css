@@ -37,8 +37,8 @@ html {
         text-align: center;
         margin: 4rem 0 2rem 0;
       }
-    } 
-  }
+  } 
+}
 
 
   a {
@@ -52,7 +52,9 @@ html {
     list-style: none;
   }
   
-
+  section &:last-child {
+    margin-bottom: 3rem;
+  }
 
   /* not used at the moment in the html  */
   .hide {

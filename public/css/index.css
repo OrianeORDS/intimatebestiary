@@ -1,8 +1,7 @@
 @import url("./global.css");
 @import url("./main-navbar.css");
-@import url("./home.css");
-@import url("/.titles.css"); 
 @import url("./carousel.css");
+@import url("./text-and-titles.css");
 
 
 
@@ -22,7 +21,8 @@
     background-image: url("/public/images/background/pattern_terrazzo.png");
     /* background-color: darkblue;   //==> test*/
   }
-  #home-header__bgicontainer {
+
+  #home__bgicontainer {
     position: fixed;
     z-index: -1;
     left: 0;
@@ -36,7 +36,7 @@
     background-image: url("/public/images/arts/paintings/ourson_lr.jpg");
   }
 
-    
+
 /* XXXXXXXXXXXXX PAINTINGS SECTION XXXXXXXXXXXXX */ 
   .highlight {
     & figure {
@@ -49,21 +49,7 @@
     }
   }
 
-  .description {
-    p {
-      margin: 1.5rem 0;
-    }
-  }
-
-  #paintings {
-    display: flex;
-    flex-flow: column;
-    /* margin: 3rem 0 2rem 0; */
-    width: 100%;
-    justify-content: center;
-    align-items: center; } 
-
-  #paintings #nav-gallery {
+  #nav-gallery {
     position: fixed;
     left: 0px;
     top: 15%;
@@ -117,21 +103,17 @@
     }
   }
 
-/* see if the ARTICLE TEXT STYLING can be un-cascaded in order to apply to the whole webpage */ 
 
-  #paintings article {
-    padding: 3rem;
-    margin-top: 4rem;
+  #paintings {
     display: flex;
     flex-flow: column;
-    width: 80%;
-    align-items: center;
+    /* margin: 3rem 0 2rem 0; */
+    width: 100%;
+    justify-content: center;
+    align-items: center; } 
 
-    background: hsla(0, 0%, 0%, 0.6);
-    /* if disabling the panel background, disable also box-shadow bellow */
-    box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black;
 
-    audio {
+   #paintings audio {
       display: block;
       align-self: baseline;
       height: 1.5rem;
@@ -141,7 +123,8 @@
         box-shadow: 0 0 5px 3px var(--medium-purple);
       }
     }
-    figure {
+
+   #paintings figure {
       text-align: center;
       width: 100%;
       img {
@@ -157,7 +140,8 @@
         font-size: 1.6rem;
       }
     }
-    .technique {
+
+  #paintings .technique {
       font-family: Arial, Helvetica, sans-serif;
       font-style: italic;
       text-align: center;
@@ -166,10 +150,7 @@
         padding: 0;
       }
     }
-    &:last-child {
-      margin-bottom: 3rem;
-    }
-  }
+
 
 
 /* XXXXXXXXXXXXX SCULPTURES SECTION  XXXXXXXXXXXXX*/ 

@@ -1,3 +1,7 @@
+
+
+
+
 :root {
   --dark-background: #090a0b;
   --clear-text: ghostwhite;
@@ -33,10 +37,6 @@ html {
   main {
       width: 90%;
       margin: 2rem auto;
-      header {
-        text-align: center;
-        margin: 4rem 0 2rem 0;
-      }
   } 
 }
 

@@ -1,35 +1,47 @@
-/* XXXXXXXX TITLES XXXXXXXX */ /*except for home page*/
+/* XXXXXXXX TITLES XXXXXXXX */
 
-  h1, h2, h3, h4, h5, h6 {
-      font-family: "Oswald", sans-serif;
-  }
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 1.8rem;
-  }
-  h3 {
-    font-size: 1.9rem;
-  }
-  h4 {
-    font-size: 1.8rem;
-  }
-  article {
-    padding: 3rem;
-    margin-top: 4rem;
-    display: flex;
-    flex-flow: column;
-    width: 80%;
-    align-items: center;
 
-    background: hsla(0, 0%, 0%, 0.6);
-    /* if disabling the panel background, disable also box-shadow bellow */
-    box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black;
-  }
+/* to be done : 
+    * left align every title in the section, see within the sections what is blocking header to be applied 
+    * 
+*/ 
 
-  .description {
-    p {
-      margin: 1.5rem 0;
-    }
-  }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+  text-align: left;
+}
+h1 {
+font-size: 3rem;
+}
+h2 {
+font-size: 1.8rem;
+}
+h3 {
+font-size: 1.9rem;
+}
+h4 {
+font-size: 1.8rem;
+}
+
+header, article {
+margin: 4rem 0 2rem 0;
+padding: 3rem;
+margin-top: 4rem;
+display: flex;
+flex-flow: column;
+width: 80%;
+align-items: center;
+text-align: left;
+/* background: hsla(0, 0%, 0%, 0.6); */
+/* if disabling the panel background, disable also box-shadow bellow */
+/* box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black; */
+}
+
+.description {
+p {
+  margin: 1.5rem 0;
+  line-height: 1.5; 
+  font-size: 1rem;
+}
+}

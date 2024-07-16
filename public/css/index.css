@@ -1,7 +1,7 @@
 @import url("./global.css");
 @import url("./main-navbar.css");
 @import url("./home.css");
-@import url("/.titles.css"); 
+@import url("/.text-and-titles.css"); 
 @import url("./carousel.css");
 
 
@@ -35,7 +35,6 @@
     background-position: center;
     background-image: url("/public/images/arts/paintings/ourson_lr.jpg");
   }
-
 
     
 /* XXXXXXXXXXXXX PAINTINGS SECTION XXXXXXXXXXXXX */ 

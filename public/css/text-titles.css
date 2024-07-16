@@ -1,7 +1,5 @@
 /* XXXXXXXX TITLES XXXXXXXX */ /*except for home page*/
-  #synopsis {
-    background-color: red;
-  }
+
   h1, h2, h3, h4, h5, h6 {
       font-family: "Oswald", sans-serif;
   }
@@ -32,7 +30,6 @@
 
   .description {
     p {
-      background-color: blueviolet;
       margin: 1.5rem 0;
     }
   }

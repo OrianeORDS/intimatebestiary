@@ -1,40 +1,13 @@
 @import url("./global.css");
 @import url("./main-navbar.css");
-@import url("./carousel.css");
-@import url("/.headers.css"); 
 @import url("./home.css");
+@import url("/.titles.css"); 
+@import url("./carousel.css");
 
 
 
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  &:hover {
-    color: var(--medium-purple);
-  }
-}
-
-.description {
-  p {
-    margin: 1.5rem 0;
-  }
-}
-
-.hide {
-  transition: all 0.33s ease-in-out;
-  overflow: hidden;
-  height: 0;
-  opacity: 0;
-}
-
-
-
-
-/* HOME SECTION */
+/*  XXXXXXXXXXXXX HOME SECTION  XXXXXXXXXXXXX*/
   #home__bgpcontainer {
     position: fixed;
     z-index: -2;
@@ -64,30 +37,8 @@ a {
   }
 
 
-/* INFOS SECTION */
-    #info__about-project {
-        margin: 4rem 0 2rem 0;
-        article {
-          width: 80%;
-          margin: 0 auto;
-          h3 {
-            text-align: center;
-          }
-        }
-        &:hover #project-description {
-          transition: all 0.6s ease-in-out;
-          overflow: hidden;
-          height: 100%;
-          opacity: 1;
-        }
-      }
-
-
-
     
-/* PAINTINGS SECTION */ 
-
-
+/* XXXXXXXXXXXXX PAINTINGS SECTION XXXXXXXXXXXXX */ 
   .highlight {
     & figure {
       & img {
@@ -96,6 +47,12 @@ a {
       & figcaption {
         display: block !important;
       }
+    }
+  }
+
+  .description {
+    p {
+      margin: 1.5rem 0;
     }
   }
 
@@ -161,6 +118,7 @@ a {
     }
   }
 
+/* see if the ARTICLE TEXT STYLING can be un-cascaded in order to apply to the whole webpage */ 
 
   #paintings article {
     padding: 3rem;
@@ -215,7 +173,7 @@ a {
   }
 
 
-/* SCULPTURES SECTION */ 
+/* XXXXXXXXXXXXX SCULPTURES SECTION  XXXXXXXXXXXXX*/ 
     #sculptures {
       display: flex;
       flex-flow: column;
@@ -248,10 +206,27 @@ a {
     }
 
     
-    
-    
 
-  /* XXXXXXXXXXXX  FOOTER  XXXXXXXXXXXXXX*/
+/* XXXXXXXXXXXXX INFOS SECTION XXXXXXXXXXXXX */
+  #info__about-project {
+    margin: 4rem 0 2rem 0;
+    article {
+      width: 80%;
+      margin: 0 auto;
+      h3 {
+        text-align: center;
+      }
+    }
+    &:hover #project-description {
+      transition: all 0.6s ease-in-out;
+      overflow: hidden;
+      height: 100%;
+      opacity: 1;
+    }
+  }
+    
+  
+/* XXXXXXXXXXXX  FOOTER  XXXXXXXXXXXXXX*/
   footer {
     position: fixed;
     left: 0;

@@ -39,3 +39,26 @@ html {
       }
     } 
   }
+
+
+  a {
+    text-decoration: none;
+    &:hover {
+      color: var(--medium-purple);
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+  
+
+
+  /* not used at the moment in the html  */
+  .hide {
+    transition: all 0.33s ease-in-out;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+  }
+  

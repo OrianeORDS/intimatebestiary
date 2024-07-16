@@ -79,12 +79,15 @@ html {
 
     footer {
       position: fixed;
-      right: 0;
+      left: 0;
       bottom: 0;
       width: 100%;
       text-align: end;
       padding: 0 5rem;
-      background-color: var(--dark-background);
+      background-color: transparent;
+      p {
+        
+      }
     }
   }
 }

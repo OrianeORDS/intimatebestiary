@@ -1,6 +1,6 @@
 @import url("./global.css");
 @import url("./nav.css");
-@import url('./carousel.css');
+@import url("./carousel.css");
 
 html {
   body {
@@ -13,25 +13,6 @@ html {
         margin: 4rem 0 2rem 0;
       }
 
-      #sculptures {
-        display: flex;
-        flex-flow: column;
-        margin: 3rem 0 2rem 0;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-
-        h3 {
-          align-self: self-start;
-          margin: 0 0 2rem 0;
-        }
-
-        div.carousel {
-          width: 120%;
-          height: 65vh;
-        }
-
-      }
       #background-image-container {
         position: fixed;
         z-index: -1;
@@ -69,5 +50,3 @@ html {
     }
   }
 }
-
-

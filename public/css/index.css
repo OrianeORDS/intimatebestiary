@@ -31,6 +31,8 @@ a {
   opacity: 0;
 }
 
+
+/* MAIN ELEMENTS at the root of the html skeleton  */ 
 html {
   body {
     background-color: var(--dark-background);
@@ -41,7 +43,7 @@ html {
     box-sizing: border-box;
   }
 
-    main {
+  main {
       width: 90%;
       margin: 2rem auto;
       header {
@@ -51,7 +53,9 @@ html {
     } 
 
 
-      #info__about-project {
+    
+/* INFOS SECTION */
+    #info__about-project {
         margin: 4rem 0 2rem 0;
         article {
           width: 80%;
@@ -68,7 +72,11 @@ html {
         }
       }
 
-      #paintings {
+
+
+    
+/* PAINTINGS SECTION */ 
+ #paintings {
         display: flex;
         flex-flow: column;
         /* margin: 3rem 0 2rem 0; */

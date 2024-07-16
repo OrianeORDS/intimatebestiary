@@ -1,51 +1,11 @@
 @import url("./global.css");
-@import url("./robo-css.css");
+@import url("./main-navbar.css");
 @import url("./carousel.css");
+@import url("/.headers.css"); 
+@import url("./home.css");
 
-:root {
-  --dark-background: #090a0b;
-  --clear-text: ghostwhite;
-  /* purple */
-  --light-purple: #d4c3d8;
-  --medium-purple: #9783b4;
-  --intense-purple: #402666;
-  /* green */
-  --light-green: #dee8e3;
-  --medium-green: #7ed6ac;
-  --intense-green: #30646b;
-}
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: var(--medium-purple);
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Oswald", sans-serif;
-}
-h1 {
-  font-size: 3rem;
-}
-h2 {
-  font-size: 1.8rem;
-}
-h3 {
-  font-size: 1.9rem;
-}
-h4 {
-  font-size: 1.8rem;
-}
 
 ul {
   list-style: none;
@@ -79,11 +39,7 @@ html {
     margin: 0 auto;
     min-width: 400px;
     box-sizing: border-box;
-
-    header {
-      /* include robo`s css later */
-      border: 0;
-    }
+  }
 
     main {
       width: 90%;
@@ -92,6 +48,9 @@ html {
         text-align: center;
         margin: 4rem 0 2rem 0;
       }
+    } 
+
+
       #info__about-project {
         margin: 4rem 0 2rem 0;
         article {

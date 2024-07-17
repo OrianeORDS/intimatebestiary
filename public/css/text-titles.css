@@ -30,7 +30,18 @@ font-size: 1.8rem;
 #home__hcontainer {
   height: 100vh;
   h1 {
-    font-size : 4vw
+    font-size : 7vw ; 
+    text-shadow : 2px 2px 15px var(--intense-green);
+    padding : 2rem 0 2rem ; 
+    letter-spacing: 2vw;
+    font-weight: 900;
+  }
+  h2 {
+    color: var(--light-purple); 
+    margin-top: 5vw;
+    font-size : 4vw ; 
+    font-weight: 200;
+    text-shadow : -0.5px 0.5px 15px var(--intense-green)
   }
 } 
 

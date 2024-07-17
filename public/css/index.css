@@ -9,12 +9,15 @@
   z-index: -1;
   left: 0;
   top: 0;
+  margin-right: 200px ;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   opacity: 1;
-  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: calc(150vh > 150vw ? 150vh || 150vw);
+  background-origin: content-box;
+  background-position-x: right  ; 
+  background-position-y: bottom; 
   background-image: url("../images/arts/paintings/ourson_bgi.png");
 }
 

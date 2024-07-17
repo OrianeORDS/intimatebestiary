@@ -1,18 +1,13 @@
 /* XXXXXXXX TITLES XXXXXXXX */
 
-
-/* to be done : 
-    * left align every title in the section, see within the sections what is blocking header to be applied 
-    * 
-*/ 
-
-
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", sans-serif;
   text-align: left;
+  font-weight: 200;
 }
 h1 {
 font-size: 4rem;
+text-transform: uppercase;
 }
 h2 {
 font-size: 1.8rem;
@@ -34,12 +29,21 @@ text-align: left;
 /* box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black; */
 }
 
+.header__h1h2container { 
+  padding : 2rem 0 2rem 0 ; 
+
+}
+
 .description {
 p {
   line-height: 1.5; 
   font-size: 1.3rem;
   padding-bottom: 1rem ;
-}
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  }
 }
 
 /* shall we moove the section styling to global ? */ 

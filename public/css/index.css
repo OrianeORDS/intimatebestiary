@@ -25,16 +25,39 @@
 .highlight figure img {
   box-shadow: 0 0 0 1px var(--medium-purple);
 }
-
+@keyframes nav-gallery-hide {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    display: block;
+    opacity: 0;
+  }
+}
+@keyframes nav-gallery-show {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
 #nav-gallery {
   transition: all 0.33s ease-in-out;
+  animation: nav-gallery-show;
+  animation-duration: 0.33s;
   @media (max-height: 640px) {
+    animation-name: nav-gallery-hide;
+    display: none;
     opacity: 0;
-    z-index: -9999;
   }
   &.nav-gallery-hidden {
+    animation-name: nav-gallery-hide;
+    display: none;
     opacity: 0;
-    z-index: -9999;
   }
   position: fixed;
   left: 50px;
@@ -58,8 +81,8 @@
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 #nav-gallery ul figure figcaption {
   display: none;
@@ -144,7 +167,7 @@
   margin: 0 0 2rem 0;
 }
 #sculptures div.carousel {
-  width: 120%;
+  width: 100%;
   height: 65vh;
 }
 
@@ -180,10 +203,13 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  text-align: end;
-  padding: 0 5rem;
+  text-align: center;
+  padding: 0 5rem 1rem 0;
   background-color: transparent;
 }
 footer p {
   background-color: transparent;
+  font-size: 1.5rem;
+  color: hsla(0, 0%, 0%, 0.5);
+  text-shadow: 1px 1px 0px hsla(289, 21%, 81%, 0.85);
 }

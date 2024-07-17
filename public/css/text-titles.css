@@ -4,16 +4,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", sans-serif;
   text-align: left;
   font-weight: 200;
+  line-height: 1.5; 
 }
 h1 {
 font-size: 4rem;
 text-transform: uppercase;
+color: var(--light-purple); 
 }
 h2 {
 font-size: 1.8rem;
+color: var(--medium-purple);
 }
 h3 {
-font-size: 1.9rem;
+font-size: 1.7rem;
+color: var(--intense-purple);
+font-weight: 900; 
 }
 h4 {
 font-size: 1.8rem;
@@ -24,6 +29,7 @@ display: flex;
 flex-flow: column;
 align-items: center;
 text-align: left;
+padding-bottom: 2rem;  
 /* background: hsla(0, 0%, 0%, 0.6); */
 /* if disabling the panel background, disable also box-shadow bellow */
 /* box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black; */
@@ -43,6 +49,7 @@ p {
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
+  color: var(--light-green);
   }
 }
 

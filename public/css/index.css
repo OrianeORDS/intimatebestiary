@@ -186,13 +186,6 @@
 #info__about-project {
   margin: 4rem 0 2rem 0;
 }
-#info__about-project article {
-  width: 80%;
-  margin: 0 auto;
-  h3 {
-    text-align: center;
-  }
-}
 #info__about-project:hover #project-description {
   transition: all 0.6s ease-in-out;
   overflow: hidden;

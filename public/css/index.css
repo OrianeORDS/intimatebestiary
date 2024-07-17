@@ -106,7 +106,6 @@
 #paintings {
   display: flex;
   flex-flow: column;
-  /* margin: 3rem 0 2rem 0; */
   width: 100%;
   justify-content: center;
   align-items: center;

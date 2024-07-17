@@ -24,10 +24,9 @@ h4 {
 font-size: 1.8rem;
 }
 
-header, article {
+article {
 display: flex;
 flex-flow: column;
-width: 80%;
 align-items: center;
 text-align: left;
 /* background: hsla(0, 0%, 0%, 0.6); */
@@ -39,14 +38,16 @@ text-align: left;
 p {
   line-height: 1.5; 
   font-size: 1.3rem;
+  padding-bottom: 1rem ;
 }
 }
 
 /* shall we moove the section styling to global ? */ 
 section {
-  max-width : 1000px ; 
+  max-width : 800px ; 
   padding: 3rem;
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin : auto ; 
 }

@@ -5,10 +5,13 @@ window.addEventListener("scroll", (event) => {
 
   let painting;
   for (painting of Array.from(paintings).reverse()) {
-    if (scroll + 1 >= painting.offsetTop) {
+    if ((scroll +1 < paintings[0].offsetTop) || (scroll +1 >= paintings[paintings.length-1].offsetTop + paintings[paintings.length-1].offsetHeight) ) {
+      document.querySelector("#nav-gallery").classList.add("nav-gallery-hidden");
+      painting = "";
+    } else if (scroll + 1 >= painting.offsetTop) {
+      document.querySelector("#nav-gallery").classList.remove("nav-gallery-hidden");
       break;
-    }
-    painting = "";
+    }    
   }
   artsNavGallery.forEach((nav) => {
     nav.matches("." + painting.id)

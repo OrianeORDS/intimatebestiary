@@ -25,6 +25,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   body {
     background-color: var(--dark-background);
     color: var(--light-purple);

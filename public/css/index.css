@@ -5,17 +5,17 @@
 
 /*  XXXXXXXXXXXXX HOME SECTION  XXXXXXXXXXXXX*/
 #home__bgicontainer {
-  position: fixed;
+  position: absolute;
   z-index: -1;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
-  opacity: 0.15;
+  opacity: 1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("./public/images/arts/paintings/ourson_lr.jpg");
+  background-image: url("../images/arts/paintings/ourson_bgi.png");
 }
 
 /* XXXXXXXXXXXXX PAINTINGS SECTION XXXXXXXXXXXXX */

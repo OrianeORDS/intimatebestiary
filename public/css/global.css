@@ -25,7 +25,7 @@ html {
   body {
     background-color: var(--dark-background);
     color: var(--light-purple);
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     min-width: 400px;
     box-sizing: border-box;
@@ -34,10 +34,6 @@ html {
   main {
       width: 90%;
       margin: 2rem auto;
-      header {
-        text-align: center;
-        margin: 4rem 0 2rem 0;
-      }
   } 
 }
 

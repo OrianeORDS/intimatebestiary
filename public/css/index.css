@@ -4,21 +4,6 @@
 @import url("./text-titles.css");
 
 /*  XXXXXXXXXXXXX HOME SECTION  XXXXXXXXXXXXX*/
-#home__bgpcontainer {
-  position: fixed;
-  z-index: -2;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: 1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("/public/images/background/pattern_terrazzo.png");
-  /* background-color: darkblue;   //==> test*/
-}
-
 #home__bgicontainer {
   position: fixed;
   z-index: -1;
@@ -30,7 +15,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/public/images/arts/paintings/ourson_lr.jpg");
+  background-image: url("./public/images/arts/paintings/ourson_lr.jpg");
 }
 
 /* XXXXXXXXXXXXX PAINTINGS SECTION XXXXXXXXXXXXX */
@@ -129,7 +114,6 @@
 #paintings {
   display: flex;
   flex-flow: column;
-  /* margin: 3rem 0 2rem 0; */
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -153,6 +137,7 @@
   max-height: calc(100vh - 2rem);
   max-width: 100%;
   margin-bottom: 1rem;
+  padding-top: 1rem;
   box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black;
 }
 #paintings figure figcaption {
@@ -166,10 +151,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   text-align: center;
-}
-#paintings .technique p {
-  margin: 0;
-  padding: 0;
+  padding-bottom: 2rem;
 }
 
 /* XXXXXXXXXXXXX SCULPTURES SECTION  XXXXXXXXXXXXX*/
@@ -193,28 +175,21 @@
 /* XXXXXXXXXXXXX BACKGROUND PATTERN SECTION  XXXXXXXXXXXXX*/
 #background-image > #background-image-container {
   position: fixed;
-  z-index: -1;
+  z-index: -2;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
-  opacity: 0.25;
+  opacity: 0.5;
   background-image: url("../images/background/pattern_terrazzo.png");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
 }
 
 /* XXXXXXXXXXXXX INFOS SECTION XXXXXXXXXXXXX */
 #info__about-project {
   margin: 4rem 0 2rem 0;
-}
-#info__about-project article {
-  width: 80%;
-  margin: 0 auto;
-  h3 {
-    text-align: center;
-  }
 }
 #info__about-project:hover #project-description {
   transition: all 0.6s ease-in-out;

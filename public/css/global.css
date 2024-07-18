@@ -42,7 +42,7 @@ section {
   padding: 3rem;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: left;
   margin : auto ; 
 }
 

@@ -151,10 +151,6 @@
 
 /* XXXXXXXXXXXXX SCULPTURES SECTION  XXXXXXXXXXXXX*/
 
-#sculptures h3 {
-  align-self: self-start;
-  margin: 0 0 2rem 0;
-}
 #sculptures div.carousel {
   width: 100%;
   height: 65vh;
@@ -175,14 +171,14 @@
   background-position: center;
 }
 
-/* XXXXXXX INFO SECTION XXXXXXXXXX */
-
+/* X
+/*
 #info__about-project:hover #project-description {
   transition: all 0.6s ease-in-out;
   overflow: hidden;
   height: 100%;
   opacity: 1;
-}
+} */
 
 /* XXXXXXXXXXXX  FOOTER  XXXXXXXXXXXXXX*/
 footer {

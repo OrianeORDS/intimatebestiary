@@ -56,7 +56,6 @@ section .header__h1h2container {
 article {
   display: flex;
   flex-flow: column;
-  align-items: center;
   text-align: left;
   padding-bottom: 2rem;  
   /* background: hsla(0, 0%, 0%, 0.6); */
@@ -70,7 +69,6 @@ article {
     justify-content: left ; 
     gap: 3rem ;
     flex-wrap: wrap;
-    align-items: left ; 
   }
 
 .description {

@@ -37,6 +37,14 @@ html {
   } 
 }
 
+section {
+  max-width : 800px ; 
+  padding: 3rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin : auto ; 
+}
 
   a {
     text-decoration: none;

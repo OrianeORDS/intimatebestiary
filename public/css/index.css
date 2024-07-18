@@ -175,10 +175,8 @@
   background-position: center;
 }
 
-/* XXXXXXXXXXXXX INFOS SECTION XXXXXXXXXXXXX */
-#info__about-project {
-  margin: 4rem 0 2rem 0;
-}
+/* XXXXXXX INFO SECTION XXXXXXXXXX */
+
 #info__about-project:hover #project-description {
   transition: all 0.6s ease-in-out;
   overflow: hidden;

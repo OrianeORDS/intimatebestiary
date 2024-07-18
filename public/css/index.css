@@ -113,13 +113,6 @@
   background-color: var(--light-green);
 }
 
-#paintings {
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
 #paintings audio {
   display: block;
   height: 1.5rem;
@@ -157,14 +150,7 @@
 }
 
 /* XXXXXXXXXXXXX SCULPTURES SECTION  XXXXXXXXXXXXX*/
-#sculptures {
-  display: flex;
-  flex-flow: column;
-  margin: 3rem auto 2rem auto;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
+
 #sculptures h3 {
   align-self: self-start;
   margin: 0 0 2rem 0;

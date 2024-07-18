@@ -127,6 +127,7 @@
 #paintings figure {
   text-align: center;
   width: 100%;
+  margin: 5rem 0 1rem 0;   
 }
 #paintings figure img {
   max-width: 100%;
@@ -149,7 +150,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 6rem;
 }
 
 /* XXXXXXXXXXXXX SCULPTURES SECTION  XXXXXXXXXXXXX*/

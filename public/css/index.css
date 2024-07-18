@@ -160,7 +160,7 @@
 #sculptures {
   display: flex;
   flex-flow: column;
-  margin: 3rem 0 2rem 0;
+  margin: 3rem auto 2rem auto;
   width: 100%;
   justify-content: center;
   align-items: center;

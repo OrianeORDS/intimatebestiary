@@ -1,7 +1,7 @@
-@import url("./global.css");
-@import url("./main-navbar.css");
-@import url("./carousel.css");
-@import url("./text-titles.css");
+@import url('./global.css');
+@import url('./main-navbar.css');
+@import url('./carousel.css');
+@import url('./text-titles.css');
 
 /*  XXXXXXXXXXXXX HOME SECTION  XXXXXXXXXXXXX*/
 #home__bgicontainer {
@@ -9,15 +9,15 @@
   z-index: -1;
   left: 0;
   top: 0;
-  margin-right: 200px ;
-  width: 100vw; 
+  margin-right: 200px;
+  width: 100vw;
   height: 100%;
   opacity: 1;
   background-repeat: no-repeat;
   background-origin: content-box;
-  background-position-x: right  ; 
-  background-position-y: bottom; 
-  background-image: url("../images/arts/paintings/ourson_bgi.png");
+  background-position-x: right;
+  background-position-y: bottom;
+  background-image: url('../images/arts/paintings/ourson_bgi.png');
 }
 
 /* XXXXXXXXXXXXX PAINTINGS SECTION XXXXXXXXXXXXX */
@@ -92,6 +92,7 @@
   text-wrap: nowrap;
   top: 50%;
   transform: translate(60px, -50%);
+  color: var(--light-purple);
 }
 #nav-gallery ul figure:hover img,
 #nav-gallery ul figure:focus img {
@@ -100,8 +101,8 @@
 #nav-gallery ul figure:hover figcaption,
 #nav-gallery ul figure:focus figcaption {
   display: block;
-  color: var(--light-purple);
 }
+
 #nav-gallery div.vertical-line {
   position: absolute;
   top: 50%;
@@ -127,7 +128,7 @@
 #paintings figure {
   text-align: center;
   width: 100%;
-  margin: 5rem 0 1rem 0;   
+  margin: 5rem 0 1rem 0;
 }
 #paintings figure img {
   max-width: 100%;
@@ -135,8 +136,8 @@
   padding-top: 1rem;
   box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black;
 }
-#paintings figure img .paysage{
- max-height: calc(100vh - 2rem);
+#paintings figure img .paysage {
+  max-height: calc(100vh - 2rem);
 }
 
 #paintings figure figcaption {
@@ -169,7 +170,7 @@
   width: 100vw;
   height: 100vh;
   opacity: 0.5;
-  background-image: url("../images/background/pattern_terrazzo.png");
+  background-image: url('../images/background/pattern_terrazzo.png');
   background-size: cover;
   background-repeat: repeat;
   background-position: center;

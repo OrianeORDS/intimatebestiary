@@ -14,8 +14,8 @@ html {
         }
         .navigation__button {
           background-color: var(--clear-text);
-          height: 4.5rem;
-          width: 4.5rem;
+          height: 3rem;
+          width: 3rem;
           position: fixed;
           top: 2rem;
           left: 2rem;
@@ -116,14 +116,15 @@ html {
         }
         .navigation__icon {
           position: relative;
-          margin-top: 2.3rem;
+          margin-top: 1.5rem;
         }
         .navigation__icon,
         .navigation__icon::before,
         .navigation__icon::after {
-          width: 3rem;
+          width: 2rem;
           height: 2px;
           background-color: var(--dark-background);
+          /* background-color: orangered; */
           display: inline-block;
           transition: all 0.2s;
         }
@@ -137,7 +138,7 @@ html {
           top: -0.8rem;
         }
         .navigation__icon::after {
-          top: 0.8rem;
+          top: +0.8rem;
         }
         .navigation__button:hover .navigation__icon::before {
           top: -1rem;

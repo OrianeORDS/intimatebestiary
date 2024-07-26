@@ -118,9 +118,10 @@
 
 #paintings audio {
   display: block;
-  height: 1.5rem;
-  border-radius: 4%/50%;
-  padding-bottom: 0.2rem;
+  align-self: flex-end;
+  transform: translateY(-0.75rem);
+  height: 2rem;
+  border-radius: 5%/50%;
 }
 #paintings audio:hover,
 #paintings audio:focus {

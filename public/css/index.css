@@ -78,6 +78,7 @@
 #nav-gallery ul figure {
   position: relative;
   margin: 0;
+  padding: 0;
   z-index: 2;
 }
 #nav-gallery ul figure img {

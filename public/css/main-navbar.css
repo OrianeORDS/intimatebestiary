@@ -56,7 +56,7 @@ html {
           flex-direction: column;
           justify-content: center;
           list-style: none;
-          text-align: center;
+          text-align: left;
         }
         .navigation__item {
           margin: 1rem;

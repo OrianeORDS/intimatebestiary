@@ -84,5 +84,12 @@ p {
   font-style: normal;
   color: var(--light-green);
   }
+.description--highlight {
+  color: var(--medium-green);
+  background-color: rgba(126, 214, 172, 0.2); 
+  padding: 0.1% 0.5rem ;
+  border-radius: 5%;
 }
+}
+
 

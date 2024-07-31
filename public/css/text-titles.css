@@ -68,19 +68,28 @@ article {
     justify-content: left ; 
     gap: 3rem ;
     flex-wrap: wrap;
+    padding-bottom: 2rem;
   }
 
 .description {
-p {
-  line-height: 1.5; 
-  font-size: 1.3rem;
-  padding-bottom: 1rem ;
+p, li{
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
   color: var(--light-green);
+  font-size: 1.3rem;
+  line-height: 1.5;
+  padding-bottom: 1rem ;
+}
+}
+.description {
+  li {
+    color: var(--light-green);
+    list-style-type: circle ;
+    list-style-position: inside;
   }
+}
 .description--highlight {
   color: var(--medium-green);
   background-color: rgba(126, 214, 172, 0.2); 

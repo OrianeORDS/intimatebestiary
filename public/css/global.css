@@ -44,13 +44,6 @@ section {
   flex-flow: column;
   align-items: left;
   margin: auto;
-
-  a {
-    text-decoration: none;
-    &:hover {
-      color: var(--medium-purple);
-    }
-  }
 }
 ul {
   list-style: none;

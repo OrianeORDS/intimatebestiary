@@ -96,6 +96,15 @@ p, li{
   padding: 0.1% 0.5rem ;
   border-radius: 5%;
 }
+
+a {
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--intense-purple);
+  text-decoration: underline;
+  &:hover {
+    color: var(--light-purple);
+  }
 }
 
 

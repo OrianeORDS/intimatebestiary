@@ -11,9 +11,6 @@ h1 {
   font-size: 5rem;
   text-transform: uppercase;
   color: var(--light-purple);
-  span { 
-    text-transform: none;
-  }
 }
 h2 {
   font-size: 3rem;
@@ -22,7 +19,7 @@ h2 {
 h3 {
   font-size: 2.7rem;
   color: var(--intense-green);
-  font-weight: 900; 
+  font-weight: 900;
 }
 h4 {
 font-size: 3rem;
@@ -60,9 +57,6 @@ article {
   text-align: left;
   padding-top: 4rem ; 
   padding-bottom: 7rem;  
-  /* background: hsla(0, 0%, 0%, 0.6); */
-  /* if disabling the panel background, disable also box-shadow bellow */
-  /* box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black; */
   }
 
   .article__header {
@@ -74,15 +68,42 @@ article {
   }
 
 .description {
-p {
-  line-height: 1.5; 
-  font-size: 1.3rem;
-  padding-bottom: 1rem ;
+p, li{
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
   color: var(--light-green);
+  font-size: 1.3rem;
+  line-height: 1.5;
+  padding-bottom: 1rem ;
+}
+}
+.description {
+  li {
+    color: var(--light-green);
+    list-style-type: circle ;
+    list-style-position: inside;
   }
 }
+.description--highlight {
+  background-color: rgba(126, 214, 172, 0.3); 
+  padding: 0.1% 0.5rem ;
+  border-radius: 5%;
+}
+
+.description--undertitle {
+  padding : 7rem 0 3rem 0;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--intense-purple);
+  text-decoration: underline;
+  &:hover {
+    color: var(--light-purple);
+  }
+}
+
 

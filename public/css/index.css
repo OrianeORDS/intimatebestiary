@@ -76,19 +76,16 @@
   flex-flow: column;
   justify-content: space-between;
 }
-@media (min-width: 590px) {
-  ul#nav-gallery-art-icon {
-    display: flex;
-  }
-  ul#nav-gallery-arrow-icon {
-    display: none;
-  }
+ul#nav-gallery-art-icon {
+  display: flex;
 }
-@media (max-width: 590px), (max-height: 640px) {
+ul#nav-gallery-arrow-icon {
+  display: none;
+}
+@media (max-height: 640px) { 
   #nav-gallery {
-    /* height: 120px; */
+    height: 120px;
   }
-
   ul#nav-gallery-art-icon {
     display: none;
   }
@@ -204,7 +201,7 @@
 }
 section:hover ~ #background-image div#background-image-container {
   transition: all 0.1667s ease-in-out;
-  scale: 1;
+  scale: 1.05;
 }
 
 /* X

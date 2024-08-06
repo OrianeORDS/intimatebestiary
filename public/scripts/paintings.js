@@ -24,13 +24,14 @@ window.addEventListener("scroll", (event) => {
       i.next = (index + 1) % artsNavGallery.length;
       arrows[0].style.display = "block";
       arrows[0].setAttribute("href", "#" + artsNavGallery[i.previous].className.split(" ")[0]);
-      if (index === 0) 
-        arrows[0].style.display = "none";
+      // if (index === 0) 
+      //   arrows[0].style.display = "none";
 
       arrows[1].style.display = "block";
       arrows[1].setAttribute("href", "#" + artsNavGallery[i.next].className.split(" ")[0]);
-      if (index === artsNavGallery.length - 1) 
-        arrows[1].style.display = "none";
+      // if (index === artsNavGallery.length - 1) 
+      //   arrows[1].style.display = "none";
+      
     } else { 
       nav.classList.remove("highlight");
     }

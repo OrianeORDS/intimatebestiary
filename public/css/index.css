@@ -1,7 +1,7 @@
-@import url('./global.css');
-@import url('./main-navbar.css');
-@import url('./carousel.css');
-@import url('./text-titles.css');
+@import url("./global.css");
+@import url("./main-navbar.css");
+@import url("./carousel.css");
+@import url("./text-titles.css");
 
 /*  XXXXXXXXXXXXX HOME SECTION  XXXXXXXXXXXXX*/
 #home__bgicontainer {
@@ -17,12 +17,14 @@
   background-origin: content-box;
   background-position-x: right;
   background-position-y: bottom;
-  background-image: url('../images/arts/paintings/ourson_bgi.png');
+  background-image: url("../images/arts/paintings/ourson_bgi.png");
 }
 
 /* XXXXXXXXXXXXX PAINTINGS SECTION XXXXXXXXXXXXX */
 .highlight figure figcaption {
-  display: block !important;
+  @media (min-width: 1150px) {
+    display: block !important;
+  }
 }
 .highlight figure img {
   box-shadow: 0 0 0 1px var(--medium-purple);
@@ -33,7 +35,6 @@
     opacity: 1;
   }
   100% {
-    display: block;
     opacity: 0;
   }
 }
@@ -43,37 +44,56 @@
     opacity: 0;
   }
   100% {
-    display: block;
     opacity: 1;
   }
 }
 #nav-gallery {
   transition: all 0.33s ease-in-out;
-  animation: nav-gallery-show;
   animation-duration: 0.33s;
-  @media (max-height: 640px) {
-    animation-name: nav-gallery-hide;
-    display: none;
-    opacity: 0;
-  }
-  &.nav-gallery-hidden {
-    animation-name: nav-gallery-hide;
-    display: none;
-    opacity: 0;
-  }
   position: fixed;
-  left: 50px;
-  top: 20%;
+  left: 3.5rem;
+  top: 120px;
   transform: translateX(-50%);
-  min-height: 450px;
-  height: 70vh;
+  height: calc(100vh - 120px - 30px);
+  opacity: 0;
+  display:none;
 }
+
+#nav-gallery.nav-gallery-show {
+  animation-name: nav-gallery-show;
+  display: block;
+  opacity: 1;
+}
+#nav-gallery.nav-gallery-hide {
+  animation-name: nav-gallery-hide;
+  display: none;
+  opacity: 0;
+}
+
 #nav-gallery ul {
   height: 100%;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
 }
+ul#nav-gallery-art-icon {
+  display: flex;
+}
+ul#nav-gallery-arrow-icon {
+  display: none;
+}
+@media (max-height: 640px) { 
+  #nav-gallery {
+    height: 120px;
+  }
+  ul#nav-gallery-art-icon {
+    display: none;
+  }
+  ul#nav-gallery-arrow-icon {
+    display: flex;
+  }
+}
+
 #nav-gallery ul figure {
   position: relative;
   margin: 0;
@@ -101,7 +121,9 @@
 }
 #nav-gallery ul figure:hover figcaption,
 #nav-gallery ul figure:focus figcaption {
-  display: block;
+  @media (min-width: 1090px) {
+    display: block;
+  }
 }
 
 #nav-gallery div.vertical-line {
@@ -111,7 +133,7 @@
   transform: translate(-50%, -50%);
   z-index: 1;
   width: 1px;
-  height: 98%;
+  height: 99%;
   background-color: var(--light-green);
 }
 
@@ -170,7 +192,7 @@
   width: 100%;
   height: 100vh;
   opacity: 0.5;
-  background-image: url('../images/background/pattern_terrazzo.png');
+  background-image: url("../images/background/pattern_terrazzo.png");
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
@@ -179,7 +201,7 @@
 }
 section:hover ~ #background-image div#background-image-container {
   transition: all 0.1667s ease-in-out;
-  scale: 1;
+  scale: 1.05;
 }
 
 /* X

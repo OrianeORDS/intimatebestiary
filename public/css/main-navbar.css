@@ -162,23 +162,6 @@ html {
           top: 0;
         }
       }
-
-      .navigation--phone {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: var(--dark-background);
-        ul {
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: space-evenly;
-        }
-        @media only screen and (max-width: 37.5em) {
-          display: block;
-        }
-      }
     }
   }
 }

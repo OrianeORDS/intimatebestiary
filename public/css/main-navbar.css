@@ -101,7 +101,7 @@ body > header > *::after {
     }
     .navigation__checkbox:checked ~ .navigation__nav {
       visibility : visible; 
-      width : 40% ; 
+      width : 20rem ; 
     }
 
     .navigation__list {
@@ -119,19 +119,20 @@ body > header > *::after {
 /* styling of the navigation__link + animation when hovered */ 
     .navigation__link {
       border-radius: 5%;
-      background-color: var(--medium-purple-transp);
+      background-color:  rgba(64, 38, 102, 0.8);;
       background-image: 
       linear-gradient(
-        300deg, 
-        var(--intense-purple-transp),
-        10%, var(--medium-purple-transp), 
-        75%, var(--light-green));
+        transparent,
+        85%, var(--medium-purple-transp), 
+        99%, var(--light-green));
       background-size: 0px; 
-      color: var(--intense-purple);
+      color: var(--light-green); 
+      text-shadow : 2px 2px 15px var(--light-green);
       font-family: "Oswald", sans-serif; 
       font-size: 1rem;
       font-weight: 300;
       letter-spacing: 0.2rem;
+      margin-right : 2rem ; 
       padding: 1rem 2rem;
       text-decoration: none; 
       text-transform: uppercase;

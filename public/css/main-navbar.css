@@ -125,7 +125,8 @@ body > header > *::after {
         300deg, 
         var(--intense-purple-transp),
         10%, var(--medium-purple-transp), 
-        75%, var(--light-green));  
+        75%, var(--light-green));
+      background-size: 0px; 
       color: var(--intense-purple);
       font-family: "Oswald", sans-serif; 
       font-size: 1rem;
@@ -134,7 +135,7 @@ body > header > *::after {
       padding: 1rem 2rem;
       text-decoration: none; 
       text-transform: uppercase;
-      transition: background-size 1s ease-in ; 
+      transition: background-size 0.5s ease-in ; 
     }        
       .navigation__link:hover, 
       .navigation__link:active {

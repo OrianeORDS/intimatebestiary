@@ -4,7 +4,7 @@
   /* purple */
   --light-purple: #d4c3d8;
   --medium-purple: #9783b4;
-  --medium-purple-transp : rgba(151, 131, 180, 0.8) ; 
+  --medium-purple-transp : rgba(151, 131, 180, 0.7) ; 
   --intense-purple: #402666;
   --intense-purple-transp: rgba(64, 38, 102, 0.8); 
   /* green */
@@ -12,6 +12,9 @@
   --medium-green: #7ed6ac;
   --medium-green-transp: rgba(126, 214, 172, 0.5);
   --intense-green: #30646b;
+  --intense-green-transp:rgba(48, 100, 107, 0.5);
+  
+
 }
 
 *,

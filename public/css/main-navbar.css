@@ -5,15 +5,17 @@ body > header > *::after {
   padding: 0;
 }
 
-html {
-  body {
-    header {
+
+
       .navigation--desktop {
         .navigation__checkbox {
           display: none;
         }
+
+/*syling the button + the icon on the button */
+
         .navigation__button {
-          background-color: var(--intense-purple);
+          background-color: var(--intense-purple-transp);
           height: 3rem;
           width: 3rem;
           position: fixed;
@@ -23,62 +25,6 @@ html {
           text-align: center;
           cursor: pointer;
           z-index: 999;
-        }
-        .navigation__background--transition {
-          transition: all 0.8s cubic-bezier(0.49, -0.55, 0.5, 1.65);
-        }
-        .navigation__nav {
-          opacity: 0;
-          height: 100vh;
-          position: fixed;
-          top: 0;
-          left: -40rem;
-          z-index: 998;
-        }
-        .navigation__nav--transition {
-          transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-          transition-delay: 0.5s;
-        }
-        .navigation__list {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          list-style: none;
-          text-align: left;
-          background: var(--medium-purple-transp) ;
-        }
-        .navigation__item {
-          margin: 1rem;
-          margin-left : 0rem; 
-        }
-        .navigation__link:link,
-        .navigation__link:visited {
-          border-radius: 5%;
-          display: inline-block;
-          font-family: "Oswald", sans-serif; 
-          font-size: 1.3rem;
-          font-weight: 300;
-          padding: 1rem 2rem;
-          color: var(--light-green);
-          background-color: var(--medium-purple-transp);
-          text-decoration: none;
-          text-transform: uppercase;
-         background-image: linear-gradient(
-            125deg,
-            transparent 55%,
-            var(--light-green)
-          );
-          transition: 1.5s;
-          background-size: 200%;
-          transform: translateX(0rem);
-        }
-        .navigation__link:hover,
-        .navigation__link:active {
-          background-position: 100%;
-          color: var(--intense-purple);
-          transform: translateX(0.5rem);
         }
         .navigation__checkbox:checked ~ .navigation__button {
           background-color: var(--intense-purple-transp);
@@ -91,25 +37,6 @@ html {
           .navigation__icon::after {
           background-color: var(--light-green) !important;
         }
-        .navigation__checkbox:checked ~ .navigation__background {
-          width: 20%;
-        }
-        @media screen and (max-width: 93.75em) {
-          .navigation__checkbox:checked ~ .navigation__background {
-            width: 20rem;
-
-          }
-        }
-        .navigation__checkbox:checked ~ .navigation__nav {
-          opacity: 1;
-          width: 20%;
-          left: 0;
-        }
-        @media screen and (max-width: 93.75em) {
-          .navigation__checkbox:checked ~ .navigation__nav {
-            width: 20rem;
-          }
-        }
         .navigation__icon {
           position: relative;
           margin-top: 1.5rem;
@@ -117,10 +44,9 @@ html {
         .navigation__icon,
         .navigation__icon::before,
         .navigation__icon::after {
-          width: 2rem;
+          width: 1.5rem;
           height: 2px;
-          background-color: var(--intense-purple);
-          /* background-color: orangered; */
+          background-color: var(--light-green); 
           display: inline-block;
           transition: all 0.2s;
         }
@@ -131,16 +57,16 @@ html {
           left: 0;
         }
         .navigation__icon::before {
-          top: -0.8rem;
+          top: -0.5rem;
         }
         .navigation__icon::after {
-          top: +0.8rem;
+          top: +0.5rem;
         }
         .navigation__button:hover .navigation__icon::before {
-          top: -1rem;
+          top: -0.7rem;
         }
         .navigation__button:hover .navigation__icon::after {
-          top: 1rem;
+          top: 0.7rem;
         }
         .navigation__checkbox:checked ~ .navigation__button .navigation__icon {
           background-color: transparent;
@@ -157,7 +83,65 @@ html {
           transform: rotate(-135deg);
           top: 0;
         }
-      }
+
+
+/* styling the nav (happens when button clicked)  */ 
+
+        .navigation__nav {
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          left: 0;
+          visibility: hidden ;
+          width:1px ;  
+          z-index: 998;
+          background: linear-gradient(
+            var(--intense-purple),
+            5%, var(--intense-purple-transp),
+            95%, var(--medium-purple-transp)
+          ); 
+          transition: all 1s cubic-bezier(0.5, 0.8, 0.8, 1);
+        }
+        .navigation__list {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          list-style: none;
+          text-align: left;
+        }
+        .navigation__item{
+          margin: 2rem 0rem ;
+        }
+        .navigation__link {
+          border-radius: 5%;
+          background: var(--medium-purple-transp);
+          font-family: "Oswald", sans-serif; 
+          font-size: 1rem;
+          font-weight: 300;
+          letter-spacing: 0.2rem;
+          padding: 1rem 2rem;
+          text-decoration: none; 
+          text-transform: uppercase;
+          transition: 2s ease-in ;
+        }
+        .navigation__link:hover,
+        .navigation__link:active {
+          background: linear-gradient(
+          var(--light-green), 
+          var(--medium-green-transp),
+          );
+        }        
+        .navigation__checkbox:checked ~ .navigation__nav {
+          visibility : visible; 
+          width : 40% ; 
+        }
+  /* to be changed */ 
+        @media screen and (max-width: 600px) {
+          .navigation__checkbox:checked ~ .navigation__nav {
+            width: 100%;
+          }
+        }
+
     }
-  }
-}

@@ -8,12 +8,15 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
+  letter-spacing: 1rem;
   text-transform: uppercase;
   color: var(--light-purple);
 }
 h2 {
-  font-size: 3rem;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
   color: var(--medium-purple);
 }
 h3 {

@@ -3,6 +3,7 @@
   --clear-text: ghostwhite;
   /* purple */
   --light-purple: #d4c3d8;
+  --light-purple-transp : rgba(212, 195, 216, 0.5); 
   --medium-purple: #9783b4;
   --medium-purple-transp : rgba(151, 131, 180, 0.5) ; 
   --intense-purple: #402666;

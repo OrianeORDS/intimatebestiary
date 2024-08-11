@@ -13,9 +13,6 @@ body > header > *::after {
     }
 
 /* styling the sticky bestiaire intime */ 
-    .navigation__stickycontainer {
-      
-    } 
     .navigation__sticker {
       color: var(--medium-purple);
       font-family: "Oswald", sans-serif;

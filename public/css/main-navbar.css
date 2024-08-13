@@ -9,7 +9,7 @@ body > header > *::after {
 
   .navigation--desktop {
     .navigation__checkbox {
-      display: none;
+      visibility: hidden;
     }
 
 /* styling the sticky bestiaire intime */ 
@@ -21,18 +21,19 @@ body > header > *::after {
       font-size: 1rem ;
       font-weight: 300 ; 
       letter-spacing: 0.2rem;
-      text-shadow : 2px 2px 20px var(--intense-purple);
+      text-shadow : 2px 2px 20px var(--intense-purple) ; 
 
       height: 3rem;
       position: fixed;
       top: 2rem;
       left: 7rem;
-      z-index: 999;      }
+      z-index: 999;     
+      transition-delay: 0.4 ; }
     .navigation__checkbox:checked ~ .navigation__sticker {
       color: var(--light-green) ; }
 
 
-/*syling the button + the icon on the button */
+/*syling the button */
     .navigation__button {
       background-color: var(--medium-purple);
       height: 3rem;
@@ -46,16 +47,16 @@ body > header > *::after {
       z-index: 999;
     }
     .navigation__checkbox:checked ~ .navigation__button {
-      background-color: var(--intense-purple-transp);
+      background-color: var(--intense-purple);
+      opacity : 0.8 ; 
+      transition : 0.1s 
     }
     .navigation__checkbox:checked
-      ~ .navigation__button
-      .navigation__icon::before,
-    .navigation__checkbox:checked
-      ~ .navigation__button
-      .navigation__icon::after {
-      background-color: var(--light-green) !important;
+    ~ .navigation__button:hover {
+      opacity : 1 ; 
     }
+
+/* styling the icon (little lines) on the button */ 
     .navigation__icon {
       position: relative;
       margin-top: 1.5rem;
@@ -65,7 +66,7 @@ body > header > *::after {
     .navigation__icon::after {
       width: 1.5rem;
       height: 2px;
-      background-color: var(--light-green); 
+      background-color: var(--light-green-transp); 
       display: inline-block;
       transition: all 0.2s;
     }
@@ -74,6 +75,7 @@ body > header > *::after {
       content: '';
       position: absolute;
       left: 0;
+      color : var(--light-green)
     }
     .navigation__icon::before {
       top: -0.5rem;
@@ -81,14 +83,28 @@ body > header > *::after {
     .navigation__icon::after {
       top: +0.5rem;
     }
+
+    /* styling the icon (little lines) when the button is HOVERED */ 
+    .navigation__button:hover .navigation__icon::before {
+      top: -0.7rem;
+    }
+    .navigation__button:hover .navigation__icon::after {
+      top: 0.7rem;
+    }    
     .navigation__button:hover .navigation__icon::before {
       top: -0.7rem;
     }
     .navigation__button:hover .navigation__icon::after {
       top: 0.7rem;
     }
+
+/* styling the icon (litle lines) when the button is checked */ 
     .navigation__checkbox:checked ~ .navigation__button .navigation__icon {
       background-color: transparent;
+    }
+    .navigation__checkbox:checked ~ .navigation__button .navigation__icon:before, 
+    .navigation__checkbox:checked ~ .navigation__button .navigation__icon:before {
+      background-color: var(--light-green-transp);
     }
     .navigation__checkbox:checked
       ~ .navigation__button
@@ -104,25 +120,42 @@ body > header > *::after {
     }
 
 
+/* styling icon when button is checked + hovered */ 
+    .navigation__checkbox:checked
+    ~ .navigation__button:hover
+    .navigation__icon::before,
+  .navigation__checkbox:checked
+    ~ .navigation__button:hover
+    .navigation__icon::after {
+    background-color: var(--light-green);
+  }
+
+
+
+
+
+
 
 /* styling the nav (happens when button clicked)  */
     .navigation__nav {
       height: 100vh;
       position: fixed;
       top: 0;
-      left: 0;
+      left: -40rem;
       visibility: hidden ;
-      width:1px ;  
+      width:20rem;  
       z-index: 998;
       background: linear-gradient(
         var(--intense-purple-transp), 
         95%, var(--medium-purple-transp)
       ); 
-      transition: all 1s cubic-bezier(0.5, 0.8, 0.8, 1);
+      opacity : 0.8; 
+      transition: all 0.4s cubic-bezier(.26,-0.03,.11,.97);
     }
     .navigation__checkbox:checked ~ .navigation__nav {
       visibility : visible; 
-      width : 20rem ; 
+      opacity: 1 ;  
+      left: 0px; 
     }
 
     .navigation__list {
@@ -137,17 +170,19 @@ body > header > *::after {
     .navigation__item{
       margin: 2rem 0rem ;
     }
+
+
 /* styling of the navigation__link + animation when hovered */ 
     .navigation__link {
       border-radius: 5%;
       background-color:  rgba(64, 38, 102, 0.8);;
-      background-image: 
+      /*background-image: 
       linear-gradient(
         transparent,
         85%, var(--medium-purple-transp), 
-        99%, var(--light-green));
-      background-size: 0px; 
-      color: var(--light-green); 
+        99%, var(--light-green-transp));
+      background-size: 0px;*/
+      color: var(--light-green-transp); 
       text-shadow : 2px 2px 15px var(--light-green);
       font-family: "Oswald", sans-serif; 
       font-size: 1rem;
@@ -157,13 +192,42 @@ body > header > *::after {
       padding: 1rem 2rem;
       text-decoration: none; 
       text-transform: uppercase;
-      transition: background-size 0.5s ease-in ; 
+      transition: background-size 0.1s ; 
     }        
+
       .navigation__link:hover, 
       .navigation__link:active {
       background-size: 100%;
-      
+      color : var(--light-green);    
     }
+
+    
+ /*.navigation__link--enlighten:hover{
+  background-color: yellow;
+ }  */
+ .navigation__link--enlighten {
+      animation-name: navLink--enlighten;
+      animation-duration: 1s;
+    }
+    @keyframes navLink--enlighten {
+      from {
+        background-color: red; }
+      to {
+        background-color: blue ; } 
+      }
+
+    /*
+    @keyframes navigation__link--darken {
+      0% {
+        display: block;
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    */
+
 
 
 /* to be changed if necessary with the media queries */ 

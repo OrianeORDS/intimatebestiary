@@ -1,4 +1,4 @@
-window.addEventListener("scroll", (event) => {
+document.addEventListener("scroll", (event) => {
   let paintings = document.querySelectorAll("#paintings article");
   let artsNavGallery = document.querySelectorAll("#nav-gallery #nav-gallery-art-icon li");
   let scroll = this.scrollY;

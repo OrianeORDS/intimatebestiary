@@ -201,20 +201,19 @@ body > header > *::after {
       color : var(--light-green);    
     }
 
-    
- /*.navigation__link--enlighten:hover{
+
+ .navigation__link--enlighten{
   background-color: yellow;
- }  */
- .navigation__link--enlighten {
-      animation-name: navLink--enlighten;
-      animation-duration: 1s;
+ }
+ .navigation__link--enlighten:hover {
+      animation: navLinkEnlighten 2s infinite;
     }
-    @keyframes navLink--enlighten {
-      from {
-        background-color: red; }
-      to {
-        background-color: blue ; } 
-      }
+  @keyframes navLinkEnlighten {
+    from {
+      background-color: yellow; }
+    to {
+      background-color: blue ; } 
+  }
 
     /*
     @keyframes navigation__link--darken {

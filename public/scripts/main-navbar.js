@@ -14,13 +14,6 @@ navLink.forEach(linkofnav => {
   linkofnav.addEventListener("mouseover", enlighten(e) ) }); 
   
   function enlighten(event){
-    console.log(event)
+    console.log(event.srcElement);
+    event.srcElement.classList.add('navigation__link--enlighten')
   }
-
-  /*
-function enlighten(event) {
-    event.srcElement.classList.add('navigation__link--enlighten');
-    setTimeout(function () {
-      event.srcElement.classList.remove("navigation__link--enlighten");}, 300);
-      console.log(event); 
-  }*/

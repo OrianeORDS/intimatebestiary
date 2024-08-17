@@ -1,19 +1,14 @@
 let navButton = document.querySelector('.navigation__checkbox');
-let navLink = document.querySelector('.navigation__link');
+let navLink = document.querySelectorAll('.navigation__link');
 
-navButton.addEventListener('change', function () {
-  if (this.checked) {
-    navNav.classList.add('navigation__nav--transition');
-  } else {
-    navNav.classList.remove('navigation__nav--transition');
-  }
-});
 
-//  Try to add an eventlistener to each link in order to enlight them ... but not working 
-navLink.forEach(linkofnav => {
-  linkofnav.addEventListener("mouseover", enlighten(e) ) }); 
-  
-  function enlighten(event){
-    console.log(event.srcElement);
-    event.srcElement.classList.add('navigation__link--enlighten')
-  }
+navLink.forEach((linkofnav) => 
+  linkofnav.addEventListener("mouseover", (event) => {
+    event.target.classList.add('navigation__link--enlighten') ;
+  })
+)
+navLink.forEach((linkofnav) => 
+  linkofnav.addEventListener("mouseout", (event) => {
+    event.target.classList.remove('navigation__link--enlighten')
+  })
+)

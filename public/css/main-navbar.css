@@ -175,13 +175,7 @@ body > header > *::after {
 /* styling of the navigation__link + animation when hovered */ 
     .navigation__link {
       border-radius: 5%;
-      background-color:  rgba(64, 38, 102, 0.8);;
-      /*background-image: 
-      linear-gradient(
-        transparent,
-        85%, var(--medium-purple-transp), 
-        99%, var(--light-green-transp));
-      background-size: 0px;*/
+      background-color:  rgba(64, 38, 102, 0.4);;
       color: var(--light-green-transp); 
       text-shadow : 2px 2px 15px var(--light-green);
       font-family: "Oswald", sans-serif; 
@@ -192,28 +186,38 @@ body > header > *::after {
       padding: 1rem 2rem;
       text-decoration: none; 
       text-transform: uppercase;
-      transition: background-size 0.1s ; 
+      transition: background-size 0.1s ;  
     }        
 
       .navigation__link:hover, 
       .navigation__link:active {
       background-size: 100%;
-      color : var(--light-green);    
+      color : var(--light-green);   
     }
 
 
  .navigation__link--enlighten{
-  background-color: yellow;
- }
- .navigation__link--enlighten:hover {
-      animation: navLinkEnlighten 2s infinite;
+  background-color: rgba(212, 195, 216, 0.1);
+  background-image: 
+      linear-gradient(
+        transparent,
+        85%, var(--medium-purple-transp), 
+        99%, var(--light-green-transp));
+  animation-name: test ;
+  animation-duration: 10s;
     }
-  @keyframes navLinkEnlighten {
-    from {
-      background-color: yellow; }
-    to {
-      background-color: blue ; } 
-  }
+
+
+    @-webkit-keyframes test {
+      0% { border: thick double red ; }
+      100% { border: thick double blue ; } 
+    }
+    
+    @keyframes test {
+      0% { border: thick double red ; }
+      100% { border: thick double blue ; } 
+    }
+
 
     /*
     @keyframes navigation__link--darken {

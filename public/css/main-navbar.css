@@ -29,7 +29,7 @@ body > header > *::after {
     z-index: 999;     
     transition-delay: 0.4 ; }
   .navigation__checkbox:checked ~ .navigation__sticker {
-    color: var(--light-green) ; }
+    color: var(--light-green-transp) ; }
 
 
 /*syling the button */
@@ -52,7 +52,7 @@ body > header > *::after {
 }
 .navigation__checkbox:checked
 ~ .navigation__button:hover {
-  opacity : 1 ; 
+  opacity : 1 ;
 }
 
 /* styling the icon (little lines) on the button */ 
@@ -171,6 +171,9 @@ background-color: var(--light-green);
 .navigation__link {
   border-radius: 5%;
   background-color:  rgba(64, 38, 102, 0.4);
+  background-size: 200% 200%;
+  background-position: 0% 100% ;
+  background-image: transparent;
   color: var(--light-green-transp); 
   text-shadow : 2px 2px 15px var(--light-green);
   font-family: "Oswald", sans-serif; 
@@ -187,45 +190,32 @@ background-color: var(--light-green);
 .navigation__link:active {
   background-color: rgba(212, 195, 216, 0.1);
   color : var(--light-green);
-  background-image: linear-gradient(
-    transparent,
-    85%, var(--medium-purple-transp), 
-    99%,var(--light-green-transp)); 
   animation-name: navLink--enlighten ;
-  animation-duration: 0.5s;
+  animation-duration: 0.15s;
 }
-.navigation__link:not(:hover) {
+.navigation__link--darken {
   animation-name : navLink--darken ; 
-  animation-duration : 0.2s ; 
-  background-image: transparent;
+  animation-duration : 1s ; 
 }
-
-@keyframes navLink--darken {
-  0% { 
-    background-color: rgba(212, 195, 216, 0.1);
-   } 
-  100% {
-    background-color: rgba(212, 195, 216, 0.1);
-    background-image: transparent;
-  }
-}
-
 @keyframes navLink--enlighten {
   0% { 
     background-color:  rgba(64, 38, 102, 0.4);
-    background-image: transparent;
    } 
-  50% {
-    background-color: rgba(212, 195, 216, 0.1);
-    }
   100% {
-    background-color: rgba(212, 195, 216, 0.1);
-    background-image: linear-gradient(
-      transparent,
-      85%, var(--medium-purple-transp), 
-      99%,var(--light-green-transp));
+    background-color: rgba(212, 195, 216, 0.1)
   }
 }
+@keyframes navLink--darken {
+  0% {    
+    background-color: rgba(212, 195, 216, 0.1)
+   } 
+  100% {
+    background-color:  rgba(64, 38, 102, 0.4);
+
+  }
+}
+
+
 
 /* to be changed if necessary with the media queries */ 
   @media screen and (max-width: 600px) {

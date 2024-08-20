@@ -221,11 +221,15 @@ footer {
   width: 100%;
   text-align: center;
   padding: 1rem 0;
-  background-color: var(--dark-background);
+  background-color: var(--intense-purple-transp);
 }
 footer p {
-  background-color: transparent;
-  font-size: 1.5rem;
-  color: hsla(0, 0%, 0%, 0.5);
-  text-shadow: 1px 1px 0px hsla(289, 21%, 81%, 0.85);
+  font-size: 0.8rem;
+  font-weight: 100;
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--light-green-transp);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem ; 
+
 }

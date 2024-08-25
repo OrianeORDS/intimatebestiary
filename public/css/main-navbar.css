@@ -193,6 +193,7 @@ background-color: var(--light-green);
   animation-name: navLink--enlighten ;
   animation-duration: 0.15s;
 }
+/* navigation__link--darken = is used with main-navbar.js */ 
 .navigation__link--darken {
   animation-name : navLink--darken ; 
   animation-duration : 1s ; 

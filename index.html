@@ -247,7 +247,8 @@
                 pour me garder au chaud, dans un sommeil pesant et triste.
               </p>
               <details>
-                <summary class="paintings__readmore" onclick="readMore()"> <span class="paintings__readmore--lire"> Lire</span> le poème de l'Ourson </summary>
+                <!--I tried some stuff here : span + specific class. Depends on the element we decide to use : summary or button -->
+                <summary class="paintings__readmore"> <span class="paintings__readmore--lire"> Lire</span> le poème de l'Ourson </summary>
                 <p>
                   Le petit ours est doux et moelleux. Sa fourrure sent bon comme les
                   jours de pluie. Mais la tristesse qui m’envahit est immense, et
@@ -289,7 +290,7 @@
                 cornes.
               </p>
               <details>
-                <summary>Lire la suite...</summary>
+                <summary> <span> Lire</span> le poème de la Girafe </summary>
                 <p>
                   Elle m’accompagne dans les moments de confusion, quand les idées
                   s’entrechoquent sans arriver à leur terme, quand la pelote de
@@ -332,7 +333,7 @@
                 hurlements remontent de mon plexus vers ma gorge.
               </p>
               <details>
-                <summary>Lire la suite...</summary>
+                <summary><span> Lire</span> le poème de l'hippopotame</summary>
                 <p>
                   Longtemps l’origine de ces vibrations est restée mystérieuse. Il a
                   fallu d’abord se livrer à une paléontologie de la souffrance,
@@ -399,7 +400,7 @@
                 : mon enthousiasme se heurte au groupe des lémuriens.
               </p>
               <details>
-                <summary>Lire la suite...</summary>
+                <summary> <span> Lire</span> le poème des lémuriens</summary>
                 <p>
                   Je suis hors-champ. J’observe le groupe soudé de mes pairs, avec
                   convoitise, avec amertume et angoisse, avec dédain aussi, et
@@ -430,7 +431,9 @@
             <div class="article__header"> 
               <h3>Panthère</h3>
               <audio src="./public/audio/arts/panthere.mp3" type="audio/mpeg" controls controlsList="nodownload"></audio>
+
             </div>
+            <p class="tw-violences"> TW : violences </p>
             <figure>
               <img src="./public/images/arts/paintings/panthere_lr.jpg" alt="Panthère" />
               <figcaption>Panthère</figcaption>
@@ -443,6 +446,7 @@
               </p>
             </div>
             <div class="description">
+              <p> TW : violences </p>
               <p>
                 Je suis une grande anxieuse, je ressens toujours de la petite
                 peur, une alarme diffuse et permanente. Or, derrière mon
@@ -453,7 +457,7 @@
                 gare, feutrée comme les pattes d’un félin.
               </p>
               <details>
-                <summary>Lire la suite...</summary>
+                <summary><span> Lire</span> le poème de la Panthère</summary>
                 <p>
                   Elle anime chaque cellule de mon corps, chaque électron de mon
                   cerveau. L’agitation qui guette sous ma peau, m’étreint la gorge,
@@ -518,7 +522,7 @@
                 archaïque de ma Rhinocéros.
               </p>
               <details>
-                <summary>Lire la suite...</summary>
+                <summary><span> Lire</span> le poème du Rhinocéros</summary>
                 <p>
                   De sa peau épaisse et ridée, monumentale, elle pare aux menaces.
                   Elle est garde-barrière et garde-malade, celle qui fait le vide
@@ -594,7 +598,7 @@
                 quotidien performant et l’apparence bien ficelée de la normalité.
               </p>
               <details>
-                <summary>Lire la suite...</summary>
+                <summary><span> Lire</span> le poème de la Scarabée</summary>
                 <p>
                   Elle pousse une boule d’émotions résultant du traumatisme. Elle
                   incarne ma détermination à m’agiter pour ne pas laisser les
@@ -668,7 +672,7 @@
                 dans ses qualités intrinsèques.
               </p>
               <details>
-                <summary>Lire la suite...</summary>
+                <summary><span> Lire</span> le poème de la Limace</summary>
                 <p>
                   Souvent quand j’étais enfant et adolescente, on m’a dit « aller,
                   bouge, mets-toi en mouvement, on dirait une limace sur le canapé
@@ -722,7 +726,7 @@
                 est née de l’amour que j’ai appris à me porter en devenant maman.
               </p>
               <details>
-                <summary>Lire la suite...</summary>
+                <summary><span> Lire</span> le poème de la Louve-Paon</summary>
                 <p>
                   Elle est puissante, fière et féroce, mais aussi délicate et
                   généreuse. De ses pattes de velours, elle me précède, le nez
@@ -878,7 +882,7 @@
             <article id="contact__container">
                 <a href="https://orianeords.github.io/ORDSwebdev/" id="contact__oriane">
                   <img src="./public/images/arts/portrait/portraitoriane.png" alt="dessin auto-portrait Oriane" class="contact__image" > 
-                  <p class="description"> Site web d'Oriane Royon Da Silva </p> 
+                  <p class="description"> Envoyer un mail à Oriane Royon Da Silva </p> 
                 </a>
 
                 <a href="https://www.instagram.com/longuevue.expo/?hl=fr" id="contact__gallerie">

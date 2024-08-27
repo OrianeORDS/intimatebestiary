@@ -1,4 +1,4 @@
-div.carousel {
+.carousel {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,7 @@ div.carousel {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    list-style: none;
     li {
       height: 100%;
       img {
@@ -22,9 +23,9 @@ div.carousel {
         object-fit: contain;
         &.carousel-current {
           opacity: 1;
-          z-index:3;
-          height:100%;
-          width:50%;
+          z-index: 3;
+          height: 100%;
+          width: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
         }
@@ -36,10 +37,10 @@ div.carousel {
           width: 23%;
           position: absolute;
           top: 50%;
-          transform: translate(-50%,-50%);
+          transform: translate(-50%, -50%);
           border-radius: 3px;
           &:hover {
-            cursor: pointer; 
+            cursor: pointer;
             background-color: hsla(289, 21%, 81%, 0.15);
             box-shadow: 0 0 5px 3px hsla(289, 21%, 81%, 0.25);
           }

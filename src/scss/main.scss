@@ -1,0 +1,23 @@
+// Abstracts
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+// Base
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+// Components
+
+// Layout
+@import 'layout/navigation';
+@import 'layout/header';
+@import 'layout/synopsis';
+@import 'layout/footer';
+@import 'layout/paintings';
+@import 'layout/infos';
+@import 'layout/carousel';
+@import 'layout/nav-gallery';
+
+//Page
+@import 'pages/home';

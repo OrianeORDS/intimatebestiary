@@ -1,0 +1,13 @@
+.synopsis {
+  &__heading {
+  }
+  &__title {
+  }
+  &__subtitle {
+  }
+  &__description {
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}

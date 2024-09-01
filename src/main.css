@@ -258,12 +258,12 @@ body > header > *::after {
 
 /* styling the nav (happens when button clicked)  */
 .navigation__nav {
-  height: 100vh;
+  height: 120vh;
+  width: 30rem;
   position: fixed;
   top: 0;
   left: -40rem;
   visibility: hidden;
-  width: 20rem;
   z-index: 998;
   background: linear-gradient(var(--intense-purple-transp), 95%, var(--medium-purple-transp));
   opacity: 0.8;
@@ -277,6 +277,8 @@ body > header > *::after {
 }
 
 .navigation__list {
+  position: relative;
+  top: -20rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -300,7 +302,7 @@ body > header > *::after {
   color: var(--light-green-transp);
   text-shadow: 2px 2px 15px var(--light-green);
   font-family: "Oswald", sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 300;
   letter-spacing: 0.2rem;
   margin-right: 2rem;
@@ -388,9 +390,7 @@ body > header > *::after {
 }
 
 footer {
-  /* position: relative; */
-  left: 0;
-  bottom: 0;
+  margin-top: 30rem;
   width: 100%;
   text-align: center;
   padding: 1rem 0;
@@ -398,7 +398,7 @@ footer {
 }
 
 footer p {
-  font-size: 0.8rem;
+  font-size: 2rem;
   font-weight: 100;
   font-family: "Source Sans 3", sans-serif;
   color: var(--light-green-transp);
@@ -416,6 +416,14 @@ footer p {
   display: flex;
   flex-direction: column;
   row-gap: 10rem;
+}
+@media (min-width: 1150px) {
+  .paintings .highlight figure figcaption {
+    display: block !important;
+  }
+}
+.paintings .highlight figure img {
+  box-shadow: 0 0 0 1px var(--medium-purple);
 }
 
 .painting {
@@ -574,24 +582,6 @@ footer p {
   scale: 1.33;
 }
 
-@keyframes nav-gallery-hide {
-  0% {
-    display: block;
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes nav-gallery-show {
-  0% {
-    display: block;
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 #nav-gallery {
   transition: all 0.33s ease-in-out;
   animation-duration: 0.33s;
@@ -651,8 +641,8 @@ ul#nav-gallery-arrow-icon {
 }
 
 #nav-gallery ul figure img {
-  height: 3rem;
-  width: 3rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   padding: 0;
   margin: 0;
@@ -688,6 +678,30 @@ ul#nav-gallery-arrow-icon {
   width: 1px;
   height: 99%;
   background-color: var(--light-green);
+}
+
+@keyframes nav-gallery-hide {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes nav-gallery-show {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.contacts a {
+  font-weight: 800;
+  color: var(--light-purple);
+  text-decoration: underline !important;
 }
 
 /* --Main Background Styling-- */

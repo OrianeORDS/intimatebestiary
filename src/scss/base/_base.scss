@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  font-size: 70%; // Base font-size = 10px
+  font-size: 70%; // Default font-size = 11.2px
 
   @include respond(laptop) {
     font-size: 62.5%; // 11px for laptop screens

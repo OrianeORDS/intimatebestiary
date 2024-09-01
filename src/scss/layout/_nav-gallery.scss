@@ -89,6 +89,13 @@ ul#nav-gallery-arrow-icon {
   background-color: var(--light-green);
 }
 
+.arrow-up {
+  transform: rotate(-90deg);
+}
+.arrow-down {
+  transform: rotate(+90deg);
+}
+
 @keyframes nav-gallery-hide {
   0% {
     display: block;

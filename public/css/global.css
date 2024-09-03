@@ -39,13 +39,13 @@ html {
   }
 
   main {
-    width: calc(100% - 80px);
+    width: calc(100% - 8rem);
     margin: 2rem 0 2rem auto;
   }
 }
 
 section {
-  max-width: 800px;
+  max-width: 100%;
   padding: 3rem;
   display: flex;
   flex-flow: column;

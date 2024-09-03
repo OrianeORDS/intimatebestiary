@@ -9,7 +9,7 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
       return (this.current - 1 + imgs.length) % imgs.length;
     },
   };
-  imgs.forEach((img, i) => {
+  imgs.forEach(() => {
     let newDot = document.createElement("div");
     carousel.querySelector(".carousel-dots").appendChild(newDot);
   });
@@ -48,8 +48,8 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
         while (index.current !== dotIndex) {
           var next = document.querySelector(".carousel-next");
           var previous = document.querySelector(".carousel-previous");
-          (dotIndex - index.current) > 0 ? next.click() : previous.click();
-          await new Promise(resolve => setTimeout(resolve, 333))
+          dotIndex - index.current > 0 ? next.click() : previous.click();
+          await new Promise((resolve) => setTimeout(resolve, 200));
         }
       }
     });

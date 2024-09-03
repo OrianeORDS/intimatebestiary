@@ -1,38 +1,45 @@
-document.addEventListener("scroll", (event) => {
-  let paintings = document.querySelectorAll("#paintings article");
-  let artsNavGallery = document.querySelectorAll("#nav-gallery #nav-gallery-art-icon li");
-  let scroll = this.scrollY;
+var pages = document.querySelectorAll("section:not(#background-image),#paintings article,#infos,#infos__artcontainer article:not(#info__something_else)");
 
+var pageNavArrowUp = document.getElementById("nav-scroll__link-arrow-up");
+var pageNavArrowDown = document.getElementById("nav-scroll__link-arrow-down");
+
+var paintings = document.querySelectorAll("#paintings article");
+var artsNavGallery = document.querySelectorAll(
+  "#nav-gallery #nav-gallery-art-icon li"
+);
+document.addEventListener("scroll", (event) => {
+  // ===== NAV-SCROLL =====
+  let page = {};
+  let scrollY = window.scrollY + 5;
+  for (page.current of Array.from(pages).reverse()) {
+    if(scrollY >= page.current.offsetTop) break;
+  };
+  page.index = Array.from(pages).indexOf(page.current);
+  page.previous = Math.max(page.index - 1, 0);
+  page.next = Math.min(page.index + 1, pages.length - 1);
+  pageNavArrowUp.href = "#" + pages[page.previous].id;
+  pageNavArrowDown.href = "#" + pages[page.next].id;
+
+
+  // ===== PAINTINGS =====
   let painting;
   for (painting of Array.from(paintings).reverse()) {
-    if ((scroll +1 < paintings[0].offsetTop) || (scroll +1 >= paintings[paintings.length-1].offsetTop + paintings[paintings.length-1].offsetHeight) ) {
+    if ( ( scrollY < paintings[0].offsetTop ) ||
+         ( scrollY >= paintings[paintings.length-1].offsetTop + paintings[paintings.length-1].offsetHeight) )
+    {
       document.querySelector("#nav-gallery").classList.remove("nav-gallery-show");
       document.querySelector("#nav-gallery").classList.add("nav-gallery-hide");
       painting = "";
-    } else if (scroll + 1 >= painting.offsetTop) {
+    } else if (scrollY >= painting.offsetTop) {
       document.querySelector("#nav-gallery").classList.remove("nav-gallery-hide");
       document.querySelector("#nav-gallery").classList.add("nav-gallery-show");
       break;
     }    
   }
-  let arrows = document.querySelectorAll("#nav-gallery-arrow-icon a");
-  artsNavGallery.forEach((nav, index) => {
+  artsNavGallery.forEach((nav) => {
     if (nav.matches("." + painting.id)) {
       nav.classList.add("highlight");
-      let i = {current: index};
-      i.previous = (index + artsNavGallery.length - 1) % artsNavGallery.length;
-      i.next = (index + 1) % artsNavGallery.length;
-      arrows[0].style.display = "block";
-      arrows[0].setAttribute("href", "#" + artsNavGallery[i.previous].className.split(" ")[0]);
-      // if (index === 0) 
-      //   arrows[0].style.display = "none";
-
-      arrows[1].style.display = "block";
-      arrows[1].setAttribute("href", "#" + artsNavGallery[i.next].className.split(" ")[0]);
-      // if (index === artsNavGallery.length - 1) 
-      //   arrows[1].style.display = "none";
-      
-    } else { 
+    } else {
       nav.classList.remove("highlight");
     }
   });

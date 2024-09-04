@@ -16,23 +16,13 @@
 }
 /* --Main Background Styling End-- */
 
-/* --Main Content Styling-- */
-.content {
-  padding: 0 20rem;
-  @include respond(laptop) {
-    padding: 0 12rem;
-  }
+/* --Gallery Nav-- */
 
-  @include respond(tab-land) {
-    padding: 0 8rem;
-  }
-
-  @include respond(tab-port) {
-    padding: 0 5rem;
-  }
-
-  @include respond(phone) {
-    padding: 0 2rem;
-  }
+.arrow-up {
+  transform: rotate(-90deg);
 }
-/* --Main Content Styling End-- */
+.arrow-down {
+  transform: rotate(+90deg);
+}
+
+/* --Gallery Nav End-- */

@@ -20,15 +20,27 @@
   background-image: url("../images/arts/paintings/ourson_bgi.png");
 }
 
-/* XXXXXXXXXXXXX PAINTINGS SECTION XXXXXXXXXXXXX */
-.highlight figure figcaption {
-  @media (min-width: 1150px) {
-    display: block !important;
-  }
+/* XXXXXXXXXXXXX NAV-SCROLL SECTION XXXXXXXXXXXXX */
+#nav-scroll {
+  position: fixed;
+  top: 7rem;
+  left: 2rem;
+  width: 3rem;
+  height: calc(100vh - 9rem);
 }
-.highlight figure img {
-  box-shadow: 0 0 0 1px var(--medium-purple);
+#nav-scroll ul {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 }
+#nav-scroll img {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* XXXXXXXXXXXXX NAV-GALLERY SECTION XXXXXXXXXXXXX */
+
 @keyframes nav-gallery-hide {
   0% {
     display: block;
@@ -52,11 +64,14 @@
   animation-duration: 0.33s;
   position: fixed;
   left: 3.5rem;
-  top: 120px;
+  top: 10rem; /* space:2 + menu:3 + space:2 + ^:3 + space:2 = total: 12 rem */
   transform: translateX(-50%);
-  height: calc(100vh - 120px - 30px);
+  height: calc((100vh - 15rem)); /* top:12-space:2-v:3-space:2=19 */
   opacity: 0;
-  display:none;
+  display: none;
+  * {
+    font-family: "Oswald", sans-serif;
+  }
 }
 
 #nav-gallery.nav-gallery-show {
@@ -74,24 +89,10 @@
   height: 100%;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 ul#nav-gallery-art-icon {
   display: flex;
-}
-ul#nav-gallery-arrow-icon {
-  display: none;
-}
-@media (max-height: 640px) { 
-  #nav-gallery {
-    height: 120px;
-  }
-  ul#nav-gallery-art-icon {
-    display: none;
-  }
-  ul#nav-gallery-arrow-icon {
-    display: flex;
-  }
 }
 
 #nav-gallery ul figure {
@@ -99,14 +100,21 @@ ul#nav-gallery-arrow-icon {
   margin: 0;
   padding: 0;
   z-index: 2;
+  background-color: transparent;
 }
+
 #nav-gallery ul figure img {
-  height: 3rem;
-  width: 3rem;
-  border-radius: 50%;
   padding: 0;
   margin: 0;
+  border: 0;
+  --sqSize: calc(((100vh - 15rem) / 15));
+  width: var(--sqSize);
+  height: var(--sqSize);
+  max-width: 3rem;
+  max-height: 3rem;
+  border-radius: 50%;
 }
+
 #nav-gallery ul figure figcaption {
   display: none;
   position: absolute;
@@ -115,14 +123,23 @@ ul#nav-gallery-arrow-icon {
   transform: translate(60px, -50%);
   color: var(--light-purple);
 }
-#nav-gallery ul figure:hover img,
-#nav-gallery ul figure:focus img {
+
+#nav-gallery ul figure:hover img {
   box-shadow: 0 0 2px 2px var(--light-purple);
 }
+
 #nav-gallery ul figure:hover figcaption,
 #nav-gallery ul figure:focus figcaption {
   @media (min-width: 1090px) {
     display: block;
+  }
+}
+.highlight figure img {
+  box-shadow: 0 0 0 1px var(--light-purple) !important;
+}
+.highlight figure figcaption {
+  @media (min-width: 1150px) {
+    display: block !important;
   }
 }
 
@@ -133,9 +150,18 @@ ul#nav-gallery-arrow-icon {
   transform: translate(-50%, -50%);
   z-index: 1;
   width: 1px;
-  height: 99%;
+  height: 100%;
   background-color: var(--light-green);
+  /* display: none; */
 }
+
+@media (max-height: 30rem) {
+  #nav-gallery {
+    display: none !important;
+  }
+}
+
+/* XXXXXXXXXXXXX PAINTINGS SECTION  XXXXXXXXXXXXX*/
 
 #paintings audio {
   display: block;
@@ -144,6 +170,7 @@ ul#nav-gallery-arrow-icon {
   height: 2rem;
   border-radius: 5%/50%;
 }
+
 #paintings audio:hover,
 #paintings audio:focus {
   box-shadow: 0 0 5px 3px var(--medium-purple);
@@ -154,10 +181,12 @@ ul#nav-gallery-arrow-icon {
   width: 100%;
   margin: 5rem 0 1rem 0;
 }
+
 #paintings figure img {
   max-width: 100%;
   box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black;
 }
+
 #paintings figure img .paysage {
   max-height: calc(100vh - 2rem);
 }
@@ -166,7 +195,7 @@ ul#nav-gallery-arrow-icon {
   display: none;
   text-align: center;
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 
 #paintings .technique {
@@ -174,6 +203,26 @@ ul#nav-gallery-arrow-icon {
   font-style: italic;
   text-align: center;
   padding-bottom: 6rem;
+}
+#paintings .description { * { transition: all .5s ease; } }
+
+#paintings .description input {
+  display: none;
+}
+#paintings .description label:before {
+  content: "▼ lire "; 
+}
+#paintings .description input:checked ~ label:before {
+  content: "▲ replier "; 
+}
+#paintings .description p:not(p:nth-of-type(1)) {
+  overflow: hidden;
+  max-height: 0;
+  padding-bottom: 0;
+}
+#paintings .description input:checked ~ p:not(p:nth-of-type(1)) {
+  max-height: 500px;
+  padding-bottom: 1rem;
 }
 
 /* XXXXXXXXXXXXX SCULPTURES SECTION  XXXXXXXXXXXXX*/
@@ -230,6 +279,5 @@ footer p {
   color: var(--light-green-transp);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  padding: 0.5rem ; 
-
+  padding: 0.5rem;
 }

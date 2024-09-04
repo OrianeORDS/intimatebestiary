@@ -1,0 +1,77 @@
+:root {
+  --dark-background: #090a0b;
+  --clear-text: ghostwhite;
+  /* purple */
+  --light-purple: #d4c3d8;
+  --light-purple-transp : rgba(212, 195, 216, 0.5); 
+  --medium-purple: #9783b4;
+  --medium-purple-transp : rgba(151, 131, 180, 0.5) ; 
+  --intense-purple: #402666;
+  --intense-purple-transp: rgba(64, 38, 102, 0.8); 
+  /* green */
+  --light-green: #dee8e3;
+  --light-green-transp: rgba(222, 232, 227, 0.8); 
+  --medium-green: #7ed6ac;
+  --medium-green-transp: rgba(126, 214, 172, 0.5);
+  --intense-green: #30646b;
+  --intense-green-transp:rgba(48, 100, 107, 0.5);
+  
+
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  body {
+    background-color: var(--dark-background);
+    color: var(--light-purple);
+    width: 100%;
+    margin: 0 auto;
+    min-width: 400px;
+    box-sizing: border-box;
+  }
+
+  main {
+    width: calc(100% - 80px);
+    margin: 2rem 0 2rem auto;
+  }
+}
+
+section {
+  max-width: 800px;
+  padding: 3rem;
+  display: flex;
+  flex-flow: column;
+  align-items: left;
+  margin: auto;
+}
+ul {
+  list-style: none;
+}
+
+section &:last-child {
+  margin-bottom: 3rem;
+}
+
+/* not used at the moment in the html  */
+.hide {
+  transition: all 0.33s ease-in-out;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+}
+
+.arrow-up {
+  transform: rotate(-90deg);
+}
+.arrow-down {
+  transform: rotate(+90deg);
+}

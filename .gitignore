@@ -149,7 +149,7 @@ Webpack/*
 
 # Robo's Environment Directories & Files
 node_modules/*
-src/index.js
+src/*
 package-lock.json
 package.json
 public/index.html

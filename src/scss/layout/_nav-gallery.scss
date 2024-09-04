@@ -1,3 +1,21 @@
+@keyframes nav-gallery-hide {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes nav-gallery-show {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #nav-gallery {
   transition: all 0.33s ease-in-out;
   animation-duration: 0.33s;
@@ -53,8 +71,8 @@ ul#nav-gallery-arrow-icon {
   z-index: 2;
 }
 #nav-gallery ul figure img {
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   padding: 0;
   margin: 0;
@@ -87,23 +105,4 @@ ul#nav-gallery-arrow-icon {
   width: 1px;
   height: 99%;
   background-color: var(--light-green);
-}
-
-@keyframes nav-gallery-hide {
-  0% {
-    display: block;
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes nav-gallery-show {
-  0% {
-    display: block;
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }

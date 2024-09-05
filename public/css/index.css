@@ -68,20 +68,20 @@ left: 2rem;
 }
 #nav-scroll__icon-arrow-up1 {
   clip-path: polygon(80% 30%, 50% 20%, 20% 30%, 20% 20%, 50% 10%, 80% 20%);
-  transform: rotate(180deg);
 }
 #nav-scroll__icon-arrow-up2 {
   bottom:15px; 
   clip-path: polygon(80% 30%, 50% 20%, 20% 30%, 20% 20%, 50% 10%, 80% 20%); 
-  transform: rotate(180deg);
+
 }
 #nav-scroll__icon-arrow-down1  {
   top: 15px; 
   clip-path: polygon(80% 30%, 50% 20%, 20% 30%, 20% 20%, 50% 10%, 80% 20%);
+  transform: rotate(180deg);
 }
 #nav-scroll__icon-arrow-down2  {
-
   clip-path: polygon(80% 30%, 50% 20%, 20% 30%, 20% 20%, 50% 10%, 80% 20%); 
+  transform: rotate(180deg);
 }
 
 

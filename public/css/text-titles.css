@@ -127,7 +127,7 @@ article {
 }
 
 .tw-violences {
-  font-weight: 100;
+  font-weight: 100 !important;
 }
 /* see changes on .paintings__readmore appearance in the index.js file */ 
 .paintings__readmore {

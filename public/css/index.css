@@ -238,37 +238,34 @@ ul#nav-gallery-art-icon {
 
 
 /* XXXXXXXXX CONTACT SECTION  XXXXXXX */
-
-
-/*
-background-size: cover;
-background-repeat: no-repeat;
-background-origin: content-box;
-background-position-x: right;
-background-position-y: bottom;
-background-image: url("../images/arts/paintings/ourson_bgi.png");*/
  
 #contact__container {
   display: flex ; 
   flex-flow: row;
-  justify-content: space-between ;
-  gap : 2rem ; 
+  justify-content: left ;
+  gap : 10% ; 
   text-align: center;
+  flex-wrap: wrap;
+  
 }
 #contact__container a {
-  max-width: 250px ;
+  max-width:45%; 
+  min-height:150px ;
+  min-width: 150px ;
 }
 
 #contact__container  img{
-    max-width: 100%;
     padding: 1.5rem ;
     background-color: var(--medium-purple);
     border-radius: 15%;
     transition: all 1s;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 700 /800 ; 
 }
 #contact__container img:hover{
   background-color: rgba(151, 131, 180, 0.8);
-  padding : 0.5rem ; 
+  padding : 0.5rem ;
 }
 #contact__container p {
   padding : 1rem 0 ;

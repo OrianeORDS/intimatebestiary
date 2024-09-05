@@ -1,7 +1,8 @@
 /* STYLING on elements  accross the website*/
+
 a {
-  text-decoration: none;
-  font-weight: 800;
+  text-decoration: none !important;
+  font-family: "Source Sans 3", sans-serif;
   color: var(--light-purple);
   text-decoration: underline;
   &:hover {
@@ -23,6 +24,10 @@ h2 {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   color: var(--medium-purple);
+}
+
+html {
+  font-family: "Source Sans 3", sans-serif;
 }
 
 
@@ -109,11 +114,6 @@ article {
     border-radius: 5%;
   }
 
-  summary {
-    font-family: "Source Sans 3", sans-serif;
-    font-weight: 300;
-    padding-bottom: 0.5rem ;
-  }
 /* XXXXXXX PAINTINGS SECTION XXXXXXX */ 
 #paintings {
   h3 {
@@ -125,6 +125,19 @@ article {
 .description--undertitle {
   padding : 7rem 0 3rem 0;
 }
+
+.tw-violences {
+  font-weight: 100;
+}
+/* see changes on .paintings__readmore appearance in the index.js file */ 
+.paintings__readmore {
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--intense-green); 
+  text-transform: uppercase;
+  font-weight: 900;
+  padding-bottom: 1rem ;
+}
+
 
 /* XXXXX INFORMATION SECTION XXXXXX */ 
 

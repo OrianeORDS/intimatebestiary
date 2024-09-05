@@ -232,6 +232,49 @@ ul#nav-gallery-art-icon {
   height: 65vh;
 }
 
+
+/* XXXXXXXXX CONTACT SECTION  XXXXXXX */
+
+
+/*
+background-size: cover;
+background-repeat: no-repeat;
+background-origin: content-box;
+background-position-x: right;
+background-position-y: bottom;
+background-image: url("../images/arts/paintings/ourson_bgi.png");*/
+ 
+#contact__container {
+  display: flex ; 
+  flex-flow: row;
+  justify-content: space-between ;
+  gap : 2rem ; 
+  text-align: center;
+}
+#contact__container a {
+  max-width: 250px ;
+}
+
+#contact__container  img{
+    max-width: 100%;
+    padding: 1.5rem ;
+    background-color: var(--medium-purple);
+    border-radius: 15%;
+    transition: all 1s;
+}
+#contact__container img:hover{
+  background-color: rgba(151, 131, 180, 0.8);
+  padding : 0.5rem ; 
+}
+#contact__container p {
+  padding : 1rem 0 ;
+  font-weight: 200;
+  text-transform: uppercase ; 
+}
+
+
+
+
 /* XXXXXXXXXXXXX BACKGROUND PATTERN SECTION  XXXXXXXXXXXXX*/
 #background-image > #background-image-container {
   position: fixed;
@@ -253,14 +296,6 @@ section:hover ~ #background-image div#background-image-container {
   scale: 1.05;
 }
 
-/* X
-/*
-#info__about-project:hover #project-description {
-  transition: all 0.6s ease-in-out;
-  overflow: hidden;
-  height: 100%;
-  opacity: 1;
-} */
 
 /* XXXXXXXXXXXX  FOOTER  XXXXXXXXXXXXXX*/
 footer {

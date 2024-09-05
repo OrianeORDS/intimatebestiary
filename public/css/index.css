@@ -204,16 +204,20 @@ ul#nav-gallery-art-icon {
   text-align: center;
   padding-bottom: 6rem;
 }
-#paintings .description { * { transition: all .5s ease; } }
+#paintings .description {
+  * {
+    transition: all 0.5s ease;
+  }
+}
 
 #paintings .description input {
   display: none;
 }
 #paintings .description label:before {
-  content: "▼ lire "; 
+  content: "▼ lire ";
 }
 #paintings .description input:checked ~ label:before {
-  content: "▲ replier "; 
+  content: "▲ replier ";
 }
 #paintings .description p:not(p:nth-of-type(1)) {
   overflow: hidden;
@@ -264,20 +268,60 @@ section:hover ~ #background-image div#background-image-container {
 
 /* XXXXXXXXXXXX  FOOTER  XXXXXXXXXXXXXX*/
 footer {
-  /* position: relative; */
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
   padding: 1rem 0;
   background-color: var(--intense-purple-transp);
+  overflow-x: clip;
+  z-index: -1;
 }
 footer p {
-  font-size: 0.8rem;
-  font-weight: 100;
+  font-size: 0.9rem;
+  font-weight: 600;
   font-family: "Source Sans 3", sans-serif;
-  color: var(--light-green-transp);
+  color: var(--light-green-transparent);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   padding: 0.5rem;
+  z-index: 1;
+}
+
+.footer-giraffe {
+  position: absolute;
+  left: -175px;
+  bottom: 0;
+  z-index: -1;
+  transition: all 3s ease;
+}
+   
+
+#footer-giraffe-1 {
+  &.show-giraffe {
+    transform: translate( calc(40vw) , 38px) scale(.7);
+  }
+  &.hide-giraffe{
+    scale: 1;
+  }
+}
+#footer-giraffe-2 {
+  left: calc(100vw);
+  transform: rotateY(180deg);
+  &.show-giraffe {
+    transform: translate( calc(-100vw + 200px) ) rotateY(180deg); 
+  }
+  &.hide-giraffe{
+    content: "";
+  }
+}
+
+#footer-giraffe-3 {
+  &.show-giraffe {
+    transform: translate( calc(70vw), -192px ) scale(2.5);
+  }
+  &.hide-giraffe{
+    scale: 1;
+  }
 }

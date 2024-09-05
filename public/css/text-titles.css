@@ -129,8 +129,9 @@ article {
 .tw-violences {
   font-weight: 100 !important;
 }
-/* see changes on .paintings__readmore appearance in the index.js file */ 
-.paintings__readmore {
+/* see changes on .paintings__readmore appearance in the index.css file */ 
+#paintings .description label:before, 
+#paintings .description label {
   font-family: "Source Sans 3", sans-serif;
   color: var(--intense-green); 
   text-transform: uppercase;

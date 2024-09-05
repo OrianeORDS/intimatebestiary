@@ -1,6 +1,5 @@
 document.querySelectorAll(".carousel").forEach((carousel) => {
   var items = carousel.querySelectorAll("ul li");
-  console.log(items);
   if (items.length > 0) {
     //index
     let index = {

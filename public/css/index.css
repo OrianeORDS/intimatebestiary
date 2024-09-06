@@ -1,23 +1,35 @@
-@import url("./global.css");
-@import url("./main-navbar.css");
-@import url("./carousel.css");
-@import url("./text-titles.css");
+@import url('./global.css');
+@import url('./main-navbar.css');
+@import url('./carousel.css');
+@import url('./text-titles.css');
+@import url('./robo-media-query.css');
 
 /*  XXXXXXXXXXXXX HOME SECTION  XXXXXXXXXXXXX*/
+#home {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#home__maincontainer {
+  width: 100%;
+}
+#home__hcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #home__bgicontainer {
   position: absolute;
+  top: 5rem;
+  width: 75vw;
   z-index: -1;
-  left: 0;
-  top: 0;
+}
+#home__bgicontainer img {
   width: 100%;
-  height: 100%;
-  opacity: 1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-origin: content-box;
-  background-position-x: right;
-  background-position-y: bottom;
-  background-image: url("../images/arts/paintings/ourson_bgi.png");
+  object-fit: cover;
 }
 
 /* XXXXXXXXXXXXX NAV-SCROLL SECTION XXXXXXXXXXXXX */
@@ -70,7 +82,7 @@
   opacity: 0;
   display: none;
   * {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
   }
 }
 
@@ -204,16 +216,20 @@ ul#nav-gallery-art-icon {
   text-align: center;
   padding-bottom: 6rem;
 }
-#paintings .description { * { transition: all .5s ease; } }
+#paintings .description {
+  * {
+    transition: all 0.5s ease;
+  }
+}
 
 #paintings .description input {
   display: none;
 }
 #paintings .description label:before {
-  content: "▼ lire "; 
+  content: '▼ lire ';
 }
 #paintings .description input:checked ~ label:before {
-  content: "▲ replier "; 
+  content: '▲ replier ';
 }
 #paintings .description p:not(p:nth-of-type(1)) {
   overflow: hidden;
@@ -239,11 +255,10 @@ ul#nav-gallery-art-icon {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   opacity: 0.5;
-  background-image: url("../images/background/pattern_terrazzo.png");
+  background-image: url('../images/background/pattern_terrazzo.png');
   background-size: cover;
-  background-repeat: repeat;
   background-position: center;
   transition: all 0.1667s ease-in-out;
   scale: 1.025;
@@ -275,7 +290,7 @@ footer {
 footer p {
   font-size: 0.8rem;
   font-weight: 100;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   color: var(--light-green-transp);
   text-transform: uppercase;
   letter-spacing: 0.2rem;

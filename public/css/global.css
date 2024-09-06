@@ -60,10 +60,3 @@ ul {
 section &:last-child {
   margin-bottom: 3rem;
 }
-
-.arrow-up {
-  transform: rotate(-90deg);
-}
-.arrow-down {
-  transform: rotate(+90deg);
-}

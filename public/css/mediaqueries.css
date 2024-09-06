@@ -1,0 +1,30 @@
+/* XXXXXXXXXXXXX MEDIA QUERIES  XXXXXXXXXXXXX */
+/* 1200-1800px: desktop --> no need to specify for this because this is default */
+@media (max-width: 1800px) {}
+/* 900-1200px: Tablet landscape mode */
+@media (max-width: 1200px) {}
+/* 600-900px: Tablet portrait mode */
+@media (max-width: 900px) {}
+/* 400-600px:  Phone */
+@media (max-width: 600px) {
+  #nav-scroll {
+    top: 1rem; /* DESKTOP: 2rem:(space) + 3:(menu) + 2:(space) */  /* MOBILE: 1rem:(space) */
+    height: 5rem;  /* DESKTOP: 100vh:(viewport) - 7rem:(menu+spaces) - 2rem:(space)   */    /* MOBILE: 1rem(arrow-up) + 3rem:(menu) + 1rem:(arrow-down) */
+  }
+  #nav-scroll li {
+    height: 1rem;
+    width: 3rem;
+    background-color: transparent;
+    border-radius: 0%;
+  }
+  #nav-gallery { 
+    top: 7rem;
+    height: calc(100vh - 7rem - 5rem);
+  }
+  #nav-gallery ul {
+    justify-content: space-between;
+  }
+
+}
+/* 0-400px: Small-phone */
+@media (max-width: 400px) {}

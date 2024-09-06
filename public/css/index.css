@@ -23,10 +23,10 @@
 /* XXXXXXXXXXXXX NAV-SCROLL SECTION XXXXXXXXXXXXX */
 #nav-scroll {
   position: fixed;
-  top: 7rem;
+  top: 1rem;
   left: 2rem;
   width: 3rem;
-  height: calc(100vh - 9rem);
+  height: 5rem; /* 1rem(arrow-up) + 3rem:(menu) + 1rem:(arrow-down) */
 }
 #nav-scroll ul {
   display: flex;
@@ -34,52 +34,40 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
-#nav-scroll__link-arrow-up, 
-#nav-scroll__link-arrow-down {
-  display: flex; 
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--medium-purple);
-  height: 3rem;
+#nav-scroll li {
+  position: relative;
+  height: 1rem;
   width: 3rem;
-  position: fixed;
-  border-radius: 50%;
-  text-align: center;
-  cursor: pointer;
-  z-index: 998;
+  /* background-color: var(--medium-purple); */
+  border-radius: 0%;
+  /* overflow: clip; */
 }
-#nav-scroll__link-arrow-up  {
-top: 6rem;
-left: 2rem;
-}
+#nav-scroll__link-arrow-up,
 #nav-scroll__link-arrow-down {
-  bottom: 2rem;
-  left: 2rem;
+  width: 100%;
+  height: 100%;
 }
 
 .nav-scroll__icon {
   display: block;
-  position: relative; 
-  width: 95%; 
-  height: 50%;
-  background-color: var(--light-green-transp); 
+  background-color: var(--light-green-transp);
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 #nav-scroll__icon-arrow-up1 {
   clip-path: polygon(80% 30%, 50% 20%, 20% 30%, 20% 20%, 50% 10%, 80% 20%);
 }
 #nav-scroll__icon-arrow-up2 {
-  bottom:15px; 
+  top: .5rem;
   clip-path: polygon(80% 30%, 50% 20%, 20% 30%, 20% 20%, 50% 10%, 80% 20%); 
-
 }
 #nav-scroll__icon-arrow-down1  {
-  top: 15px; 
   clip-path: polygon(80% 30%, 50% 20%, 20% 30%, 20% 20%, 50% 10%, 80% 20%);
   transform: rotate(180deg);
 }
 #nav-scroll__icon-arrow-down2  {
+  bottom: .5rem;
   clip-path: polygon(80% 30%, 50% 20%, 20% 30%, 20% 20%, 50% 10%, 80% 20%); 
   transform: rotate(180deg);
 }

@@ -381,23 +381,21 @@ footer p {
   left: -175px;
   bottom: 0;
   z-index: -1;
-  transition: all 3s ease;
+  transition: all 3s ease-out;
 }
    
 
 #footer-giraffe-1 {
   &.show-giraffe {
-    transform: translate( calc(40vw) , 38px) scale(.7);
+    transform: translate( calc(175px + 35vw) , 38px) scale(.7);
   }
   &.hide-giraffe{
-    scale: 1;
+    content: "";
   }
 }
 #footer-giraffe-2 {
-  left: calc(100vw);
-  transform: rotateY(180deg);
   &.show-giraffe {
-    transform: translate( calc(-100vw + 200px) ) rotateY(180deg); 
+    transform: translate( calc(175px + 20vw) ); 
   }
   &.hide-giraffe{
     content: "";
@@ -406,9 +404,9 @@ footer p {
 
 #footer-giraffe-3 {
   &.show-giraffe {
-    transform: translate( calc(70vw), -192px ) scale(2.5);
+    transform: translate( calc(175px + 55vw), -64px ) scale(1.5);
   }
   &.hide-giraffe{
-    scale: 1;
+    content: "";
   }
 }

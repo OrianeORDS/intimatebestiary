@@ -114,6 +114,27 @@ article {
     border-radius: 5%;
   }
 
+  summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+  }
+
+  summary::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: url('../images/arrow.png') no-repeat; /* replace with new arrow img */
+    transform : rotate(90deg) ; 
+    background-size: cover;
+    margin-left: .75em;
+    transition: 0.2s;
+  }
+  details[open] > summary::after{
+    transform : rotate(-90deg); 
+  }
+
 /* XXXXXXX PAINTINGS SECTION XXXXXXX */ 
 #paintings {
   h3 {

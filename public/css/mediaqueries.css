@@ -19,10 +19,16 @@
   }
   #nav-gallery { 
     top: 7rem;
-    height: calc(100vh - 7rem - 5rem);
+    left: 7rem;
+    height: 3rem;
+    width: calc(100vw - 12rem);
   }
   #nav-gallery ul {
+    flex-direction: row;
     justify-content: space-between;
+  }
+  #nav-gallery ul figure img {
+    --sqSize: calc(((100vw - 12rem) / 15));
   }
 
 }

@@ -70,10 +70,9 @@
   transition: all 0.33s ease-in-out;
   animation-duration: 0.33s;
   position: fixed;
-  left: 3.5rem;
-  top: 10rem; /* space:2 + menu:3 + space:2 + ^:3 + space:2 = total: 12 rem */
-  transform: translateX(-50%);
-  height: calc((100vh - 15rem)); /* top:12-space:2-v:3-space:2=19 */
+  left: 2rem;
+  top: 10rem; /* 7(menu+spaces) + 3(arrow-up) = 10rem */
+  height: calc((100vh - 15rem)); /* 7(menu+spaces) + 3(arrow-up) + 3(arrow-down) + 2(space) = 15rem */
   opacity: 0;
   display: none;
   * {
@@ -148,18 +147,6 @@ ul#nav-gallery-art-icon {
   @media (min-width: 1150px) {
     display: block !important;
   }
-}
-
-#nav-gallery div.vertical-line {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  width: 1px;
-  height: calc(100% - 10px);
-  background-color: var(--light-green);
-  /* display: none; */
 }
 
 @media (max-height: 30rem) {

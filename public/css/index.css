@@ -258,7 +258,6 @@ background-image: url("../images/arts/paintings/ourson_bgi.png");*/
 #contact__container a {
   max-width: 250px ;
 }
-
 #contact__container  img{
     max-width: 100%;
     padding: 1.5rem ;
@@ -270,11 +269,7 @@ background-image: url("../images/arts/paintings/ourson_bgi.png");*/
   background-color: rgba(151, 131, 180, 0.8);
   padding : 0.5rem ; 
 }
-#contact__container p {
-  padding : 1rem 0 ;
-  font-weight: 200;
-  text-transform: uppercase ; 
-}
+
 
 
 

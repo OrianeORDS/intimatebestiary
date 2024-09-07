@@ -5,33 +5,6 @@
     margin-left: 0;
     overflow: hidden;
   }
-  #home {
-    height: 40vh;
-    justify-content: flex-end;
-    padding-bottom: 0;
-  }
-  #home__hcontainer h1 {
-    font-size: 3rem;
-    padding: 0;
-    font-weight: 700;
-  }
-  #home__hcontainer h2 {
-    color: var(--light-purple);
-    margin-top: 0;
-    font-size: 2rem;
-  }
-  #home__bgicontainer {
-    position: absolute;
-    top: 5rem;
-    left: -5rem;
-    width: 100vw;
-    z-index: -1;
-  }
-  #home__bgicontainer img {
-    width: 120%;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
   section .header__h1h2container {
     padding: 2rem 0 2rem 0;
   }

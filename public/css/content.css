@@ -91,12 +91,13 @@
   position: fixed;
   left: 2rem;
   top: 10rem; /* 7(menu+spaces) + 3(arrow-up) = 10rem */
+  min-width: 3rem;;
   height: calc(
     (100vh - 15rem)
   ); /* 7(menu+spaces) + 3(arrow-up) + 3(arrow-down) + 2(space) = 15rem */
   opacity: 0;
   display: none;
-  z-index: 1;
+  z-index: 1;  
 }
 
 #nav-gallery.nav-gallery-show {

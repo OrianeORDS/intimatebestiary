@@ -163,7 +163,7 @@ ul#nav-gallery-art-icon {
   }
 }
 
-@media (max-height: 30rem) {
+@media (max-height: 30rem) and (min-width: 601px) {
   #nav-gallery {
     display: none !important;
   }

@@ -10,8 +10,13 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Oswald", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Oswald', sans-serif;
   text-align: left;
   font-weight: 200;
   line-height: 1.5;
@@ -19,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.2rem;
 }
 
-h2 { 
+h2 {
   font-size: 2rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
@@ -30,31 +35,30 @@ html {
   font-family: "Source Sans 3", sans-serif;
 }
 
-
-/* XXXXXX HOME CONTAINER */ 
+/* XXXXXX HOME CONTAINER */
 
 #home__hcontainer {
-  height: 100vh;
+  /* height: 100vh; */
   h1 {
-    font-size : 7vw ; 
-    text-shadow : 2px 2px 15px var(--intense-green);
-    padding : 2rem 0 2rem ; 
+    font-size: 6rem;
+    text-shadow: 2px 2px 15px var(--intense-green);
+    padding: 2rem 0 2rem;
     letter-spacing: 2vw;
     font-weight: 900;
   }
   h2 {
-    color: var(--light-purple); 
+    color: var(--light-purple);
     margin-top: 5vw;
-    font-size : 4vw ; 
+    font-size: 4rem;
     font-weight: 200;
-    text-shadow : -0.5px 0.5px 15px var(--intense-green)
+    text-shadow: -0.5px 0.5px 15px var(--intense-green);
   }
-} 
+}
 
-/* XXXX SECTION XXXXX */ 
+/* XXXX SECTION XXXXX */
 
-section .header__h1h2container { 
-  padding : 2rem 0 2rem 0 ;
+section .header__h1h2container {
+  padding: 2rem 0 2rem 0;
   h1 {
     font-size: 3rem;
     letter-spacing: 1rem;
@@ -69,52 +73,52 @@ article {
   display: flex;
   flex-flow: column;
   text-align: left;
-  padding-top: 4rem ; 
-  padding-bottom: 7rem; 
+  padding-top: 4rem;
+  padding-bottom: 7rem;
 }
-
 
 .article__header {
   width: 100%;
   display: flex;
-  justify-content: left ; 
-  gap: 3rem ;
+  justify-content: left;
+  gap: 3rem;
   flex-wrap: wrap;
 }
 .description {
-  p, li{
-    font-family: "Source Sans 3", sans-serif;
+  p,
+  li {
+    font-family: 'Source Sans 3', sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
     color: var(--light-green);
     font-size: 1.3rem;
     line-height: 1.5;
-    padding-bottom: 1rem ;
+    padding-bottom: 1rem;
   }
   li {
     color: var(--light-green);
-    list-style-type: disc ;
+    list-style-type: disc;
     list-style-position: oustide;
-    }
+  }
   li::marker {
     color: var(--medium-purple);
     font-size: 1.5rem;
     margin-right: 0rem;
     padding-inline: 1rem;
     margin-inline-end: 1rem;
-    position : relative !important ; 
-    top: 3rem ; 
-    left : 0.5rem ;  
+    position: relative !important ;
+    top: 3rem;
+    left: 0.5rem;
   }
-  }
-  .description--highlight {
-    background-color: rgba(126, 214, 172, 0.3); 
-    padding: 0.1% 0.5rem ;
-    border-radius: 5%;
-  }
+}
+.description--highlight {
+  background-color: rgba(126, 214, 172, 0.3);
+  padding: 0.1% 0.5rem;
+  border-radius: 5%;
+}
 
-/* XXXXXXX PAINTINGS SECTION XXXXXXX */ 
+/* XXXXXXX PAINTINGS SECTION XXXXXXX */
 #paintings {
   h3 {
     font-size: 2.7rem;
@@ -123,7 +127,7 @@ article {
   }
 }
 .description--undertitle {
-  padding : 7rem 0 3rem 0;
+  padding: 7rem 0 3rem 0;
 }
 
 .tw-violences {
@@ -139,27 +143,23 @@ article {
   padding-bottom: 1rem ;
 }
 
-
-/* XXXXX INFORMATION SECTION XXXXXX */ 
+/* XXXXX INFORMATION SECTION XXXXXX */
 
 #infos {
   h2 {
-      padding-bottom: 2rem ;
-      padding-top : 1rem ; 
-      font-size: 2.5rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    font-size: 2.5rem;
   }
   h3 {
-      font-size: 1.5rem;
-      color: var(--intense-green);
-      font-weight: 600;
-      padding-top : 1rem ;
-      padding-bottom : 1rem ;  
-      text-transform: uppercase;
-    }
-    .description {
-      padding-bottom: 2rem ;
-    }
-  } 
-
-
-
+    font-size: 1.5rem;
+    color: var(--intense-green);
+    font-weight: 600;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  .description {
+    padding-bottom: 2rem;
+  }
+}

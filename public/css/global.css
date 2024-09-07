@@ -39,8 +39,10 @@ html {
   }
 
   main {
-    width: calc(100% - 10rem - 4rem);
-    margin: 2rem 4rem 2rem auto;
+    /* width: calc(100% - 10rem - 4rem); */
+    /* margin: 2rem 4rem 2rem auto; */
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 

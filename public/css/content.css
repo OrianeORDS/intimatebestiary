@@ -1,27 +1,41 @@
 /*  XXXXXXXXXXXXX HOME SECTION  XXXXXXXXXXXXX*/
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#home__maincontainer {
+  width: 100%;
+  
+}
+#home__hcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 #home__bgicontainer {
   position: absolute;
-  z-index: -1;
-  left: 0;
   top: 0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+#home__bgicontainer img {
   width: 100%;
   height: 100%;
-  opacity: 1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-origin: content-box;
-  background-position-x: right;
-  background-position-y: bottom;
-  background-image: url("../images/arts/paintings/ourson_bgi.png");
+  object-fit: cover;
+  object-position: bottom right;
 }
 
 /* XXXXXXXXXXXXX NAV-SCROLL SECTION XXXXXXXXXXXXX */
 #nav-scroll {
   position: fixed;
-  top: 7rem; /* DESKTOP: 2rem:(space) + 3:(menu) + 2:(space) */  /* MOBILE: 1rem:(space) */
+  top: 7rem; /* DESKTOP: 2rem:(space) + 3:(menu) + 2:(space) */ 
   left: 2rem;
   width: 3rem;
-  height: calc(100vh - 9rem);  /* DESKTOP: 100vh:(viewport) - 7rem:(menu+spaces) - 2rem:(space)   */    /* MOBILE: 1rem(arrow-up) + 3rem:(menu) + 1rem:(arrow-down) */
+  height: calc(100vh - 9rem);  /* DESKTOP: 100vh:(viewport) - 7rem:(menu+spaces) - 2rem:(space) */
 }
 #nav-scroll ul {
   display: flex;
@@ -223,14 +237,6 @@ ul#nav-gallery-art-icon {
   padding-bottom: 1rem;
 }
 
-/* XXXXXXXXXXXXX SCULPTURES SECTION  XXXXXXXXXXXXX*/
-
-#sculptures div.carousel {
-  width: 100%;
-  height: 65vh;
-}
-
-
 /* XXXXXXXXX CONTACT SECTION  XXXXXXX */
  
 #contact__container {
@@ -277,7 +283,7 @@ ul#nav-gallery-art-icon {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   opacity: 0.5;
   background-image: url("../images/background/pattern_terrazzo.png");
   background-size: cover;

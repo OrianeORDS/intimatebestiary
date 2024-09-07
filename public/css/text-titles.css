@@ -1,7 +1,7 @@
 /* STYLING on elements  accross the website*/
 
 a {
-  text-decoration: none !important;
+/*  text-decoration: none !important;*/
   font-family: "Source Sans 3", sans-serif;
   color: var(--medium-purple);
   text-decoration: underline;
@@ -171,63 +171,65 @@ article {
 
 /* XXXXXXXXX REMERCIEMENT / ACKNOWLEDGMGENT SECTION */
 
+ul.acknowledgment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 .acknowledgment--beforelist{
   margin-bottom: 1.5rem;
 }
 .acknowledgment li{
   list-style: none ;
+  min-width: 15rem;
+  max-width: 25rem;
 }
 .acknowledgment details {
   background-color: rgba(126, 214, 172, 0.15);
   border-radius: 5%;
-  padding: 1rem;
+  padding: 0 ;
   margin-bottom: 1.5rem;
 }
 
 .acknowledgment summary {
   cursor: pointer;
   transition: all 0.2s;
+  padding: 1rem ; 
+  border-radius: 5% 5% 0% 0%;   
 }
 .acknowledgment summary:hover {
-    background-color: 0.2;
+    background-color: rgba(126, 214, 172, 0.25);
 }
 
-
+details[open] > summary {
+  background-color: rgba(126, 214, 172, 0.2);
+}
 
 .acknowledgment li p {
   font-size: smaller;
+  padding: 1rem;  
+}
+.description--highlight {
+  color: var(--medium-purple);
 }
 
-  /*
-  .description--highlight {
-    background-color: rgba(126, 214, 172, 0.3); 
-    padding: 0.1% 0.5rem ;
-    border-radius: 5%;
-  }*/
 
-
-
+/* WAS WORKING PREVIOUSLY BUT NOT WORKING ANYMORE, DONT KNOW WHY */
 /*
 summary::after {
 content: '';
 width: 18px;
 height: 18px;
-background: url('../images/arrow.png') no-repeat; */
- /* replace with new arrow img */
-/*transform : rotate(90deg) ; 
-background-size: cover;
-margin-left: .75em;
+border-radius: 25%;
+background-color: var(--medium-purple);
+background-image: url('../images/arrow.png');
+transform : rotate(90deg) ;
+margin-left: 0.75em;
 transition: 0.2s;
-}
+}*/
+
+/*
 .acknowledgment details[open] > summary::after{
 transform : rotate(-90deg); 
 } */
-
-summary {
-  list-style-type: '⬇ ';
-  list-style-position: outside;
-} 
-
-details[open] > summary {
-  list-style-type: '⬆ ';
-}

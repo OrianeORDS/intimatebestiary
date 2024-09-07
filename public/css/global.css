@@ -28,7 +28,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-timeline: 100;
+  /* scroll-timeline: 100; */
 
   body {
     background-color: var(--dark-background);

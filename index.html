@@ -60,32 +60,23 @@
     <main>
       <nav id="nav-scroll">
         <ul>
-          <li>
-            <a id="nav-scroll__link-arrow-up" href="#home"
-              ><figure>
-                <img
-                  class="arrow-up"
-                  src="./public/images/arrow.png"
-                  alt="arrow up"
-                /></figure
-            ></a>
-          </li>
-          <li>
-            <a id="nav-scroll__link-arrow-down" href="#synopsis"
-              ><figure>
-                <img
-                  class="arrow-down"
-                  src="./public/images/arrow.png"
-                  alt="arrow down"
-                /></figure
-            ></a>
+            <li>
+              <a id="nav-scroll__link-arrow-up" href="#home">
+                <img class="nav-scroll__icon" id="nav-scroll__icon-arrow-up" src="./public/images/arrow.png" />
+              </a>
+            </li>
+        <li>
+            <a id="nav-scroll__link-arrow-down" href="#synopsis">
+              <img class="nav-scroll__icon" id="nav-scroll__icon-arrow-down" src="./public/images/arrow.png" />
+            </a>
           </li>
         </ul>
       </nav>
-
       <section id="home">
         <div id="home__maincontainer">
-          <div id="home__bgicontainer"></div>
+          <figure id="home__bgicontainer">
+            <img src="./public/images//arts/paintings/ourson_bgi.png" />
+          </figure>
           <div id="home__hcontainer">
             <h1>BESTIAIRE INTIME<br /></h1>
             <h2>par Oriane Royon Da Silva</h2>
@@ -285,12 +276,11 @@
                 alt="Ourson"
               />
               <figcaption>Ourson</figcaption>
-            </figure>
-            <div class="technique">
-              <p>49x64,5cm sur papier noir, techniques mixtes</p>
-              <p>(crayon de couleur, pastel sec, acrylique)</p>
-            </div>
-
+              <div class="technique">
+                <p>49x64,5cm sur papier noir, techniques mixtes</p>
+                <p>(crayon de couleur, pastel sec, acrylique)</p>
+              </div>
+              </figure>
             <div class="description">
               <input id="hideLongDescription__ourson" type="checkbox" />
               <p>
@@ -333,13 +323,13 @@
                 alt="Girafe"
               />
               <figcaption>Girafe</figcaption>
-            </figure>
-            <div class="technique">
-              <p>49x64,5cm sur papier noir, techniques mixtes</p>
-              <p>
-                (acrylique, crayon de couleur, paillettes, coll, coton, pastel
-                sec)
-              </p>
+              <div class="technique">
+                <p>49x64,5cm sur papier noir, techniques mixtes</p>
+                <p>
+                  (acrylique, crayon de couleur, paillettes, coll, coton, pastel
+                  sec)
+                </p>
+              </figure>
             </div>
             <div class="description">
               <input id="hideLongDescription__girafe" type="checkbox" />
@@ -387,14 +377,14 @@
                 alt="Hippopotame"
               />
               <figcaption>Hippopotame</figcaption>
+              <div class="technique">
+                <p>49x64,5cm sur papier noir, techniques mixtes</p>
+                <p>
+                  (acrylique, gouache, crayon de couleur, paillettes, colle,
+                  pastel gras)
+                </p>
+              </div>
             </figure>
-            <div class="technique">
-              <p>49x64,5cm sur papier noir, techniques mixtes</p>
-              <p>
-                (acrylique, gouache, crayon de couleur, paillettes, colle,
-                pastel gras)
-              </p>
-            </div>
             <div class="description">
               <input id="hideLongDescription__hippopotame" type="checkbox" />
               <p>
@@ -455,14 +445,14 @@
                 alt="Lémuriens"
               />
               <figcaption>Lémuriens</figcaption>
+              <div class="technique">
+                <p>49x64,5cm sur papier noir, techniques mixtes</p>
+                <p>
+                  (crayon de couleur, paillettes, colle, pastel sec, acrylique,
+                  laque)
+                </p>
+              </div>
             </figure>
-            <div class="technique">
-              <p>49x64,5cm sur papier noir, techniques mixtes</p>
-              <p>
-                (crayon de couleur, paillettes, colle, pastel sec, acrylique,
-                laque)
-              </p>
-            </div>
             <div class="description">
               <input id="hideLongDescription__lemuriens" type="checkbox" />
               <p>
@@ -518,14 +508,14 @@
                 alt="Panthère"
               />
               <figcaption>Panthère</figcaption>
+              <div class="technique">
+                <p>49x64,5cm sur papier noir, techniques mixtes</p>
+                <p>
+                  (crayon de couleur, paillettes, pastels gras, arylique, laque,
+                  pastel sec)
+                </p>
+              </div>
             </figure>
-            <div class="technique">
-              <p>49x64,5cm sur papier noir, techniques mixtes</p>
-              <p>
-                (crayon de couleur, paillettes, pastels gras, arylique, laque,
-                pastel sec)
-              </p>
-            </div>
             <div class="description">
               <input id="hideLongDescription__panthere" type="checkbox" />
              
@@ -591,11 +581,11 @@
                 alt="Rhinocéros"
               />
               <figcaption>Rhinocéros</figcaption>
+              <div class="technique">
+                <p>49x64,5cm sur papier noir, technique mixtes</p>
+                <p>(acrylique, paillettes, colle, pastel gras,)</p>
+              </div>
             </figure>
-            <div class="technique">
-              <p>49x64,5cm sur papier noir, technique mixtes</p>
-              <p>(acrylique, paillettes, colle, pastel gras,)</p>
-            </div>
             <div class="description">
               <input id="hideLongDescription__rhinoceros" type="checkbox" />
               <p>
@@ -663,14 +653,14 @@
                 alt="Scarabée"
               />
               <figcaption>Scarabée</figcaption>
+              <div class="technique">
+                <p>49x64,5cm sur papier noir, techniques mixtes</p>
+                <p>
+                  (pastels secs, laque, crayon de couleur, pastels gras,
+                  acrylique)
+                </p>
+              </div>
             </figure>
-            <div class="technique">
-              <p>49x64,5cm sur papier noir, techniques mixtes</p>
-              <p>
-                (pastels secs, laque, crayon de couleur, pastels gras,
-                acrylique)
-              </p>
-            </div>
             <div class="description">
               <input id="hideLongDescription__scarabee" type="checkbox" />
               <p>
@@ -752,11 +742,11 @@
                 alt="Limace"
               />
               <figcaption>Limace</figcaption>
+              <div class="technique">
+                <p>49x64,5cm sur papier noir, techniques mixtes</p>
+                <p>(crayon de couleur, paillettes, colle, pastel sec)</p>
+              </div>
             </figure>
-            <div class="technique">
-              <p>49x64,5cm sur papier noir, techniques mixtes</p>
-              <p>(crayon de couleur, paillettes, colle, pastel sec)</p>
-            </div>
             <div class="description">
               <input id="hideLongDescription__limace" type="checkbox" />
               <p>

@@ -28,7 +28,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-timeline: 100;
+  /* scroll-timeline: 100; */
 
   body {
     background-color: var(--dark-background);
@@ -39,13 +39,16 @@ html {
   }
 
   main {
-    width: calc(100% - 10rem - 4rem);
-    margin: 2rem 4rem 2rem auto;
+    /* width: calc(100% - 10rem - 4rem); */
+    /* margin: 2rem 4rem 2rem auto; */
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
 section {
   max-width: 100%;
+  flex-wrap : wrap ; 
   padding: 3rem;
   display: flex;
   flex-flow: column;
@@ -58,19 +61,4 @@ ul {
 
 section &:last-child {
   margin-bottom: 3rem;
-}
-
-/* not used at the moment in the html  */
-.hide {
-  transition: all 0.33s ease-in-out;
-  overflow: hidden;
-  height: 0;
-  opacity: 0;
-}
-
-.arrow-up {
-  transform: rotate(-90deg);
-}
-.arrow-down {
-  transform: rotate(+90deg);
 }

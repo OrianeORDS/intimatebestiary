@@ -37,6 +37,7 @@
   height: calc(
     100vh - 9rem
   ); /* DESKTOP: 100vh:(viewport) - 7rem:(menu+spaces) - 2rem:(space) */
+  z-index: 1;
 }
 #nav-scroll ul {
   display: flex;

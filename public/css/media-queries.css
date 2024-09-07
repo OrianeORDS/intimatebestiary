@@ -97,49 +97,52 @@
 /* 400-600px:  Phone */
 @media (max-width: 600px) {
   #nav-scroll {
-    top: 1rem; /* DESKTOP: 2rem:(space) + 3:(menu) + 2:(space) */ /* MOBILE: 1rem:(space) */
-    height: 5rem; /* DESKTOP: 100vh:(viewport) - 7rem:(menu+spaces) - 2rem:(space)   */ /* MOBILE: 1rem(arrow-up) + 3rem:(menu) + 1rem:(arrow-down) */
+    /* MOBILE: 1rem:(space) */
+    top: 1rem; 
+    /* MOBILE: 1rem(arrow-up) + 3rem:(menu) + 1rem:(arrow-down) */
+    height: 5rem; 
+    li {
+      height: 1rem;
+      width: 3rem;
+      background-color: transparent;
+      border-radius: 0%;
+    }
   }
-  #nav-scroll li {
-    height: 1rem;
-    width: 3rem;
-    background-color: transparent;
-    border-radius: 0%;
-  }
+
   #nav-gallery {
     top: 7rem;
     left: 7rem;
     height: 3rem;
     width: calc(100vw - 12rem);
-  }
-  #nav-gallery ul {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #nav-gallery ul figure img {
-    --sqSize: calc(((100vw - 12rem) / 15));
+    ul {
+      flex-direction: row;
+      justify-content: space-between;
+      figure img {
+        --sqSize: calc(((100vw - 12rem) / 15));
+      }
+    }
   }
 
   #paintings article {
     padding-top: 9rem;
-  }
-  #paintings figure {
-    div.technique {
-      background-color: var(--intense-purple-transp);
-      margin: 0;
-      padding: 15px;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      opacity: 0;
-      transition: all 0.5s ease;
+    figure {
+      div.technique {
+        background-color: var(--intense-purple-transp);
+        margin: 0;
+        padding: 15px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+      }
+      & img:hover ~ div.technique,
+      & div.technique:hover {
+        opacity: 1;
+      }
     }
-    & img:hover ~ div.technique,
-    & div.technique:hover {
-      opacity: 1;
-    }
-
   }
+  #paintings 
 }
 /* 0-400px: Small-phone */
 @media (max-width: 400px) {

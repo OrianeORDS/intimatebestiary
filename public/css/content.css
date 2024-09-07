@@ -324,24 +324,32 @@ footer p {
 }
 
 .footer-giraffe {
+  --height-size: 310px;
+  --width-size: 175px;
   position: absolute;
-  left: -175px;
+  left: calc(0px - var(--width-size));
   bottom: 0;
   z-index: -1;
   transition: all 3s ease-out;
+  --scale: .85;
+  &.hide-giraffe {
+    transition: all 0.25s ease;
+  }
 }
 
 #footer-giraffe-1 {
+  --scale1: calc(var(--scale) * 0.7);
   &.show-giraffe {
-    transform: translate(calc(175px + 35vw), 38px) scale(0.7);
+      transform: translate(calc(var(--width-size) + 35vw), calc(var(--height-size) * (1 - var(--scale1)) / 2 )) scale(var(--scale1)); 
   }
   &.hide-giraffe {
     content: "";
   }
 }
 #footer-giraffe-2 {
+  --scale2: calc(var(--scale) * 1);
   &.show-giraffe {
-    transform: translate(calc(175px + 20vw));
+    transform: translate(calc(var(--width-size) + 20vw), calc(var(--height-size) * (1 - var(--scale2)) / 2 ) ) scale(var(--scale2));
   }
   &.hide-giraffe {
     content: "";
@@ -349,8 +357,9 @@ footer p {
 }
 
 #footer-giraffe-3 {
+  --scale3: calc(var(--scale) * 1.5);
   &.show-giraffe {
-    transform: translate(calc(175px + 55vw), -64px) scale(1.5);
+    transform: translate(calc(var(--width-size) + 55vw), calc(var(--height-size) * (1 - var(--scale3)) / 2 )) scale(var(--scale3));
   }
   &.hide-giraffe {
     content: "";

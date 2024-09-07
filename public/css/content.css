@@ -81,6 +81,9 @@
   }
 }
 #nav-gallery {
+  * {
+    font-family: "Oswald", sans-serif;
+  }
   transition: all 0.33s ease-in-out;
   animation-duration: 0.33s;
   position: fixed;
@@ -89,9 +92,7 @@
   height: calc((100vh - 15rem)); /* 7(menu+spaces) + 3(arrow-up) + 3(arrow-down) + 2(space) = 15rem */
   opacity: 0;
   display: none;
-  * {
-    font-family: "Oswald", sans-serif;
-  }
+  z-index: 1;
 }
 
 #nav-gallery.nav-gallery-show {
@@ -177,18 +178,18 @@ ul#nav-gallery-art-icon {
   transform: translateY(-0.75rem);
   height: 2rem;
   border-radius: 5%/50%;
-  z-index: -1;
 }
 
 #paintings audio:hover,
 #paintings audio:focus {
-  box-shadow: 0 0 5px 3px var(--medium-purple);
+  box-shadow: 0 0 5px 3px var(--light-purple);
 }
 
 #paintings figure {
+  position: relative;
   text-align: center;
   width: 100%;
-  margin: 5rem 0 1rem 0;
+  margin: 5rem 0 2rem 0;
 }
 
 #paintings article figure img {
@@ -207,11 +208,11 @@ ul#nav-gallery-art-icon {
   font-size: 1rem;
 }
 
-#paintings .technique {
+#paintings figure div.technique {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   text-align: center;
-  padding-bottom: 6rem;
+  margin: 2rem;
 }
 #paintings .description {
   * {

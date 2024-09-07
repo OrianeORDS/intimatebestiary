@@ -28,7 +28,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-timeline: 100;
+  /* scroll-timeline: 100; */
 
   body {
     background-color: var(--dark-background);
@@ -39,8 +39,10 @@ html {
   }
 
   main {
-    width: calc(100% - 10rem - 4rem);
-    margin: 2rem 4rem 2rem auto;
+    /* width: calc(100% - 10rem - 4rem); */
+    /* margin: 2rem 4rem 2rem auto; */
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -59,11 +61,4 @@ ul {
 
 section &:last-child {
   margin-bottom: 3rem;
-}
-
-.arrow-up {
-  transform: rotate(-90deg);
-}
-.arrow-down {
-  transform: rotate(+90deg);
 }

@@ -71,9 +71,9 @@
 @media (max-width: 600px) {
   #nav-scroll {
     /* MOBILE: 1rem:(space) */
-    top: 1rem; 
+    top: 1rem;
     /* MOBILE: 1rem(arrow-up) + 3rem:(menu) + 1rem:(arrow-down) */
-    height: 5rem; 
+    height: 5rem;
     li {
       height: 1rem;
       width: 3rem;
@@ -114,6 +114,10 @@
         opacity: 1;
       }
     }
+  }
+
+  footer {
+    margin-top: 14rem;
   }
 }
 /* 0-400px: Small-phone */

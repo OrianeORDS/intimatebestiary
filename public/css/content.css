@@ -7,7 +7,6 @@
 }
 #home__maincontainer {
   width: 100%;
-  
 }
 #home__hcontainer {
   display: flex;
@@ -17,7 +16,7 @@
 #home__bgicontainer {
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   height: 100vh;
   z-index: -1;
@@ -32,10 +31,12 @@
 /* XXXXXXXXXXXXX NAV-SCROLL SECTION XXXXXXXXXXXXX */
 #nav-scroll {
   position: fixed;
-  top: 7rem; /* DESKTOP: 2rem:(space) + 3:(menu) + 2:(space) */ 
+  top: 7rem; /* DESKTOP: 2rem:(space) + 3:(menu) + 2:(space) */
   left: 2rem;
   width: 3rem;
-  height: calc(100vh - 9rem);  /* DESKTOP: 100vh:(viewport) - 7rem:(menu+spaces) - 2rem:(space) */
+  height: calc(
+    100vh - 9rem
+  ); /* DESKTOP: 100vh:(viewport) - 7rem:(menu+spaces) - 2rem:(space) */
 }
 #nav-scroll ul {
   display: flex;
@@ -89,7 +90,9 @@
   position: fixed;
   left: 2rem;
   top: 10rem; /* 7(menu+spaces) + 3(arrow-up) = 10rem */
-  height: calc((100vh - 15rem)); /* 7(menu+spaces) + 3(arrow-up) + 3(arrow-down) + 2(space) = 15rem */
+  height: calc(
+    (100vh - 15rem)
+  ); /* 7(menu+spaces) + 3(arrow-up) + 3(arrow-down) + 2(space) = 15rem */
   opacity: 0;
   display: none;
   z-index: 1;
@@ -240,43 +243,39 @@ ul#nav-gallery-art-icon {
 }
 
 /* XXXXXXXXX CONTACT SECTION  XXXXXXX */
- 
+
 #contact__container {
-  display: flex ; 
+  display: flex;
   flex-flow: row;
-  justify-content: left ;
-  gap : 10% ; 
+  justify-content: left;
+  gap: 10%;
   text-align: center;
   flex-wrap: wrap;
-  
 }
 #contact__container a {
-  max-width:45%; 
-  min-height:150px ;
-  min-width: 150px ;
+  max-width: 45%;
+  min-height: 150px;
+  min-width: 150px;
 }
 
-#contact__container  img{
-    padding: 1.5rem ;
-    background-color: var(--medium-purple);
-    border-radius: 15%;
-    transition: all 1s;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 700 /800 ; 
+#contact__container img {
+  padding: 1.5rem;
+  background-color: var(--medium-purple);
+  border-radius: 15%;
+  transition: all 1s;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 700 /800;
 }
-#contact__container img:hover{
+#contact__container img:hover {
   background-color: rgba(151, 131, 180, 0.8);
-  padding : 0.5rem ;
+  padding: 0.5rem;
 }
 #contact__container p {
-  padding : 1rem 0 ;
+  padding: 1rem 0;
   font-weight: 200;
-  text-transform: uppercase ; 
+  text-transform: uppercase;
 }
-
-
-
 
 /* XXXXXXXXXXXXX BACKGROUND PATTERN SECTION  XXXXXXXXXXXXX*/
 #background-image > #background-image-container {
@@ -298,7 +297,6 @@ section:hover ~ #background-image div#background-image-container {
   transition: all 0.1667s ease-in-out;
   scale: 1.05;
 }
-
 
 /* XXXXXXXXXXXX  FOOTER  XXXXXXXXXXXXXX*/
 footer {
@@ -330,30 +328,29 @@ footer p {
   z-index: -1;
   transition: all 3s ease-out;
 }
-   
 
 #footer-giraffe-1 {
   &.show-giraffe {
-    transform: translate( calc(175px + 35vw) , 38px) scale(.7);
+    transform: translate(calc(175px + 35vw), 38px) scale(0.7);
   }
-  &.hide-giraffe{
+  &.hide-giraffe {
     content: "";
   }
 }
 #footer-giraffe-2 {
   &.show-giraffe {
-    transform: translate( calc(175px + 20vw) ); 
+    transform: translate(calc(175px + 20vw));
   }
-  &.hide-giraffe{
+  &.hide-giraffe {
     content: "";
   }
 }
 
 #footer-giraffe-3 {
   &.show-giraffe {
-    transform: translate( calc(175px + 55vw), -64px ) scale(1.5);
+    transform: translate(calc(175px + 55vw), -64px) scale(1.5);
   }
-  &.hide-giraffe{
+  &.hide-giraffe {
     content: "";
   }
 }

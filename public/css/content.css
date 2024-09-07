@@ -177,6 +177,7 @@ ul#nav-gallery-art-icon {
   transform: translateY(-0.75rem);
   height: 2rem;
   border-radius: 5%/50%;
+  z-index: -1;
 }
 
 #paintings audio:hover,
@@ -190,7 +191,7 @@ ul#nav-gallery-art-icon {
   margin: 5rem 0 1rem 0;
 }
 
-#paintings figure img {
+#paintings article figure img {
   max-width: 100%;
   box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black;
 }

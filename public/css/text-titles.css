@@ -114,14 +114,14 @@ article {
     border-radius: 5%;
   }
 
+
   summary {
       list-style: none;
-      display: flex;
       align-items: center;
       padding: 10px;
   }
 
-  summary::after {
+  summary::before {
     content: '';
     width: 18px;
     height: 18px;

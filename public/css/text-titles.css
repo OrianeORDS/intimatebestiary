@@ -108,33 +108,6 @@ article {
     left : 0.5rem ;  
   }
   }
-  .description--highlight {
-    background-color: rgba(126, 214, 172, 0.3); 
-    padding: 0.1% 0.5rem ;
-    border-radius: 5%;
-  }
-
-
-  summary {
-      list-style: none;
-      align-items: center;
-      padding: 10px;
-  }
-
-  summary::before {
-    content: '';
-    width: 18px;
-    height: 18px;
-    background: url('../images/arrow.png') no-repeat; /* replace with new arrow img */
-    transform : rotate(90deg) ; 
-    background-size: cover;
-    margin-left: .75em;
-    transition: 0.2s;
-  }
-  details[open] > summary::after{
-    transform : rotate(-90deg); 
-  }
-
 /* XXXXXXX PAINTINGS SECTION XXXXXXX */ 
 #paintings {
   h3 {
@@ -174,7 +147,7 @@ article {
       color: var(--intense-green);
       font-weight: 600;
       padding-top : 1rem ;
-      padding-bottom : 1rem ;  
+      padding-bottom : 2rem ;  
       text-transform: uppercase;
     }
     .description {
@@ -189,4 +162,69 @@ article {
   font-weight: 300;
   text-transform: uppercase ; 
   color: var(--light-purple) ; 
+}
+
+
+
+/* XXXXXXXXX REMERCIEMENT / ACKNOWLEDGMGENT SECTION */
+
+.acknowledgment--beforelist{
+  margin-bottom: 1.5rem;
+}
+.acknowledgment li{
+  list-style: none ;
+}
+.acknowledgment details {
+  background-color: rgba(126, 214, 172, 0.15);
+  border-radius: 5%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.acknowledgment summary {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.acknowledgment summary:hover {
+    background-color: 0.2;
+}
+
+
+
+.acknowledgment li p {
+  font-size: smaller;
+}
+
+  /*
+  .description--highlight {
+    background-color: rgba(126, 214, 172, 0.3); 
+    padding: 0.1% 0.5rem ;
+    border-radius: 5%;
+  }*/
+
+
+
+/*
+summary::after {
+content: '';
+width: 18px;
+height: 18px;
+background: url('../images/arrow.png') no-repeat; */
+ /* replace with new arrow img */
+/*transform : rotate(90deg) ; 
+background-size: cover;
+margin-left: .75em;
+transition: 0.2s;
+}
+.acknowledgment details[open] > summary::after{
+transform : rotate(-90deg); 
+} */
+
+summary {
+  list-style-type: '⬇ ';
+  list-style-position: outside;
+} 
+
+details[open] > summary {
+  list-style-type: '⬆ ';
 }

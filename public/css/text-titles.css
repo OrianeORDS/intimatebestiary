@@ -3,10 +3,10 @@
 a {
   text-decoration: none !important;
   font-family: "Source Sans 3", sans-serif;
-  color: var(--light-purple);
+  color: var(--medium-purple);
   text-decoration: underline;
   &:hover {
-    color: var(--intense-purple);
+    color: var(--medium-green);
   }
 }
 
@@ -183,4 +183,10 @@ article {
   } 
 
 
-
+/* XXXXXXXXX CONTACT SECTION XXXXXXXXXXXXXX */ 
+#contact__container p {
+  padding : 1rem 0 ;
+  font-weight: 300;
+  text-transform: uppercase ; 
+  color: var(--light-purple) ; 
+}

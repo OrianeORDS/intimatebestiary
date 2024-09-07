@@ -308,7 +308,6 @@ ul#nav-gallery-art-icon {
   min-height:150px ;
   min-width: 150px ;
 }
-
 #contact__container  img{
     padding: 1.5rem ;
     background-color: var(--medium-purple);
@@ -322,11 +321,7 @@ ul#nav-gallery-art-icon {
   background-color: rgba(151, 131, 180, 0.8);
   padding : 0.5rem ;
 }
-#contact__container p {
-  padding : 1rem 0 ;
-  font-weight: 200;
-  text-transform: uppercase ; 
-}
+
 
 
 

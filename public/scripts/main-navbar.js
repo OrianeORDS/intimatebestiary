@@ -12,3 +12,11 @@ navLink.forEach((linkofnav) =>
     event.target.classList.add('navigation__link--darken')
   })
 )
+
+
+document.addEventListener('click', (event) => {
+  console.log(event); 
+  if (! event.target.matches('nav, nav *')) {
+    document.getElementById("navi-toggle").checked = false
+  }
+})

@@ -13,10 +13,8 @@ navLink.forEach((linkofnav) =>
   })
 )
 
-
 document.addEventListener('click', (event) => {
-  console.log(event); 
-  if (! event.target.matches('nav, nav *')) {
+  if (!event.target.matches('nav, nav *') || event.target.matches('.navigation__link')) {
     document.getElementById("navi-toggle").checked = false
   }
 })

@@ -176,6 +176,9 @@ ul#nav-gallery-art-icon {
 }
 
 /* XXXXXXXXXXXXX PAINTINGS SECTION  XXXXXXXXXXXXX*/
+#paintings {
+  position: relative;
+}
 
 #paintings audio {
   display: block;

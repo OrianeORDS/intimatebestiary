@@ -66,17 +66,20 @@
   }
 } /*# sourceMappingURL=main.css.map */
 
-/* XXXXXXXXXXXXX MEDIA QUERIES  XXXXXXXXXXXXX */
-/* 1200-1800px: desktop --> no need to specify for this because this is default */
-@media (max-width: 1800px) {
+@media (min-width: 1800px) {
+  #paintings {
+    figure {
+      width: 48%;
+      float: left;
+    }
+    .description {
+      width: 48%;
+      float: right;
+      margin-top: 5rem; 
+    }
+
+  }
 }
-/* 900-1200px: Tablet landscape mode */
-@media (max-width: 1200px) {
-}
-/* 600-900px: Tablet portrait mode */
-@media (max-width: 900px) {
-}
-/* 400-600px:  Phone */
 @media only screen and (max-width: 600px) {
   section:not(:first-of-type) {
     padding-top: 5rem;
@@ -132,7 +135,4 @@
   footer {
     margin-top: 15rem;
   }
-}
-/* 0-400px: Small-phone */
-@media (max-width: 400px) {
 }

@@ -164,7 +164,7 @@ ul#nav-gallery-art-icon {
   box-shadow: 0 0 0 1px var(--light-purple) !important;
 }
 .highlight figure figcaption {
-  @media (min-width: 1150px) {
+  @media (min-width: 1260px) {
     display: block !important;
   }
 }
@@ -252,12 +252,12 @@ ul#nav-gallery-art-icon {
 #paintings .description input:checked ~ label:before {
   content: "▲ replier ";
 }
-#paintings .description p:not(p:nth-of-type(1)) {
+#paintings .description p:not(p:nth-of-type(1)):not(.tw-violences) {
   overflow: hidden;
   max-height: 0;
   padding-bottom: 0;
 }
-#paintings .description input:checked ~ p:not(p:nth-of-type(1)) {
+#paintings .description input:checked ~ p:not(p:nth-of-type(1)):not(.tw-violences) {
   max-height: 500px;
   padding-bottom: 1rem;
 }

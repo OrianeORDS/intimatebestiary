@@ -126,6 +126,7 @@ article {
 
 .tw-violences {
   font-weight: 100 !important;
+  color: var(--light-purple) !important;
 }
 /* see changes on .paintings__readmore appearance in the index.css file */ 
 #paintings .description label:before, 

@@ -35,26 +35,18 @@ function ElementDisplay(element, show = true) {
   }
 }
 function WindowResize() {
+
   isPhoneSized = innerWidth <= phoneBreakpoint;
-  pages = !isPhoneSized ?
-    document.querySelectorAll("section:not(#background-image), #paintings article, #infos,#infos__artcontainer article:not(#info__something_else)") :
-    document.querySelectorAll("section:not(#background-image), #infos,#infos__artcontainer article:not(#info__something_else)");
+
+  pages = !isPhoneSized ? document.querySelectorAll("section:not(#background-image), #paintings article, #infos,#infos__artcontainer article:not(#info__something_else)") : document.querySelectorAll("section:not(#background-image), #infos,#infos__artcontainer article:not(#info__something_else)");
+
   pages.forEach((p, i) => p.getBoundingClientRect().top <= 5 ? (page.index = i) : null );
 
-  if (isPhoneSized) {
-    if (![...artsNavGallery].some((nav) => nav.matches(".highlight"))) {
+  if (isPhoneSized) { 
+    artsNavGallery.forEach( (nav) => (nav.querySelector("a").href = "#paintings") );
+    if (![...artsNavGallery].some((nav) => nav.matches(".highlight"))) 
       artsNavGallery[0].classList.add("highlight");
-    }
-    paintings.forEach((p, i) =>
-      i !== 0
-        ? ElementDisplay(
-            p,
-            [...artsNavGallery].some((nav) =>
-              nav.matches("." + p.id + ".highlight")
-            )
-          )
-        : null
-    );
+    paintings.forEach((p, i) => i !== 0 ? ElementDisplay( p, [...artsNavGallery].some((nav) => nav.matches("." + p.id + ".highlight") ) ) : null );
   } else {
     artsNavGallery.forEach((nav) => {
       nav.querySelector("a").href = "#" + nav.classList[0];
@@ -63,14 +55,13 @@ function WindowResize() {
     });
   }
 }
-WindowResize();
 window.addEventListener("resize", WindowResize);
+WindowResize();
 // ----------------------------------------------------------------
 
 artsNavGallery.forEach((_nav) => {
   _nav.querySelector("a").addEventListener("click", (_event) => {
     if (isPhoneSized) {
-      _event.preventDefault();
       paintings.forEach((p, i) => i !== 0 ? ElementDisplay(p, _nav.matches("." + p.id)) : null );
       artsNavGallery.forEach((__nav) => __nav.classList.toggle("highlight", __nav === _nav) );
     }
@@ -86,23 +77,12 @@ document.addEventListener("scroll", (event) => {
   pageNavArrowDown.href = "#" + pages[page.next].id;
 
   let isOnPaintings = page.current.id === "paintings";
-  paintings.forEach(
-    (p) => (isOnPaintings ||= p.matches("." + page.current.id))
-  );
-  ElementDisplay(
-    document.querySelector("#nav-gallery"),
-    isOnPaintings || isPhoneSized
-  );
+  paintings.forEach( (p) => (isOnPaintings ||= p.matches("." + page.current.id)) );
 
-  if (!isPhoneSized) {
-    artsNavGallery.forEach((nav) => {
-      nav.classList.toggle("highlight", nav.matches("." + page.current.id));
-    });
-  } else {
-    artsNavGallery.forEach(
-      (nav) => (nav.querySelector("a").href = "#paintings")
-    );
-  }
+  ElementDisplay( document.querySelector("#nav-gallery"), isOnPaintings || isPhoneSized );
+
+  if (!isPhoneSized) 
+    artsNavGallery.forEach((nav) => { nav.classList.toggle("highlight", nav.matches("." + page.current.id)); });
 });
 
 //stop other playing audios

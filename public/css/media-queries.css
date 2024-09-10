@@ -1,3 +1,12 @@
+:root {
+  /* screen sizes */
+  --desktop-breakpoint: 1800px;
+  --tablet-landscape-breakpoint: 1200px;
+  --tablet-portrait-breakpoint: 900px;
+  --phone-breakpoint: 600px;
+  --small-phone-breakpoint: 400px;
+}
+
 @media only screen and (max-width: 600px) {
   html main {
     margin-top: 0;
@@ -68,56 +77,60 @@
 @media (max-width: 900px) {
 }
 /* 400-600px:  Phone */
-@media (max-width: 600px) {
-  #nav-scroll {
-    /* MOBILE: 1rem:(space) */
-    top: 1rem;
-    /* MOBILE: 1rem(arrow-up) + 3rem:(menu) + 1rem:(arrow-down) */
-    height: 5rem;
-    li {
-      height: 1rem;
-      width: 3rem;
-      background-color: transparent;
-      border-radius: 0%;
-    }
+@media only screen and (max-width: 600px) {
+  section:not(:first-of-type) {
+    padding-top: 5rem;
   }
-
-  #nav-gallery {
-    top: 7rem;
-    left: 7rem;
+  #nav-scroll {
+    top: 2rem;
+    left: calc(100vw - 7rem - 2rem);
     height: 3rem;
-    width: calc(100vw - 12rem);
+    width: calc(2 * 3rem + 1 * 1rem);
     ul {
       flex-direction: row;
-      justify-content: space-between;
-      figure img {
-        --sqSize: calc(((100vw - 12rem) / 15));
-      }
     }
   }
 
-  #paintings article {
-    padding-top: 9rem;
-    figure {
-      div.technique {
-        background-color: var(--intense-purple-transp);
-        margin: 0;
-        padding: 15px;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        opacity: 0;
-        transition: all 0.5s ease;
+  #paintings {
+    #nav-gallery {
+      position: static;
+      left: 2rem;
+      height: 100%;
+      width: 100%;
+      margin-bottom: 2rem;
+      ul {
+        flex-direction: row;
+        justify-content: space-between;
+        figure img {
+          --sqSize: calc(((100vw - 12rem) / 15));
+        }
       }
-      & img:hover ~ div.technique,
-      & div.technique:hover {
-        opacity: 1;
+    }
+    #paintings__container {
+      article {
+        /* padding-top: 7rem; */
+        figure {
+          div.technique {
+            background-color: var(--intense-purple-transp);
+            margin: 0;
+            padding: 15px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            opacity: 0;
+            transition: all 0.5s ease;
+          }
+          & img:hover ~ div.technique,
+          & div.technique:hover {
+            opacity: 1;
+          }
+        }
       }
     }
   }
 
   footer {
-    margin-top: 14rem;
+    margin-top: 15rem;
   }
 }
 /* 0-400px: Small-phone */

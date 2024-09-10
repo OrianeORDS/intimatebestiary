@@ -1,43 +1,108 @@
-var pages = document.querySelectorAll("section:not(#background-image),#paintings article,#infos,#infos__artcontainer article:not(#info__something_else)");
+console.clear();
+
+var phoneBreakpoint = getComputedStyle(document.documentElement)
+  .getPropertyValue("--phone-breakpoint")
+  .slice(0, -2);
+var isPhoneSized = innerWidth <= phoneBreakpoint;
+
+var pages = !isPhoneSized ? 
+  document.querySelectorAll("section:not(#background-image), #paintings article, #infos,#infos__artcontainer article:not(#info__something_else)") :
+  document.querySelectorAll("section:not(#background-image), #infos,#infos__artcontainer article:not(#info__something_else)");
 var page = {
   index: 0,
-  get previous() {return Math.max(this.index - 1, 0)},
-  get next() {return Math.min(this.index + 1, pages.length - 1)},
-  get current() {return pages[this.index]},
-}
+  get previous() { return Math.max(this.index - 1, 0); },
+  get next() { return Math.min(this.index + 1, pages.length - 1); },
+  get current() { return pages[this.index]; },
+};
 
 var pageNavArrowUp = document.getElementById("nav-scroll__link-arrow-up");
 var pageNavArrowDown = document.getElementById("nav-scroll__link-arrow-down");
+pageNavArrowUp.href = "#" + pages[page.previous].id;
+pageNavArrowDown.href = "#" + pages[page.next].id;
+document.getElementById("nav-scroll").style.display = "block";
 
-var paintings = document.querySelectorAll("#paintings article");
-var artsNavGallery = document.querySelectorAll("#nav-gallery #nav-gallery-art-icon li");
+var artsNavGallery = document.querySelectorAll( "#nav-gallery #nav-gallery-art-icon li" );
 
-document.addEventListener("scroll", (event) => {
-  console.clear();
-  // ===== PAGE =====
-  pages.forEach((p, i) => {
-      if (p.getBoundingClientRect().top <= 5) {
-        page.index = i;
-      }
-  });
-  pageNavArrowUp.href = "#" + pages[page.previous].id;
-  pageNavArrowDown.href = "#" + pages[page.next].id;
-  
-  // ===== NAV-GALLERY & PAINTINGS =====
+var paintings = document.querySelectorAll("#paintings, #paintings article");
 
-  document.querySelector("#nav-gallery").classList.remove("nav-gallery-show");
-  document.querySelector("#nav-gallery").classList.add("nav-gallery-hide");
-  artsNavGallery.forEach((nav) => {
-    if (nav.matches("." + page.current.id)) {
-      document
-        .querySelector("#nav-gallery")
-        .classList.remove("nav-gallery-hide");
-      document.querySelector("#nav-gallery").classList.add("nav-gallery-show");
-      nav.classList.add("highlight");
-    } else {
-      nav.classList.remove("highlight");
+function ElementDisplay(element, show = true) {
+  if (show) {
+    element.classList.remove("element-hide");
+    element.classList.add("element-show");
+  } else {
+    element.classList.remove("element-show");
+    element.classList.add("element-hide");
+  }
+}
+function WindowResize() {
+  isPhoneSized = innerWidth <= phoneBreakpoint;
+  pages = !isPhoneSized ?
+    document.querySelectorAll("section:not(#background-image), #paintings article, #infos,#infos__artcontainer article:not(#info__something_else)") :
+    document.querySelectorAll("section:not(#background-image), #infos,#infos__artcontainer article:not(#info__something_else)");
+  pages.forEach((p, i) => p.getBoundingClientRect().top <= 5 ? (page.index = i) : null );
+
+  if (isPhoneSized) {
+    if (![...artsNavGallery].some((nav) => nav.matches(".highlight"))) {
+      artsNavGallery[0].classList.add("highlight");
+    }
+    paintings.forEach((p, i) =>
+      i !== 0
+        ? ElementDisplay(
+            p,
+            [...artsNavGallery].some((nav) =>
+              nav.matches("." + p.id + ".highlight")
+            )
+          )
+        : null
+    );
+  } else {
+    artsNavGallery.forEach((nav) => {
+      nav.querySelector("a").href = "#" + nav.classList[0];
+      nav.classList.toggle("highlight", nav.matches("." + page.current.id));
+      paintings.forEach((p, i) => (i !== 0 ? ElementDisplay(p, true) : null));
+    });
+  }
+}
+WindowResize();
+window.addEventListener("resize", WindowResize);
+// ----------------------------------------------------------------
+
+artsNavGallery.forEach((_nav) => {
+  _nav.querySelector("a").addEventListener("click", (_event) => {
+    if (isPhoneSized) {
+      _event.preventDefault();
+      paintings.forEach((p, i) => i !== 0 ? ElementDisplay(p, _nav.matches("." + p.id)) : null );
+      artsNavGallery.forEach((__nav) => __nav.classList.toggle("highlight", __nav === _nav) );
     }
   });
+});
+
+// ----------------------------------------------------------------
+document.addEventListener("scroll", (event) => {
+  
+  pages.forEach((p, i) => p.getBoundingClientRect().top <= 5 ? (page.index = i) : null );
+
+  pageNavArrowUp.href = "#" + pages[page.previous].id;
+  pageNavArrowDown.href = "#" + pages[page.next].id;
+
+  let isOnPaintings = page.current.id === "paintings";
+  paintings.forEach(
+    (p) => (isOnPaintings ||= p.matches("." + page.current.id))
+  );
+  ElementDisplay(
+    document.querySelector("#nav-gallery"),
+    isOnPaintings || isPhoneSized
+  );
+
+  if (!isPhoneSized) {
+    artsNavGallery.forEach((nav) => {
+      nav.classList.toggle("highlight", nav.matches("." + page.current.id));
+    });
+  } else {
+    artsNavGallery.forEach(
+      (nav) => (nav.querySelector("a").href = "#paintings")
+    );
+  }
 });
 
 //stop other playing audios

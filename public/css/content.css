@@ -30,6 +30,7 @@
 
 /* XXXXXXXXXXXXX NAV-SCROLL SECTION XXXXXXXXXXXXX */
 #nav-scroll {
+  display: none;
   position: fixed;
   top: 7rem; /* DESKTOP: 2rem:(space) + 3:(menu) + 2:(space) */
   left: 2rem;
@@ -64,7 +65,7 @@
 
 /* XXXXXXXXXXXXX NAV-GALLERY SECTION XXXXXXXXXXXXX */
 
-@keyframes nav-gallery-hide {
+@keyframes element_hide {
   0% {
     display: block;
     opacity: 1;
@@ -73,7 +74,7 @@
     opacity: 0;
   }
 }
-@keyframes nav-gallery-show {
+@keyframes element_show {
   0% {
     display: block;
     opacity: 0;
@@ -91,24 +92,23 @@
   position: fixed;
   left: 2rem;
   top: 10rem; /* 7(menu+spaces) + 3(arrow-up) = 10rem */
-  min-width: 3rem;;
+  min-width: 3rem;
   height: calc(
     (100vh - 15rem)
   ); /* 7(menu+spaces) + 3(arrow-up) + 3(arrow-down) + 2(space) = 15rem */
   opacity: 0;
   display: none;
-  z-index: 1;  
-}
-
-#nav-gallery.nav-gallery-show {
-  animation-name: nav-gallery-show;
-  display: block;
-  opacity: 1;
-}
-#nav-gallery.nav-gallery-hide {
-  animation-name: nav-gallery-hide;
-  display: none;
-  opacity: 0;
+  z-index: 1;
+  &.element-hide {
+    animation-name: element_hide;
+    opacity: 0;
+    display: none;
+  }
+  &.element-show {
+    animation-name: element_show;
+    opacity: 1;
+    display: block;
+  }
 }
 
 #nav-gallery ul {
@@ -178,6 +178,21 @@ ul#nav-gallery-art-icon {
 /* XXXXXXXXXXXXX PAINTINGS SECTION  XXXXXXXXXXXXX*/
 #paintings {
   position: relative;
+}
+
+#paintings article {
+  transition: all 0.33s ease-in-out;
+  animation-duration: 0.33s;
+  &.element-show {
+    animation-name: element_show;
+    opacity: 1;
+    display: block;
+  }
+  &.element-hide {
+    animation-name: element_hide;
+    opacity: 0;
+    display: none;
+  }
 }
 
 #paintings audio {
@@ -272,8 +287,8 @@ ul#nav-gallery-art-icon {
   height: auto;
   aspect-ratio: 700 /800;
   max-height: 50vh;
-
 }
+
 #contact__container img:hover {
   background-color: rgba(151, 131, 180, 0.8);
   padding: 0.5rem;
@@ -336,7 +351,7 @@ footer p {
   bottom: 0;
   z-index: -1;
   transition: all 3s ease-out;
-  --scale: .85;
+  --scale: 0.85;
   &.hide-giraffe {
     transition: all 0.25s ease;
   }
@@ -345,7 +360,11 @@ footer p {
 #footer-giraffe-1 {
   --scale1: calc(var(--scale) * 0.7);
   &.show-giraffe {
-      transform: translate(calc(var(--width-size) + 35vw), calc(var(--height-size) * (1 - var(--scale1)) / 2 )) scale(var(--scale1)); 
+    transform: translate(
+        calc(var(--width-size) + 35vw),
+        calc(var(--height-size) * (1 - var(--scale1)) / 2)
+      )
+      scale(var(--scale1));
   }
   &.hide-giraffe {
     content: "";
@@ -354,7 +373,11 @@ footer p {
 #footer-giraffe-2 {
   --scale2: calc(var(--scale) * 1);
   &.show-giraffe {
-    transform: translate(calc(var(--width-size) + 20vw), calc(var(--height-size) * (1 - var(--scale2)) / 2 ) ) scale(var(--scale2));
+    transform: translate(
+        calc(var(--width-size) + 20vw),
+        calc(var(--height-size) * (1 - var(--scale2)) / 2)
+      )
+      scale(var(--scale2));
   }
   &.hide-giraffe {
     content: "";
@@ -364,7 +387,11 @@ footer p {
 #footer-giraffe-3 {
   --scale3: calc(var(--scale) * 1.5);
   &.show-giraffe {
-    transform: translate(calc(var(--width-size) + 55vw), calc(var(--height-size) * (1 - var(--scale3)) / 2 )) scale(var(--scale3));
+    transform: translate(
+        calc(var(--width-size) + 55vw),
+        calc(var(--height-size) * (1 - var(--scale3)) / 2)
+      )
+      scale(var(--scale3));
   }
   &.hide-giraffe {
     content: "";

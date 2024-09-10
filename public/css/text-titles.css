@@ -182,8 +182,9 @@ ul.acknowledgment {
 }
 .acknowledgment li{
   list-style: none ;
-  min-width: 15rem;
-  max-width: 25rem;
+  /* min-width: 15rem; */
+  /* max-width: 25rem; */
+  width: 25rem;
 }
 .acknowledgment details {
   background-color: rgba(126, 214, 172, 0.15);

@@ -1,4 +1,7 @@
 #sculptures .carousel {
+  * {
+    transition: all 0.2s linear;
+  }
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -7,9 +10,6 @@
   gap: 2rem;
   height: 80vh;
   width: 100%;
-  * {
-    transition: all 0.2s linear;
-  }
   ul {
     position: relative;
     height: 100%;

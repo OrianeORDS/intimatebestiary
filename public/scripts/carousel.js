@@ -1,3 +1,4 @@
+document.querySelector("#sculptures.nojs").classList.remove("nojs");
 document.querySelectorAll(".carousel").forEach((carousel) => {
   var items = carousel.querySelectorAll("ul li");
   if (items.length > 0) {

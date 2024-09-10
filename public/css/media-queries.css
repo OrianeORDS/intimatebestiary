@@ -80,7 +80,7 @@
 
   }
 }
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   section:not(:first-of-type) {
     padding-top: 5rem;
   }

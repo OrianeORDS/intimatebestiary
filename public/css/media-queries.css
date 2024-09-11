@@ -69,11 +69,11 @@
 @media (min-width: 1800px) {
   #paintings {
     figure {
-      width: 50%;
+      width: calc(50% - 1rem);
       float: left;
     }
     .description {
-      width: 50%;
+      width: calc(50% - 1rem);
       float: right;
       margin-top: 5rem; 
     }

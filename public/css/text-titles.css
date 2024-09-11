@@ -177,6 +177,7 @@ ul.acknowledgment {
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 .acknowledgment--beforelist{
   margin-bottom: 1.5rem;
@@ -185,7 +186,8 @@ ul.acknowledgment {
   list-style: none ;
   /* min-width: 15rem; */
   /* max-width: 25rem; */
-  width: 25rem;
+  max-width: 25rem;
+  width: 100%;
 }
 .acknowledgment details {
   background-color: rgba(126, 214, 172, 0.15);

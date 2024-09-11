@@ -80,6 +80,11 @@
 
   }
 }
+@media (max-width: 1200px) {
+  .acknowledgment li{ 
+    max-width: 40rem;
+  }
+}
 @media (max-width: 600px) {
   section:not(:first-of-type) {
     padding-top: 5rem;

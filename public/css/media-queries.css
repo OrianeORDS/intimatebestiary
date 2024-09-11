@@ -69,11 +69,11 @@
 @media (min-width: 1800px) {
   #paintings {
     figure {
-      width: 48%;
+      width: 50%;
       float: left;
     }
     .description {
-      width: 48%;
+      width: 50%;
       float: right;
       margin-top: 5rem; 
     }
@@ -87,7 +87,7 @@
   #nav-scroll {
     top: 2rem;
     left: calc(100vw - 7rem - 2rem);
-    height: 3rem;
+    height: 5rem;
     width: calc(2 * 3rem + 1 * 1rem);
     ul {
       flex-direction: row;
@@ -98,22 +98,21 @@
     #nav-gallery {
       position: static;
       left: 2rem;
-      height: 100%;
       width: 100%;
+      height: fit-content;
       margin-bottom: 2rem;
       ul {
         flex-direction: row;
         justify-content: space-between;
         figure img {
-          --sqSize: calc(((100vw - 12rem) / 15));
+          --sqSize: calc(((100vw - 2 * 3rem - 8 * 0.75rem) / 9));
         }
       }
     }
     #paintings__container {
       article {
-        /* padding-top: 7rem; */
         figure {
-          div.technique {
+          .technique {
             background-color: var(--intense-purple-transp);
             margin: 0;
             padding: 15px;
@@ -123,15 +122,14 @@
             opacity: 0;
             transition: all 0.5s ease;
           }
-          & img:hover ~ div.technique,
-          & div.technique:hover {
+          & img:hover ~ .technique,
+          & .technique:hover {
             opacity: 1;
           }
         }
       }
     }
   }
-
   footer {
     margin-top: 15rem;
   }

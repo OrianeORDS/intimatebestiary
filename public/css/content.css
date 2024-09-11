@@ -117,9 +117,6 @@
   flex-flow: column;
   justify-content: space-evenly;
 }
-ul#nav-gallery-art-icon {
-  display: flex;
-}
 
 #nav-gallery ul figure {
   position: relative;
@@ -130,10 +127,10 @@ ul#nav-gallery-art-icon {
 }
 
 #nav-gallery ul figure img {
+  --sqSize: calc(((100vh - 15rem - 8 * 0.75rem) / 9));
   padding: 0;
   margin: 0;
   border: 0;
-  --sqSize: calc(((100vh - 15rem) / 15));
   width: var(--sqSize);
   height: var(--sqSize);
   max-width: 3rem;
@@ -363,7 +360,6 @@ footer p {
   bottom: 0;
   transition: all 3s ease-out;
   --scale: 0.73;
-  opacity: 1;
   &.hide-giraffe {
     transition: all 0.25s ease;
   }

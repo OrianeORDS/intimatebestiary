@@ -26,13 +26,8 @@ var artsNavGallery = document.querySelectorAll( "#nav-gallery #nav-gallery-art-i
 var paintings = document.querySelectorAll("#paintings, #paintings article");
 
 function ElementDisplay(element, show = true) {
-  if (show) {
-    element.classList.remove("element-hide");
-    element.classList.add("element-show");
-  } else {
-    element.classList.remove("element-show");
-    element.classList.add("element-hide");
-  }
+  element.classList.toggle("element-hide", !show);
+  element.classList.toggle("element-show", show);
 }
 function WindowResize() {
 

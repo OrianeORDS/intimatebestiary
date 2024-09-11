@@ -1,5 +1,3 @@
-console.clear();
-
 var phoneBreakpoint = getComputedStyle(document.documentElement)
   .getPropertyValue("--phone-breakpoint")
   .slice(0, -2);

@@ -326,8 +326,6 @@ footer {
   text-align: center;
   padding: 1rem 0;
   background-color: var(--intense-purple-transp);
-  /* overflow-x: clip; */
-  /* overflow-y: visible; */
 }
 
 footer p {
@@ -339,17 +337,6 @@ footer p {
   letter-spacing: 0.2rem;
   padding: 0.5rem;
   z-index: 2;
-}
-
-#footer-giraffe__container {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: fit-content;
-  overflow-x: clip;
-  overflow-y: visible;
-  z-index: 1;
 }
 
 .footer-giraffe__img {
@@ -372,7 +359,7 @@ footer p {
 #footer-giraffe-1 {
   --scale1: calc(var(--scale) * 0.7);
   &.show-giraffe {
-    --transform-show: translate( calc(var(--width-size) + 35vw), calc(var(--height-size) * (1 - var(--scale1)) / 2) )scale(var(--scale1));
+    --transform-show: translate( calc(var(--width-size) + 30vw), calc(var(--height-size) * (1 - var(--scale1)) / 2) )scale(var(--scale1));
   }
 }
 #footer-giraffe-2 {
@@ -385,6 +372,6 @@ footer p {
 #footer-giraffe-3 {
   --scale3: calc(var(--scale) * 1.5);
   &.show-giraffe {
-    --transform-show: translate( calc(var(--width-size) + 55vw), calc(var(--height-size) * (1 - var(--scale3)) / 2) ) scale(var(--scale3));
+    --transform-show: translate( calc(var(--width-size) + 50vw), calc(var(--height-size) * (1 - var(--scale3)) / 2) ) scale(var(--scale3));
   }
 }

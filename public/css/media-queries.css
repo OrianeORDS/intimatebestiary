@@ -64,7 +64,17 @@
   section {
     padding: 0 1.5rem;
   }
-} /*# sourceMappingURL=main.css.map */
+}
+@media only screen and (max-width: 400px) {
+  #home {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+  }
+}
 
 @media (min-width: 1800px) {
   #paintings {

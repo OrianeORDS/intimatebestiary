@@ -326,8 +326,8 @@ footer {
   text-align: center;
   padding: 1rem 0;
   background-color: var(--intense-purple-transp);
-  overflow-x: clip;
-  overflow-y: visible;
+  /* overflow-x: clip; */
+  /* overflow-y: visible; */
 }
 
 footer p {
@@ -365,7 +365,7 @@ footer p {
   }
   &.show-giraffe {
     -webkit-transform: var(--transform-show, );
-  transform: var(--transform-show, );
+    transform: var(--transform-show, );
   }
 }
 

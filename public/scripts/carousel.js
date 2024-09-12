@@ -8,7 +8,7 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
       get next () { return (this.current + 1) % items.length; },
       get previous() { return (this.current - 1 + items.length) % items.length; },
       target: this.current,
-      direction: 0, // 1: next, -1: previous
+      get direction() { return Math.sign(this.target - this.current); } // 1: next, 0: current, -1: previous
     };
 
     // create nav carousel element
@@ -21,44 +21,39 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
       let newDot = document.createElement("div");
       carousel.querySelector(".carousel-dots").appendChild(newDot);
     });
+
     let dots = carousel.querySelectorAll(".carousel-dots div");
 
     const updateCarousel = () => {
       items.forEach((item,itemIndex) => {
-        item.classList.remove("carousel-previous"); 
-        item.classList.remove("carousel-current");
-        item.classList.remove("carousel-next");
-        item.classList.remove("carousel-hidden");
-        if (itemIndex === index.previous) item.classList.add("carousel-previous");
-        else if (itemIndex === index.current) item.classList.add("carousel-current")
-        else if (itemIndex === index.next)item.classList.add("carousel-next")
-        else item.classList.add("carousel-hidden");
-
-        dots.forEach(dot => dot.removeAttribute("class"));
-        dots[index.current].classList.add("carousel-dots-active");
+        item.classList.toggle("carousel-previous", itemIndex === index.previous); 
+        item.classList.toggle("carousel-current", itemIndex === index.current);
+        item.classList.toggle("carousel-next", itemIndex === index.next);
+        item.classList.toggle("carousel-hidden", itemIndex !== index.previous && itemIndex !== index.current && itemIndex !== index.next);
       });
+      dots.forEach((dot, dotIndex) => dot.classList.toggle("carousel-dots-active", dotIndex===index.current));
     }
     updateCarousel();
 
-    items.forEach(item=>{item.addEventListener("click", (e) => {
-      if (e.target.closest(".carousel-previous")!== null) index.current = index.previous;
-      if (e.target.closest(".carousel-next")!== null) index.current = index.next;
+    items.forEach(item=>{item.addEventListener("click", (event) => {
+      index.target = [...items].indexOf(event.target.closest("li"));
+      index.current = index.target;
       updateCarousel();
      })
     });
     
     const dotsClick =  () => {
-      setTimeout(() =>{
-        if (index.current === index.target) return;
-        index.current += index.direction;
-        updateCarousel();
-        dotsClick();
-      },200);
+      (index.direction !== 0) &&
+        setTimeout(() =>{
+            if (index.current === index.target) return;
+            index.current += index.direction;
+            updateCarousel();
+            dotsClick();
+        },500);
     }
 
-    dots.forEach(dot=>{dot.addEventListener("click", async (e) => {
-      index.target = [...dots].indexOf(e.target);
-      index.direction = Math.sign(index.target - index.current);
+    dots.forEach(dot=>{dot.addEventListener("click", async (event) => {
+      index.target = [...dots].indexOf(event.target);
       if (index.direction !== 0) dotsClick();
     })});
 

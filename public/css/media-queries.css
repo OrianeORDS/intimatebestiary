@@ -110,12 +110,23 @@
 
   #paintings {
     #nav-gallery {
-      position: static;
-      left: 2rem;
+      position: relative;
+      top: 0;
+      left: 0;
       width: 100%;
       height: fit-content;
       margin-bottom: 2rem;
-      ul {
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        background-color: var(--light-green);
+        z-index: -1;
+      }
+    ul {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;

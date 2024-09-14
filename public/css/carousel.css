@@ -1,7 +1,5 @@
 #sculptures .carousel {
-  * {
-    transition: all 0.2s linear;
-  }
+  transition: all 0.2s linear;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -9,7 +7,10 @@
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  aspect-ratio: 16/9 auto;
+  aspect-ratio: 16/9;
+  @supports not (aspect-ratio: 1) {
+    padding-bottom: 56.25%;
+  }
   ul {
     position: relative;
     height: 100%;
@@ -77,7 +78,7 @@
       cursor: pointer;
       &.carousel-dots-active {
         background-color: var(--light-green);
-        scale: 1.5;
+        transform: scale(1.5);
       }
       &:hover {
         background-color: var(--intense-green);

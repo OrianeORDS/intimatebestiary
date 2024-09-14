@@ -59,7 +59,6 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-
 }
 
 .nav-scroll__icon {
@@ -97,7 +96,7 @@
 }
 #nav-gallery {
   * {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
   }
   transition: all 0.33s ease-in-out;
   animation-duration: 0.33s;
@@ -160,7 +159,7 @@
 #nav-gallery ul figure figcaption {
   display: none;
   position: absolute;
-  text-wrap: nowrap;
+  white-space: nowrap;
   top: 50%;
   transform: translate(60px, -50%);
   color: var(--light-purple);
@@ -267,17 +266,20 @@
   display: none;
 }
 #paintings .description label:before {
-  content: "▼ lire ";
+  content: '▼ lire ';
 }
 #paintings .description input:checked ~ label:before {
-  content: "▲ replier ";
+  content: '▲ replier ';
 }
 #paintings .description p:not(p:nth-of-type(1)):not(.tw-violences) {
   overflow: hidden;
   max-height: 0;
   padding-bottom: 0;
 }
-#paintings .description input:checked ~ p:not(p:nth-of-type(1)):not(.tw-violences) {
+#paintings
+  .description
+  input:checked
+  ~ p:not(p:nth-of-type(1)):not(.tw-violences) {
   max-height: 500px;
   padding-bottom: 1rem;
 }
@@ -307,6 +309,9 @@
   height: auto;
   aspect-ratio: 700 /800;
   max-height: 50vh;
+  @supports not (aspect-ratio: 1) {
+    padding-bottom: 114.29%;
+  }
 }
 
 #contact__container img:hover {
@@ -328,16 +333,16 @@
   width: 100%;
   height: 150vh;
   opacity: 0.5;
-  background-image: url("../images/background/pattern_terrazzo.png");
+  background-image: url('../images/background/pattern_terrazzo.png');
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
   transition: all 0.1667s ease-in-out;
-  scale: 1.025;
+  transform: scale(1.025);
 }
 section:hover ~ #background-image div#background-image-container {
   transition: all 0.1667s ease-in-out;
-  scale: 1.05;
+  transform: scale(1.05);
 }
 
 /* XXXXXXXXXXXX  FOOTER  XXXXXXXXXXXXXX*/
@@ -355,7 +360,7 @@ footer p {
   position: relative;
   font-size: 0.9rem;
   font-weight: 600;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   color: var(--light-green-transparent);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -375,27 +380,39 @@ footer p {
     transition: all 0.25s ease;
   }
   &.show-giraffe {
-    -webkit-transform: var(--transform-show, );
-    transform: var(--transform-show, );
+    -webkit-transform: var(--transform-show);
+    transform: var(--transform-show);
   }
 }
 
 #footer-giraffe-1 {
   --scale1: calc(var(--scale) * 0.7);
   &.show-giraffe {
-    --transform-show: translate( calc(var(--width-size) + 25vw), calc(var(--height-size) * (1 - var(--scale1)) / 2) )scale(var(--scale1));
+    --transform-show: translate(
+        calc(var(--width-size) + 25vw),
+        calc(var(--height-size) * (1 - var(--scale1)) / 2)
+      )
+      scale(var(--scale1));
   }
 }
 #footer-giraffe-2 {
   --scale2: calc(var(--scale) * 1);
   &.show-giraffe {
-    --transform-show: translate( calc(var(--width-size) + 18vw), calc(var(--height-size) * (1 - var(--scale2)) / 2) )scale(var(--scale2));
+    --transform-show: translate(
+        calc(var(--width-size) + 18vw),
+        calc(var(--height-size) * (1 - var(--scale2)) / 2)
+      )
+      scale(var(--scale2));
   }
 }
 
 #footer-giraffe-3 {
   --scale3: calc(var(--scale) * 1.5);
   &.show-giraffe {
-    --transform-show: translate( calc(var(--width-size) + 50vw), calc(var(--height-size) * (1 - var(--scale3)) / 2) ) scale(var(--scale3));
+    --transform-show: translate(
+        calc(var(--width-size) + 50vw),
+        calc(var(--height-size) * (1 - var(--scale3)) / 2)
+      )
+      scale(var(--scale3));
   }
 }

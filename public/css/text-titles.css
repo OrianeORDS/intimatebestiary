@@ -1,8 +1,8 @@
 /* STYLING on elements  accross the website*/
 
 a {
-/*  text-decoration: none !important;*/
-  font-family: "Source Sans 3", sans-serif;
+  /*  text-decoration: none !important;*/
+  font-family: 'Source Sans 3', sans-serif;
   color: var(--medium-purple);
   text-decoration: underline;
   &:hover {
@@ -32,7 +32,7 @@ h2 {
 }
 
 html {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 /* XXXXXX HOME CONTAINER */
@@ -111,8 +111,8 @@ article {
     top: 3rem;
     left: 0.5rem;
   }
-  }
-/* XXXXXXX PAINTINGS SECTION XXXXXXX */ 
+}
+/* XXXXXXX PAINTINGS SECTION XXXXXXX */
 #paintings {
   h3 {
     font-size: 2.7rem;
@@ -128,14 +128,14 @@ article {
   font-weight: 100 !important;
   color: var(--light-purple) !important;
 }
-/* see changes on .paintings__readmore appearance in the index.css file */ 
-#paintings .description label:before, 
+/* see changes on .paintings__readmore appearance in the index.css file */
+#paintings .description label:before,
 #paintings .description label {
-  font-family: "Source Sans 3", sans-serif;
-  color: var(--intense-green); 
+  font-family: 'Source Sans 3', sans-serif;
+  color: var(--intense-green);
   text-transform: uppercase;
   font-weight: 900;
-  padding-bottom: 1rem ;
+  padding-bottom: 1rem;
 }
 
 /* XXXXX INFORMATION SECTION XXXXXX */
@@ -147,28 +147,25 @@ article {
     font-size: 2.5rem;
   }
   h3 {
-      font-size: 1.5rem;
-      color: var(--intense-green);
-      font-weight: 600;
-      padding-top : 1rem ;
-      padding-bottom : 2rem ;  
-      text-transform: uppercase;
-    }
-    .description {
-      padding-bottom: 2rem ;
-    }
-} 
-
-
-/* XXXXXXXXX CONTACT SECTION XXXXXXXXXXXXXX */ 
-#contact__container p {
-  padding : 1rem 0 ;
-  font-weight: 300;
-  text-transform: uppercase ; 
-  color: var(--light-purple) ; 
+    font-size: 1.5rem;
+    color: var(--intense-green);
+    font-weight: 600;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+  }
+  .description {
+    padding-bottom: 2rem;
+  }
 }
 
-
+/* XXXXXXXXX CONTACT SECTION XXXXXXXXXXXXXX */
+#contact__container p {
+  padding: 1rem 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--light-purple);
+}
 
 /* XXXXXXXXX REMERCIEMENT / ACKNOWLEDGMGENT SECTION */
 
@@ -179,11 +176,11 @@ ul.acknowledgment {
   flex-wrap: wrap;
   gap: 2rem;
 }
-.acknowledgment--beforelist{
+.acknowledgment--beforelist {
   margin-bottom: 1.5rem;
 }
-.acknowledgment li{
-  list-style: none ;
+.acknowledgment li {
+  list-style: none;
   /* min-width: 15rem; */
   /* max-width: 25rem; */
   max-width: 25rem;
@@ -192,18 +189,18 @@ ul.acknowledgment {
 .acknowledgment details {
   background-color: rgba(126, 214, 172, 0.15);
   border-radius: 5%;
-  padding: 0 ;
+  padding: 0;
   margin-bottom: 1.5rem;
 }
 
 .acknowledgment summary {
   cursor: pointer;
   transition: all 0.2s;
-  padding: 1rem ; 
-  border-radius: 5% 5% 0% 0%;   
+  padding: 1rem;
+  border-radius: 5% 5% 0% 0%;
 }
 .acknowledgment summary:hover {
-    background-color: rgba(126, 214, 172, 0.25);
+  background-color: rgba(126, 214, 172, 0.25);
 }
 
 details[open] > summary {
@@ -212,12 +209,11 @@ details[open] > summary {
 
 .acknowledgment li p {
   font-size: smaller;
-  padding: 1rem;  
+  padding: 1rem;
 }
 .description--highlight {
   color: var(--medium-purple);
 }
-
 
 /* WAS WORKING PREVIOUSLY BUT NOT WORKING ANYMORE, DONT KNOW WHY */
 /*

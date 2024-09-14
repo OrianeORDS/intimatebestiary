@@ -39,8 +39,6 @@ html {
   }
 
   main {
-    /* width: calc(100% - 10rem - 4rem); */
-    /* margin: 2rem 4rem 2rem auto; */
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -48,7 +46,7 @@ html {
 
 section {
   max-width: 100%;
-  flex-wrap : wrap ; 
+  flex-wrap: wrap;
   padding: 3rem;
   display: flex;
   flex-flow: column;
@@ -57,8 +55,4 @@ section {
 }
 ul {
   list-style: none;
-}
-
-section &:last-child {
-  margin-bottom: 3rem;
 }

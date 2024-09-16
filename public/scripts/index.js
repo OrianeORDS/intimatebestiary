@@ -9,5 +9,3 @@ var ioFooter = new IntersectionObserver((entries) => {
   });
 });
 ioFooter.observe(document.querySelector('footer'));
-
-console.log('production2');

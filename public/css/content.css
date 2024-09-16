@@ -39,10 +39,10 @@
 #nav-scroll {
   display: none;
   position: fixed;
-  top: 7rem; /* DESKTOP: 2rem:(space) + 3:(menu) + 2:(space) */
+  top: 9rem; /* DESKTOP: 2rem:(space) + 3:(menu) + 4:(space) */
   left: 2rem;
   width: 3rem;
-  height: calc(100vh - 9rem); /* DESKTOP: 100vh:(viewport) - 7rem:(menu+spaces) - 2rem:(space) */
+  height: calc(100vh - 11rem); /* DESKTOP: 100vh:(viewport) - 7rem:(menu+spaces) - 2rem:(space) */
   z-index: 1;
 }
 
@@ -107,9 +107,9 @@
   animation-duration: 0.33s;
   position: fixed;
   left: 2rem;
-  top: 10rem; /* 7(menu+spaces) + 3(arrow-up) = 10rem */
+  top: 12rem; /* 9(menu+spaces) + 3(arrow-up) = 12rem */
   min-width: 3rem;
-  height: calc(100vh - 15rem); /* 7(menu+spaces) + 3(arrow-up) + 3(arrow-down) + 2(space) = 15rem */
+  height: calc(100vh - 12rem - 5rem); /* 7(menu+spaces) + 3(arrow-up) + 3(arrow-down) + 2(space) = 15rem */
   opacity: 0;
   display: none;
   z-index: 1;

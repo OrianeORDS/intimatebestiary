@@ -66,27 +66,22 @@
   }
 }
 @media only screen and (max-width: 400px) {
-  #home {
-    h1 {
-      font-size: 4rem;
-    }
-    h2 {
-      font-size: 3rem;
-    }
+  #home h1 {
+    font-size: 4rem;
+  }
+  #home h2 {
+    font-size: 3rem;
   }
 }
-
 @media (min-width: 1800px) {
-  #paintings {
-    figure {
-      width: calc(50% - 1rem);
-      float: left;
-    }
-    .description {
-      width: calc(50% - 1rem);
-      float: right;
-      margin-top: 5rem;
-    }
+  #paintings figure {
+    width: calc(50% - 1rem);
+    float: left;
+  }
+  #paintings .description {
+    width: calc(50% - 1rem);
+    float: right;
+    margin-top: 5rem;
   }
 }
 @media (max-width: 1200px) {
@@ -101,102 +96,91 @@
   #nav-scroll {
     top: 2rem;
     left: calc(100vw - 7rem - 1.5rem);
-    width: calc(2 * 3rem + 1 * 1rem);
+    width: 7rem;
     height: 3rem;
-    ul {
-      flex-direction: row;
-    }
   }
-
-  #paintings {
-    #nav-gallery {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: fit-content;
-      margin-bottom: 2rem;
-      &::before {
-        content: "";
-        position: absolute;
-        display: block;
-        top: 50%;
-        width: 100%;
-        height: 1px;
-        background-color: var(--light-green);
-        z-index: -1;
-      }
-    ul {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        li {
-          border-radius: 50%;
-          background-color: var(--medium-purple);
-          width: 2rem;
-          height: 2rem;
-          figure:hover {
-            img {
-              box-shadow: none;
-            }
-          }
-          &:not(.nav-gallery__arrow) {
-            height: 1rem;
-            width: 1rem;
-            figure img {
-              --sqSize: 1rem;
-              opacity: 0;
-              &:hover {
-                box-shadow: none;
-              }
-            }
-          }
-          &.nav-gallery__arrow {
-            display: block;
-            figure img {
-              height: 50%;
-              width: 50%;
-            }
-            &#nav-gallery__arrow-left img {
-              transform: translate(-50%, -50%) rotate(-90deg);
-            }
-            &#nav-gallery__arrow-right img {
-              transform: translate(-50%, -50%) rotate(+90deg);
-            }
-          }
-          &.highlight {
-            height: 1.2rem;
-            width: 1.2rem;
-            background-color: var(--light-green);
-          }
-          &:hover {
-            background-color: var(--intense-green);
-          }
-        }
-      }
-    }
-    #paintings__container {
-      article {
-        figure {
-          .technique {
-            background-color: var(--intense-purple-transp);
-            margin: 0;
-            padding: 15px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            opacity: 0;
-            transition: all 0.5s ease;
-          }
-          & img:hover ~ .technique,
-          & .technique:hover {
-            opacity: 1;
-          }
-        }
-      }
-    }
+  #nav-scroll ul {
+    flex-direction: row;
+  }
+  #paintings #nav-gallery {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  #paintings #nav-gallery::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-green);
+    z-index: -1;
+  }
+  #paintings #nav-gallery ul {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #paintings #nav-gallery ul li {
+    border-radius: 50%;
+    background-color: var(--medium-purple);
+    width: 2rem;
+    height: 2rem;
+  }
+  #paintings #nav-gallery ul li figure:hover img {
+    box-shadow: none;
+  }
+  #paintings #nav-gallery ul li:not(.nav-gallery__arrow) {
+    height: 1rem;
+    width: 1rem;
+  }
+  #paintings #nav-gallery ul li:not(.nav-gallery__arrow) figure img {
+    --sqSize: 1rem;
+    opacity: 0;
+  }
+  #paintings #nav-gallery ul li:not(.nav-gallery__arrow) figure img:hover {
+    box-shadow: none;
+  }
+  #paintings #nav-gallery ul li.nav-gallery__arrow {
+    display: block;
+  }
+  #paintings #nav-gallery ul li.nav-gallery__arrow figure img {
+    height: 50%;
+    width: 50%;
+  }
+  #paintings #nav-gallery ul li.nav-gallery__arrow#nav-gallery__arrow-left img {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  #paintings #nav-gallery ul li.nav-gallery__arrow#nav-gallery__arrow-right img {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  #paintings #nav-gallery ul li.highlight {
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: var(--light-green);
+  }
+  #paintings #nav-gallery ul li:hover {
+    background-color: var(--intense-green);
+  }
+  #paintings #paintings__container article figure .technique {
+    background-color: var(--intense-purple-transp);
+    margin: 0;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  #paintings #paintings__container article figure img:hover ~ .technique, #paintings #paintings__container article figure .technique:hover {
+    opacity: 1;
   }
   footer {
     margin-top: 15rem;
   }
-}
+}/*# sourceMappingURL=media-queries.css.map */

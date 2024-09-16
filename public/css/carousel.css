@@ -8,103 +8,103 @@
   gap: 2rem;
   width: 100%;
   aspect-ratio: 16/9;
-  @supports not (aspect-ratio: 1) {
+}
+@supports not (aspect-ratio: 1) {
+  #sculptures .carousel {
     padding-bottom: 56.25%;
   }
-  ul {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    li {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      &.carousel-current {
-        width: 50%;
-        opacity: 1;
-        z-index: 3;
-      }
-      &.carousel-previous,
-      &.carousel-next {
-        opacity: 0.8;
-        z-index: 2;
-        height: 25%;
-        width: 23%;
-        top: 50%;
-        &:hover {
-          cursor: pointer;
-          background-color: hsla(289, 21%, 81%, 0.15);
-          box-shadow: 0 0 5px 3px hsla(289, 21%, 81%, 0.25);
-          border-radius: 3px;
-        }
-      }
-      &.carousel-previous {
-        left: 12.5%;
-      }
-      &.carousel-next {
-        left: 87.5%;
-      }
-      &.carousel-hidden {
-        opacity: 0;
-        z-index: 1;
-        height: 5%;
-        width: 5%;
-      }
-      img {
-        object-fit: contain;
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-  .carousel-dots {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: center;
-    max-width: 35rem;
-    min-width: 18rem;
-    width: 45vw;
-
-    div {
-      width: 1rem;
-      height: 1rem;
-      border-radius: 50%;
-      background-color: var(--medium-purple);
-      cursor: pointer;
-      &.carousel-dots-active {
-        background-color: var(--light-green);
-        transform: scale(1.5);
-      }
-      &:hover {
-        background-color: var(--intense-green);
-      }
-    }
-  }
+}
+#sculptures .carousel ul {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#sculptures .carousel ul li {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#sculptures .carousel ul li.carousel-current {
+  width: 50%;
+  opacity: 1;
+  z-index: 3;
+}
+#sculptures .carousel ul li.carousel-previous, #sculptures .carousel ul li.carousel-next {
+  opacity: 0.8;
+  z-index: 2;
+  height: 25%;
+  width: 23%;
+  top: 50%;
+}
+#sculptures .carousel ul li.carousel-previous:hover, #sculptures .carousel ul li.carousel-next:hover {
+  cursor: pointer;
+  background-color: hsla(289, 21%, 81%, 0.15);
+  box-shadow: 0 0 5px 3px hsla(289, 21%, 81%, 0.25);
+  border-radius: 3px;
+}
+#sculptures .carousel ul li.carousel-previous {
+  left: 12.5%;
+}
+#sculptures .carousel ul li.carousel-next {
+  left: 87.5%;
+}
+#sculptures .carousel ul li.carousel-hidden {
+  opacity: 0;
+  z-index: 1;
+  height: 5%;
+  width: 5%;
+}
+#sculptures .carousel ul li img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+#sculptures .carousel .carousel-dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  max-width: 35rem;
+  min-width: 18rem;
+  width: 45vw;
+}
+#sculptures .carousel .carousel-dots div {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--medium-purple);
+  cursor: pointer;
+}
+#sculptures .carousel .carousel-dots div.carousel-dots-active {
+  background-color: var(--light-green);
+  transform: scale(1.5);
+}
+#sculptures .carousel .carousel-dots div:hover {
+  background-color: var(--intense-green);
 }
 
-#sculptures.nojs {
-  .carousel {
-    height: fit-content;
-    width: 100%;
-    ul {
-      display: flex;
-      width: 100%;
-      flex-wrap: wrap;
-      overflow: initial;
-      justify-content: space-between;
-      li {
-        display: block;
-        position: unset;
-        top: 0;
-        left: 0;
-        transform: none;
-        width: 30%;
-      }
-    }
-  }
+#sculptures.nojs .carousel {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
 }
+#sculptures.nojs .carousel ul {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow: initial;
+  justify-content: space-between;
+}
+#sculptures.nojs .carousel ul li {
+  display: block;
+  position: unset;
+  top: 0;
+  left: 0;
+  transform: none;
+  width: 30%;
+}/*# sourceMappingURL=carousel.css.map */

@@ -1,13 +1,12 @@
 /* STYLING on elements  accross the website*/
-
 a {
-/*  text-decoration: none !important;*/
+  /*  text-decoration: none !important;*/
   font-family: "Source Sans 3", sans-serif;
   color: var(--medium-purple);
   text-decoration: underline;
-  &:hover {
-    color: var(--medium-green);
-  }
+}
+a:hover {
+  color: var(--medium-green);
 }
 
 h1,
@@ -16,7 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-align: left;
   font-weight: 200;
   line-height: 1.5;
@@ -36,39 +35,36 @@ html {
 }
 
 /* XXXXXX HOME CONTAINER */
-
 #home__hcontainer {
   /* height: 100vh; */
-  h1 {
-    font-size: 6rem;
-    text-shadow: 2px 2px 15px var(--intense-green);
-    padding: 2rem 0 2rem;
-    letter-spacing: 2vw;
-    font-weight: 900;
-  }
-  h2 {
-    color: var(--light-purple);
-    margin-top: 5vw;
-    font-size: 4rem;
-    font-weight: 200;
-    text-shadow: -0.5px 0.5px 15px var(--intense-green);
-  }
+}
+#home__hcontainer h1 {
+  font-size: 6rem;
+  text-shadow: 2px 2px 15px var(--intense-green);
+  padding: 2rem 0 2rem;
+  letter-spacing: 2vw;
+  font-weight: 900;
+}
+#home__hcontainer h2 {
+  color: var(--light-purple);
+  margin-top: 5vw;
+  font-size: 4rem;
+  font-weight: 200;
+  text-shadow: -0.5px 0.5px 15px var(--intense-green);
 }
 
 /* XXXX SECTION XXXXX */
-
 section .header__h1h2container {
   padding: 2rem 0 2rem 0;
-  h1 {
-    font-size: 3rem;
-    letter-spacing: 1rem;
-    text-transform: uppercase;
-    color: var(--light-purple);
-  }
+}
+section .header__h1h2container h1 {
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: var(--light-purple);
 }
 
 /*XXXXXXXXX ARTICLE XXXXXX */
-
 article {
   display: flex;
   flex-flow: column;
@@ -84,42 +80,41 @@ article {
   gap: 3rem;
   flex-wrap: wrap;
 }
-.description {
-  p,
-  li {
-    font-family: 'Source Sans 3', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-    color: var(--light-green);
-    font-size: 1.3rem;
-    line-height: 1.5;
-    padding-bottom: 1rem;
-  }
-  li {
-    color: var(--light-green);
-    list-style-type: disc;
-    list-style-position: oustide;
-  }
-  li::marker {
-    color: var(--medium-purple);
-    font-size: 1.5rem;
-    margin-right: 0rem;
-    padding-inline: 1rem;
-    margin-inline-end: 1rem;
-    position: relative !important ;
-    top: 3rem;
-    left: 0.5rem;
-  }
-  }
-/* XXXXXXX PAINTINGS SECTION XXXXXXX */ 
-#paintings {
-  h3 {
-    font-size: 2.7rem;
-    color: var(--intense-green);
-    font-weight: 900;
-  }
+
+.description p,
+.description li {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  color: var(--light-green);
+  font-size: 1.3rem;
+  line-height: 1.5;
+  padding-bottom: 1rem;
 }
+.description li {
+  color: var(--light-green);
+  list-style-type: disc;
+  list-style-position: oustide;
+}
+.description li::marker {
+  color: var(--medium-purple);
+  font-size: 1.5rem;
+  margin-right: 0rem;
+  padding-inline: 1rem;
+  margin-inline-end: 1rem;
+  position: relative !important;
+  top: 3rem;
+  left: 0.5rem;
+}
+
+/* XXXXXXX PAINTINGS SECTION XXXXXXX */
+#paintings h3 {
+  font-size: 2.7rem;
+  color: var(--intense-green);
+  font-weight: 900;
+}
+
 .description--undertitle {
   padding: 7rem 0 3rem 0;
 }
@@ -128,50 +123,44 @@ article {
   font-weight: 100 !important;
   color: var(--light-purple) !important;
 }
-/* see changes on .paintings__readmore appearance in the index.css file */ 
-#paintings .description label:before, 
+
+/* see changes on .paintings__readmore appearance in the index.css file */
+#paintings .description label:before,
 #paintings .description label {
   font-family: "Source Sans 3", sans-serif;
-  color: var(--intense-green); 
+  color: var(--intense-green);
   text-transform: uppercase;
   font-weight: 900;
-  padding-bottom: 1rem ;
+  padding-bottom: 1rem;
 }
 
 /* XXXXX INFORMATION SECTION XXXXXX */
-
-#infos {
-  h2 {
-    padding-bottom: 2rem;
-    padding-top: 1rem;
-    font-size: 2.5rem;
-  }
-  h3 {
-      font-size: 1.5rem;
-      color: var(--intense-green);
-      font-weight: 600;
-      padding-top : 1rem ;
-      padding-bottom : 2rem ;  
-      text-transform: uppercase;
-    }
-    .description {
-      padding-bottom: 2rem ;
-    }
-} 
-
-
-/* XXXXXXXXX CONTACT SECTION XXXXXXXXXXXXXX */ 
-#contact__container p {
-  padding : 1rem 0 ;
-  font-weight: 300;
-  text-transform: uppercase ; 
-  color: var(--light-purple) ; 
+#infos h2 {
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  font-size: 2.5rem;
+}
+#infos h3 {
+  font-size: 1.5rem;
+  color: var(--intense-green);
+  font-weight: 600;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+#infos .description {
+  padding-bottom: 2rem;
 }
 
-
+/* XXXXXXXXX CONTACT SECTION XXXXXXXXXXXXXX */
+#contact__container p {
+  padding: 1rem 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--light-purple);
+}
 
 /* XXXXXXXXX REMERCIEMENT / ACKNOWLEDGMGENT SECTION */
-
 ul.acknowledgment {
   display: flex;
   flex-direction: row;
@@ -179,31 +168,35 @@ ul.acknowledgment {
   flex-wrap: wrap;
   gap: 2rem;
 }
-.acknowledgment--beforelist{
+
+.acknowledgment--beforelist {
   margin-bottom: 1.5rem;
 }
-.acknowledgment li{
-  list-style: none ;
+
+.acknowledgment li {
+  list-style: none;
   /* min-width: 15rem; */
   /* max-width: 25rem; */
   max-width: 25rem;
   width: 100%;
 }
+
 .acknowledgment details {
   background-color: rgba(126, 214, 172, 0.15);
   border-radius: 5%;
-  padding: 0 ;
+  padding: 0;
   margin-bottom: 1.5rem;
 }
 
 .acknowledgment summary {
   cursor: pointer;
   transition: all 0.2s;
-  padding: 1rem ; 
-  border-radius: 5% 5% 0% 0%;   
+  padding: 1rem;
+  border-radius: 5% 5% 0% 0%;
 }
+
 .acknowledgment summary:hover {
-    background-color: rgba(126, 214, 172, 0.25);
+  background-color: rgba(126, 214, 172, 0.25);
 }
 
 details[open] > summary {
@@ -212,12 +205,12 @@ details[open] > summary {
 
 .acknowledgment li p {
   font-size: smaller;
-  padding: 1rem;  
+  padding: 1rem;
 }
+
 .description--highlight {
   color: var(--medium-purple);
 }
-
 
 /* WAS WORKING PREVIOUSLY BUT NOT WORKING ANYMORE, DONT KNOW WHY */
 /*
@@ -232,8 +225,7 @@ transform : rotate(90deg) ;
 margin-left: 0.75em;
 transition: 0.2s;
 }*/
-
 /*
 .acknowledgment details[open] > summary::after{
 transform : rotate(-90deg); 
-} */
+} *//*# sourceMappingURL=text-titles.css.map */

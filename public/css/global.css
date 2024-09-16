@@ -29,36 +29,29 @@
 html {
   scroll-behavior: smooth;
   /* scroll-timeline: 100; */
-
-  body {
-    background-color: var(--dark-background);
-    color: var(--light-purple);
-    width: 100%;
-    margin: 0 auto;
-    min-width: 400px;
-  }
-
-  main {
-    /* width: calc(100% - 10rem - 4rem); */
-    /* margin: 2rem 4rem 2rem auto; */
-    margin-left: 10%;
-    margin-right: 10%;
-  }
+}
+html body {
+  background-color: var(--dark-background);
+  color: var(--light-purple);
+  width: 100%;
+  margin: 0 auto;
+  min-width: 400px;
+}
+html main {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 section {
   max-width: 100%;
-  flex-wrap : wrap ; 
+  flex-wrap: wrap;
   padding: 3rem;
   display: flex;
   flex-flow: column;
   align-items: left;
   margin: auto;
 }
+
 ul {
   list-style: none;
-}
-
-section &:last-child {
-  margin-bottom: 3rem;
-}
+}/*# sourceMappingURL=global.css.map */

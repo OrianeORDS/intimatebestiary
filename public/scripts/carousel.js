@@ -49,7 +49,7 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
             index.current += index.direction;
             updateCarousel();
             dotsClick();
-        },500);
+        },180);
     }
 
     dots.forEach(dot=>{dot.addEventListener("click", async (event) => {

@@ -7,13 +7,10 @@
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  aspect-ratio: 16/9;
+  height: 40rem;
+  /* aspect-ratio: 16/9; */
 }
-@supports not (aspect-ratio: 1) {
-  #sculptures .carousel {
-    padding-bottom: 56.25%;
-  }
-}
+
 #sculptures .carousel ul {
   position: relative;
   height: 100%;
@@ -33,14 +30,16 @@
   opacity: 1;
   z-index: 3;
 }
-#sculptures .carousel ul li.carousel-previous, #sculptures .carousel ul li.carousel-next {
+#sculptures .carousel ul li.carousel-previous,
+#sculptures .carousel ul li.carousel-next {
   opacity: 0.8;
   z-index: 2;
   height: 25%;
   width: 23%;
   top: 50%;
 }
-#sculptures .carousel ul li.carousel-previous:hover, #sculptures .carousel ul li.carousel-next:hover {
+#sculptures .carousel ul li.carousel-previous:hover,
+#sculptures .carousel ul li.carousel-next:hover {
   cursor: pointer;
   background-color: hsla(289, 21%, 81%, 0.15);
   box-shadow: 0 0 5px 3px hsla(289, 21%, 81%, 0.25);
@@ -60,7 +59,7 @@
 }
 #sculptures .carousel ul li img {
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   width: 100%;
   height: 100%;
 }
@@ -107,4 +106,4 @@
   left: 0;
   transform: none;
   width: 30%;
-}/*# sourceMappingURL=carousel.css.map */
+} /*# sourceMappingURL=carousel.css.map */

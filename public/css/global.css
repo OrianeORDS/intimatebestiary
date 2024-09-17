@@ -38,8 +38,10 @@ html body {
   min-width: 400px;
 }
 html main {
-  margin-left: 15%;
-  margin-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 6rem ; 
+  max-width: 60rem ;
 }
 
 section {

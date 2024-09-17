@@ -177,8 +177,7 @@ ul.acknowledgment {
   list-style: none;
   /* min-width: 15rem; */
   /* max-width: 25rem; */
-  max-width: 25rem;
-  width: 100%;
+  width: 45%;
 }
 
 .acknowledgment details {

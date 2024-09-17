@@ -40,7 +40,7 @@ function WindowResize() {
     artsNavGallery.forEach((_nav) => _nav.querySelector("a").href = "#paintings" );
 
     (![...artsNavGallery].some((nav) => nav.matches(".highlight"))) 
-      && [...artsNavGallery].filter(nav => nav.matches(".ourson"))[0].classList.add("highlight");
+      && [...artsNavGallery].filter(nav => nav.matches(".hippopotame"))[0].classList.add("highlight");
 
     paintings.forEach((_p) => {
       !_p.matches("#paintings") 

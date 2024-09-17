@@ -97,13 +97,15 @@
     margin-bottom : 2rem  ;
   }
   #paintings figure {
-    width: calc(50% - 1rem);
-    float: left;
+    width: calc(50% - 1.5rem);
   }
   #paintings .description {
-    width: calc(50% - 1rem);
-    float: right;
+    width: calc(50% - 1.5rem);
     margin-top: 5rem;
+  }
+  #panthere > .tw-violences {
+    position: absolute;
+    top: 8rem;
   }
 }
 /*

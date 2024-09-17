@@ -207,6 +207,11 @@
 }
 
 #paintings article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
   transition: all 0.33s ease-in-out;
   animation-duration: 0.33s;
 }

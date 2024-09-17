@@ -55,7 +55,7 @@ function WindowResize() {
       
       _nav.classList.toggle("highlight", _nav.matches("." + page.current.id));
       
-      paintings.forEach((_p) => !_p.matches("#paintings") && ElementDisplay(_p, true));
+      paintings.forEach((_p) => !_p.matches("#paintings") && _p.classList.remove("element-show", "element-hide"));
     });
   }
 }

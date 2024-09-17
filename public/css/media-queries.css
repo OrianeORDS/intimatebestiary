@@ -93,6 +93,16 @@
     padding-left: 25rem ;
     padding-right: 15rem;
   }
+  .acknowledgment li {
+    width: 20%;
+  }
+  .description:not(.description--col) p {
+    width: 50rem ; 
+  }
+  .description--col{
+    column-count : 2 ;
+    column-gap: 4rem;
+  }
   #paintings article {
     margin-bottom : 2rem  ;
   }

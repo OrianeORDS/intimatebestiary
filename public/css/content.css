@@ -282,8 +282,8 @@
 
 #paintings .description p:not(p:nth-of-type(1)):not(.tw-violences) {
   overflow: hidden;
-  max-height: 0;
-  padding-bottom: 0;
+  max-height: 0px;
+  padding-bottom: 0px;
 }
 
 #paintings .description input:checked ~ p:not(p:nth-of-type(1)):not(.tw-violences) {
@@ -319,7 +319,7 @@
 }
 @supports not (aspect-ratio: 1) {
   #contact__container img {
-    padding-bottom: 114.29%;
+    height: 114.29%;
   }
 }
 

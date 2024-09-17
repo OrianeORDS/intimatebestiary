@@ -35,9 +35,6 @@ html {
 }
 
 /* XXXXXX HOME CONTAINER */
-#home__hcontainer {
-  /* height: 100vh; */
-}
 #home__hcontainer h1 {
   font-size: 6rem;
   text-shadow: 2px 2px 15px var(--intense-green);

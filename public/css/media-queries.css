@@ -93,6 +93,9 @@
     padding-left: 25rem ;
     padding-right: 15rem;
   }
+  #paintings article {
+    margin-bottom : 2rem  ;
+  }
   #paintings figure {
     width: calc(50% - 1rem);
     float: left;

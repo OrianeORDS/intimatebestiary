@@ -246,11 +246,6 @@
   box-shadow: -1px -1px 1px 0 black, 4px 6px 12px 6px black;
 }
 
-/* supress next or change paysage > .landscape */ 
-#paintings figure img .paysage {
-  max-height: calc(100vh - 2rem);
-}
-
 #paintings figure figcaption {
   display: none;
   text-align: center;

@@ -118,13 +118,20 @@
     top: 8rem;
   }
 }
-/*
-@media (max-width: 1200px) {
-  .acknowledgment li {
-    max-width: 45%;
-  }
-}*/ 
+
 @media (max-width: 600px) {
+  #paintings h3 { 
+    font-size:1.6rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+  #paintings figure{
+    margin: 2rem 0 ; 
+   }
+  #paintings .article__header {
+    gap : 2rem; 
+  }
   section:not(:first-of-type) {
     padding-top: 5rem;
   }
@@ -137,6 +144,7 @@
   #nav-scroll ul {
     flex-direction: row;
   }
+
   #paintings #nav-gallery {
     position: relative;
     top: 0;
@@ -144,7 +152,7 @@
     width: 100%;
     height: -moz-fit-content;
     height: fit-content;
-    margin-bottom: 2rem;
+    margin: 2rem 0 2rem 0;
   }
   #paintings #nav-gallery::before {
     content: "";

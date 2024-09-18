@@ -210,6 +210,21 @@
   #paintings #nav-gallery ul li:hover {
     background-color: var(--intense-green);
   }
+  #paintings #paintings__container article figure img {
+    width: 80vw;
+    height: 80vw;
+    object-fit: cover;  
+  }
+  #hippopotame  img { object-position:  20%  50%; }
+  #panthere     img { object-position:  50% 100%; }
+  #lemuriens    img { object-position:  90%  50%; }
+  #girafe       img { object-position:  50%  20%; }
+  #ourson       img { object-position: 100%  50%; }
+  #limace       img { object-position:  30%  50%; }
+  #rhinoceros   img { object-position:  50%  50%; }
+  #scarabee     img { object-position:  100% 50%; }
+  #louve-paon   img { object-position:  80%  50%; }
+
   #paintings #paintings__container article figure .technique {
     background-color: var(--intense-purple-transp);
     margin: 0;

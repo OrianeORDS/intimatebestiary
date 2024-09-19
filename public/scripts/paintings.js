@@ -169,13 +169,14 @@ const updateAudio = () => {
 
   const stopPlayingOtherAudios = (playingAudio) => {
     _audios.forEach((_audioToStop) => {
-      (_audioToStop !== playingAudio) && _audioToStop.pause();
-      _audioToStop.currentTime = 0;
+      if (_audioToStop !== playingAudio) {
+        _audioToStop.pause();
+        _audioToStop.currentTime = 0;
+      }
     });
   }
 
   _audios.forEach(async (_audio,_index) => {
-    _audio.removeAttribute("controlslist");
     _audio.addEventListener("play", (event) => stopPlayingOtherAudios(event.target));
     let _newAudio = _audio.cloneNode(true);
     _newAudio.setAttribute("src", _audio.src.replace(/_lr.mp3/, "_hr.mp3"));

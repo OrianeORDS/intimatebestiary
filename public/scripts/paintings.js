@@ -166,34 +166,27 @@ document.querySelectorAll("#paintings__container img").forEach(async (_img) => {
 
 const updateAudio = () => {
   let _audios = document.querySelectorAll("#paintings__container audio");
-  const updateAudioListeners = () => {
-    //stop other playing audios
-    _audios.forEach((_audio) => {
-      _audio.addEventListener("play", (event) => {
-        console.log(event.target);
-        let audioPlaying = event.target;
-        _audios.forEach((_audioToStop) => {
-          _audioToStop !== audioPlaying && _audioToStop.pause();
-          _audioToStop.currentTime = 0;
-        });
-      });
+
+  const stopPlayingOtherAudios = (playingAudio) => {
+    _audios.forEach((_audioToStop) => {
+      (_audioToStop !== playingAudio) && _audioToStop.pause();
+      _audioToStop.currentTime = 0;
     });
-  };
-  updateAudioListeners();
-  const replaceAudio = () => {
-    _audios.forEach(async (_audio, _index) => {
-      let newAudio = document.createElement("audio");
-      [..._audio.attributes].forEach((attr) =>
-        newAudio.setAttribute(attr.nodeName, attr.nodeValue)
-      );
-      newAudio.setAttribute("src", _audio.src.replace(/_lr.mp3/, "_hr.mp3"));
-      await newAudio.addEventListener("canplaythrough", () => {
-        _audio.replaceWith(newAudio);
-        _audios[_index] = newAudio;
-        updateAudioListeners();
-        _audio.removeEventListener("canplaythrough", this);
-      });
+  }
+
+  _audios.forEach(async (_audio,_index) => {
+    _audio.removeAttribute("controlslist");
+    _audio.addEventListener("play", (event) => stopPlayingOtherAudios(event.target));
+    let _newAudio = _audio.cloneNode(true);
+    _newAudio.setAttribute("src", _audio.src.replace(/_lr.mp3/, "_hr.mp3"));
+    _newAudio.load();
+    await _newAudio.addEventListener("canplaythrough", () => {
+      _newAudio.removeEventListener("canplaythrough", this);
+      _audio.removeEventListener("play", stopPlayingOtherAudios);
+      _newAudio.addEventListener("play", (event) => stopPlayingOtherAudios(event.target));
+      _audio.replaceWith(_newAudio);
+      _audios = document.querySelectorAll("#paintings__container audio");
     });
-  };
+  });
 };
 updateAudio();

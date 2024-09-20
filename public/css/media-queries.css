@@ -136,8 +136,10 @@
     padding-top: 5rem;
   }
   #nav-scroll {
+    position: fixed;
     top: 2rem;
-    left: calc(100vw - 7rem - 1.5rem);
+    left: unset;
+    right: 2rem;
     width: 7rem;
     height: 3rem;
   }

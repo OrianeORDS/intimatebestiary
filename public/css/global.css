@@ -25,6 +25,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+* img {
+  pointer-events: none;
+}
+#nav-gallery img {
+  pointer-events: unset;
+}
 
 html {
   scroll-behavior: smooth;

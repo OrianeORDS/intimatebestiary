@@ -158,7 +158,11 @@ article {
 }
 
 /* XXXXXXXXX REMERCIEMENT / ACKNOWLEDGMGENT SECTION */
-ul.acknowledgment {
+/* XXXX INFORMATIONS / SUMMARY LIST */ 
+.acknowledgment--beforelist {
+  margin-bottom: 1.5rem;
+}
+ul.infos__list--summary {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -166,32 +170,26 @@ ul.acknowledgment {
   gap: 2rem;
 }
 
-.acknowledgment--beforelist {
-  margin-bottom: 1.5rem;
-}
-
-.acknowledgment li {
+.infos__list--summary > li {
   list-style: none;
-  /* min-width: 15rem; */
-  /* max-width: 25rem; */
   width: 45%;
 }
 
-.acknowledgment details {
+.infos__list--summary details {
   background-color: rgba(126, 214, 172, 0.15);
   border-radius: 5%;
   padding: 0;
   margin-bottom: 1.5rem;
 }
 
-.acknowledgment summary {
+.infos__list--summary summary {
   cursor: pointer;
   transition: all 0.2s;
   padding: 1rem;
   border-radius: 5% 5% 0% 0%;
 }
 
-.acknowledgment summary:hover {
+.infos__list--summary summary:hover {
   background-color: rgba(126, 214, 172, 0.25);
 }
 
@@ -199,7 +197,7 @@ details[open] > summary {
   background-color: rgba(126, 214, 172, 0.2);
 }
 
-.acknowledgment li p {
+.infos__list--summary li p {
   font-size: smaller;
   padding: 1rem;
 }
@@ -222,6 +220,6 @@ margin-left: 0.75em;
 transition: 0.2s;
 }*/
 /*
-.acknowledgment details[open] > summary::after{
+.infos__list--summary details[open] > summary::after{
 transform : rotate(-90deg); 
 } *//*# sourceMappingURL=text-titles.css.map */

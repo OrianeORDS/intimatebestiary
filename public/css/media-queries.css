@@ -59,11 +59,11 @@
     padding-top: 0;
     padding-bottom: 5rem;
   }
-  .acknowledgment li {
+  .infos__list--summary li {
     width: 100%;
     padding: 0;
   }
-  .acknowledgment li details{
+  .infos__list--summary li details{
     margin: 0;
   }
 }
@@ -93,16 +93,17 @@
     padding-left: 25rem ;
     padding-right: 15rem;
   }
-  .acknowledgment li {
-    width: 20%;
-  }
-  .description:not(.description--col) p {
-    width: 50rem ; 
-  }
-  .description--col{
+  .description--big-col{
     column-count : 2 ;
     column-gap: 4rem;
   }
+  .description--big-nocol > p {
+    width: 50rem;
+  }
+  .infos__list--summary li  {
+    width: 20%;
+  }
+
   #paintings article {
     margin-bottom : 2rem  ;
   }

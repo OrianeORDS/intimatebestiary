@@ -41,7 +41,7 @@ html body {
   color: var(--light-purple);
   width: 100%;
   margin: 0 auto;
-  min-width: 400px;
+  min-width: 360px;
 }
 html main {
   margin-left: auto;
@@ -62,4 +62,4 @@ section {
 
 ul {
   list-style: none;
-}/*# sourceMappingURL=global.css.map */
+} /*# sourceMappingURL=global.css.map */
